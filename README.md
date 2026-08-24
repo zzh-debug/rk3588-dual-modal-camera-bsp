@@ -86,7 +86,16 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
 
 ## 6. 独立仓库与SDK复现
 
-本目录设计为独立Git仓库，不在SDK根目录初始化Git，也不复制完整厂商SDK。
+本目录已经作为独立Git仓库维护，不在SDK根目录初始化Git，也不复制完整厂商SDK。
+
+| 项目 | 当前值 |
+|---|---|
+| GitHub | `https://github.com/zzh-debug/rk3588-dual-modal-camera-bsp` |
+| 可见性 | Private |
+| 分支/远端 | `main` / `origin` |
+| 容器路径 | `/rk3588_dev/projects/rk3588_camera_bsp` |
+| 宿主机路径 | `/home/zzh/workspace/rk3588_project/projects/rk3588_camera_bsp` |
+
 仓库中的`sdk/`保存：
 
 - kernel/U-Boot tracked patch；

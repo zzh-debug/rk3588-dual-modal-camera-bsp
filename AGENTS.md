@@ -27,3 +27,22 @@
 - 远端仓库默认先使用private。
 - 发布前检查硬编码账号、token、密码、私钥、内网地址和不适合公开的硬件照片。
 - 原始大文件优先放Release/Object Storage，不直接进入Git历史。
+
+## Git 仓库与远端
+
+| 项目 | 当前值 |
+|---|---|
+| GitHub 仓库 | `https://github.com/zzh-debug/rk3588-dual-modal-camera-bsp` |
+| 可见性 | Private |
+| 默认分支 | `main` |
+| 远端名称 | `origin` |
+| 远端 SSH 地址 | `git@github-rk3588:zzh-debug/rk3588-dual-modal-camera-bsp.git` |
+| 容器内仓库根目录 | `/rk3588_dev/projects/rk3588_camera_bsp` |
+| Ubuntu 宿主机仓库根目录 | `/home/zzh/workspace/rk3588_project/projects/rk3588_camera_bsp` |
+| 初始基线提交 | `db4c3e337b7fae127727e469b9c77afe80e4ea6e` |
+
+- 新对话开始项目一工作前，先读取本文件和 `README.md`，再检查 `git status`。
+- GitHub 专用 SSH 私钥只保存在 Ubuntu 宿主机；不得读取输出、复制到容器或加入仓库。
+- 容器内可以编辑、构建和提交；需要认证推送时，从 Ubuntu 宿主机仓库路径执行 `git push`。
+- SDK canonical 集成有变化时，同步更新 `sdk/` 复现包，并运行 `./sdk/apply_sdk_changes.sh --check-only /rk3588_dev`。
+- 推送、公开仓库或改写远端历史必须得到用户明确授权。
