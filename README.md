@@ -1,6 +1,6 @@
 # 基于 RK3588 的 IMX415 MIPI 双模态成像 BSP 适配与采集链路可靠性开发
 
-> 当前进度：P1.6-C generation-aware timeout与mainpath VB2错误传播已实现、编译并部署；板端待验收  
+> 当前进度：P1.6-C generation-aware timeout、mainpath EIO与关闭/重开真机门禁通过；进入可靠性矩阵  
 > 目标平台：ATK-DLRK3588，Rockchip Linux 5.10.209  
 > 项目关系：本项目独立开发；项目二使用本项目验证通过的稳定接口
 
@@ -39,9 +39,9 @@ U-Boot 修改仍位于 SDK 原有目录，不在此处复制或迁移。
 | IMX415 Media Graph/RKCIF RAW/RKISP NV12 | P1.3 目标路径板端验收通过 | `docs/阶段三总结.md`；GB10/NV12 单帧、300/3000 帧，sequence 无断号、RKISP ErrCnt=0；曝光/增益亮度变化与 VBLANK 15/30 fps 动态验证 | ISP IQ/标准色卡画质和 Host 故障恢复保留到具备相应标定与故障门禁时 |
 | MLX90640 原始传输 | P1.4 板端功能验收通过；仪器波形不纳入当前验收，FOV型号在项目二标定前确认 | `docs/阶段四总结.md`；`0x33`、EEPROM 20/20 同哈希；400 kHz；8/16 Hz 各20个正式 Subpage，0交替/周期/数据错误；控制寄存器恢复 | P1.5 冻结版本化 V4L2 Meta/VB2 ABI；项目二跨光谱标定前确认精确FOV型号 |
 | MLX90640 V4L2 Meta/VB2 | P1.5 built-in正式验收通过 | `docs/阶段五总结.md`、`evidence/stage5/2026-08-24/builtin/`；自动probe、1664-byte NVMEM黄金哈希、`ZMLX` 3400-byte、200对/10周期、control恢复和共享总线回归通过 | 向P1.6/项目二提供稳定热阵列ABI；后续故障注入继续复用该接口 |
-| Host可观测性和L1恢复 | P1.6-B统计/trace真机通过；P1.6-C timeout与mainpath VB2错误传播已实现、编译、部署，板端待验收 | `docs/阶段六RKCIF可观测性.md`、`docs/阶段六L1错误传播.md`；默认关闭、代际校验、同步取消和受控心跳注入 | 加载新Image，验证用户态EIO、关闭/重开及无残留timeout |
+| Host可观测性和L1恢复 | P1.6-B统计/trace与P1.6-C L1错误传播均真机通过 | `docs/阶段六RKCIF可观测性.md`、`docs/阶段六L1错误传播.md`、`evidence/stage6/2026-08-24/l1/runtime/`；500ms受控超时、DQBUF EIO、关闭重开双路PASS、0残留timeout | 进入重复故障/启停、2小时并采和Buffer守恒 |
 | LED GPIO/PWM | 需新增硬件 | 仅有板级候选引脚分析 | 外部恒流/MOSFET、电源/PWM 冲突表、波形、电流、温升和默认关 |
-| 双路并采与可靠性矩阵 | P1.6-A基线与P1.6-B可观测性门禁通过；完整长稳/故障矩阵待做 | `docs/阶段六双路并采基线.md`、`docs/阶段六RKCIF可观测性.md`；300/3000帧基线和trace开/关回归均PASS | 进入L1错误传播、2小时并采和故障矩阵 |
+| 双路并采与可靠性矩阵 | P1.6-A基线、P1.6-B可观测性、P1.6-C L1传播通过；完整长稳/故障矩阵待做 | `docs/阶段六双路并采基线.md`、`docs/阶段六RKCIF可观测性.md`；300/3000帧基线和trace开/关回归均PASS | 进入L1错误传播、2小时并采和故障矩阵 |
 
 ## 3. 开发计划
 

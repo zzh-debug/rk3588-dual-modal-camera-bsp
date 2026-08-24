@@ -101,12 +101,13 @@ timeout 10 v4l2-ctl -d "$ISP_NODE" \
 	--stream-count=300 --stream-poll >"$FAULT_LOG" 2>&1 ||
 	fault_status=$?
 
-[ "$fault_status" -ne 0 ] ||
-	fail 'fault-injected capture unexpectedly completed'
 [ "$fault_status" -ne 124 ] ||
 	fail 'fault-injected capture hung until userspace timeout'
 grep -q 'Input/output error' "$FAULT_LOG" ||
 	fail 'userspace did not receive EIO from vb2_queue_error'
+fault_dqbuf=$(grep -c '^cap dqbuf:' "$FAULT_LOG" || true)
+[ "$fault_dqbuf" -lt 300 ] ||
+	fail "fault-injected capture reached all $fault_dqbuf frames"
 
 dmesg | tail -n +"$dmesg_line" >"$FAULT_DMESG"
 timeout_events=$(grep -c 'L1 timeout: stream=0 ' "$FAULT_DMESG" || true)
@@ -130,6 +131,7 @@ fi
 	printf 'ISP_NODE=%s\n' "$ISP_NODE"
 	printf 'TIMEOUT_MS=%s\n' "$TIMEOUT_MS"
 	printf 'FAULT_EXIT=%s\n' "$fault_status"
+	printf 'FAULT_DQBUF=%s\n' "$fault_dqbuf"
 	printf 'FAULT_TIMEOUT_EVENTS=%s\n' "$timeout_events"
 	printf 'USERSPACE_EIO=PASS\n'
 	printf 'CLOSE_REOPEN_DUAL_CAPTURE=PASS\n'

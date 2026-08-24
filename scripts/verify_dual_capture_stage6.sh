@@ -61,7 +61,8 @@ new_fatal_log()
 	start_line=$1
 
 	dmesg | tail -n +"$start_line" | grep -Ei \
-		'zzh_(imx415|mlx90640).*(error|fail|timeout)|rkcif-mipi-lvds2.*(error|fail|overflow|timeout)|rkisp0-vir0.*(error|fail|overflow|timeout)|iommu.*fault|Oops|BUG:|Kernel panic' || true
+		'zzh_(imx415|mlx90640).*(error|fail|timeout)|rkcif-mipi-lvds2.*(error|fail|overflow|timeout)|rkisp0-vir0.*(error|fail|overflow|timeout)|iommu.*fault|Oops|BUG:|Kernel panic' | \
+		grep -Fv 'L1 timeout armed:' || true
 }
 
 positive_integer "$VISIBLE_FRAMES" || fail 'visible frame count must be positive'

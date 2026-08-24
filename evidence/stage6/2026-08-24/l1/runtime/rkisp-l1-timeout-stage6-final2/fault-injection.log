@@ -1,0 +1,42 @@
+		VIDIOC_REQBUFS returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_STREAMON returned 0 (Success)
+cap dqbuf: 0 seq:      0 bytesused: 12441600 ts: 326.776696 delta now: +32.679 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      1 bytesused: 12441600 ts: 326.810123 delta: 33.427 ms delta now: +33.734 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:      2 bytesused: 12441600 ts: 326.843360 delta: 33.237 ms delta now: +32.702 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:      3 bytesused: 12441600 ts: 326.876796 delta: 33.436 ms delta now: +32.542 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:      4 bytesused: 12441600 ts: 326.910027 delta: 33.231 ms delta now: +32.601 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      5 bytesused: 12441600 ts: 326.943361 delta: 33.334 ms delta now: +34.588 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:      6 bytesused: 12441600 ts: 326.976697 delta: 33.336 ms delta now: +34.471 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:      7 bytesused: 12441600 ts: 327.010127 delta: 33.430 ms delta now: +33.919 ms fps: 29.99 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:      8 bytesused: 12441600 ts: 327.043360 delta: 33.233 ms delta now: +32.641 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      9 bytesused: 12441600 ts: 327.076791 delta: 33.431 ms delta now: +32.491 ms fps: 29.99 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     10 bytesused: 12441600 ts: 327.110026 delta: 33.235 ms delta now: +34.626 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     11 bytesused: 12441600 ts: 327.143476 delta: 33.450 ms delta now: +33.749 ms fps: 29.99 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     12 bytesused: 12441600 ts: 327.176696 delta: 33.220 ms delta now: +34.571 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     13 bytesused: 12441600 ts: 327.210028 delta: 33.332 ms delta now: +32.586 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+VIDIOC_DQBUF: failed: Input/output error
+
+VIDIOC_QUERYCAP: ok
+VIDIOC_G_FMT: ok
+VIDIOC_S_FMT: ok
+Format Video Capture Multiplanar:
+	Width/Height      : 3840/2160
+	Pixel Format      : 'NV12' (Y/CbCr 4:2:0)
+	Field             : None
+	Number of planes  : 1
+	Flags             : 
+	Colorspace        : Default
+	Transfer Function : Default
+	YCbCr/HSV Encoding: Default
+	Quantization      : Full Range
+	Plane 0           :
+	   Bytes per Line : 3840
+	   Size Image     : 12441600
