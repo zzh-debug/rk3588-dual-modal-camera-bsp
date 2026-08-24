@@ -1,0 +1,128 @@
+# 2026-08-24 23:01:47
+# run func: build_hook kernel
+
+[36mToolchain for kernel:[0m
+[36m/rk3588_dev/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-[0m
+
+[36m==========================================[0m
+[36m          Start building kernel[0m
+[36m==========================================[0m
+[36m# Found kernel's basic config fragment: rk3588_linux.config[0m
+[35m+ make -C /rk3588_dev/kernel/ -j9 CROSS_COMPILE=/rk3588_dev/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu- ARCH=arm64 alientek_rk3588_defconfig rk3588_linux.config[0m
+make: Entering directory '/rk3588_dev/kernel'
+#
+# configuration written to .config
+#
+Using .config as base
+Merging ./arch/arm64/configs/rk3588_linux.config
+#
+# merged configuration written to .config (needs make)
+#
+#
+# configuration written to .config
+#
+make: Leaving directory '/rk3588_dev/kernel'
+=========================================
+Detected multiple device trees, total 3
+Device tree list: rk3588-alientek-2mipi720x1280-2hdmi rk3588-alientek-2mipi800x1280-2hdmi rk3588-alientek-2mipi1080x1920-2hdmi
+=========================================
+[35m+ make -C /rk3588_dev/kernel/ -j9 CROSS_COMPILE=/rk3588_dev/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu- ARCH=arm64 Image[0m
+make: Entering directory '/rk3588_dev/kernel'
+  SYNC    include/config/auto.conf.cmd
+  CALL    scripts/atomic/check-atomics.sh
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  UPD     kernel/config_data
+  GZIP    kernel/config_data.gz
+  CC      kernel/configs.o
+  AR      kernel/built-in.a
+  CC      drivers/leds/leds-pwm.o
+  AR      drivers/leds/built-in.a
+  AR      drivers/built-in.a
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  AR      init/built-in.a
+  LD      vmlinux.o
+  MODPOST vmlinux.symvers
+  MODINFO modules.builtin.modinfo
+  GEN     modules.builtin
+  LD      .tmp_vmlinux.kallsyms1
+  KSYMS   .tmp_vmlinux.kallsyms1.S
+  AS      .tmp_vmlinux.kallsyms1.S
+  LD      .tmp_vmlinux.kallsyms2
+  KSYMS   .tmp_vmlinux.kallsyms2.S
+  AS      .tmp_vmlinux.kallsyms2.S
+  LD      vmlinux
+  SORTTAB vmlinux
+  SYSMAP  System.map
+  OBJCOPY arch/arm64/boot/Image
+make: Leaving directory '/rk3588_dev/kernel'
+[35m+ make -C /rk3588_dev/kernel/ -j9 CROSS_COMPILE=/rk3588_dev/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu- ARCH=arm64 modules[0m
+make: Entering directory '/rk3588_dev/kernel'
+  CALL    scripts/atomic/check-atomics.sh
+  CALL    scripts/checksyscalls.sh
+  MODPOST modules-only.symvers
+  GEN     Module.symvers
+make: Leaving directory '/rk3588_dev/kernel'
+Compiling device tree: rk3588-alientek-2mipi720x1280-2hdmi.dtb
+[35m+ make -C /rk3588_dev/kernel/ -j9 CROSS_COMPILE=/rk3588_dev/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu- ARCH=arm64 rockchip/rk3588-alientek-2mipi720x1280-2hdmi.dtb[0m
+make: Entering directory '/rk3588_dev/kernel'
+make: Leaving directory '/rk3588_dev/kernel'
+Compiling device tree: rk3588-alientek-2mipi800x1280-2hdmi.dtb
+[35m+ make -C /rk3588_dev/kernel/ -j9 CROSS_COMPILE=/rk3588_dev/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu- ARCH=arm64 rockchip/rk3588-alientek-2mipi800x1280-2hdmi.dtb[0m
+make: Entering directory '/rk3588_dev/kernel'
+make: Leaving directory '/rk3588_dev/kernel'
+Compiling device tree: rk3588-alientek-2mipi1080x1920-2hdmi.dtb
+[35m+ make -C /rk3588_dev/kernel/ -j9 CROSS_COMPILE=/rk3588_dev/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu- ARCH=arm64 rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dtb[0m
+make: Entering directory '/rk3588_dev/kernel'
+  DTC     arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dtb
+make: Leaving directory '/rk3588_dev/kernel'
+All device trees compiled successfully
+Generating resource image...
+Pack to resource.img successed!
+rk-kernel.dtb  rk3588-alientek-2mipi720x1280-2hdmi#_saradc_ch7=12.dtb rk3588-alientek-2mipi1080x1920-2hdmi#_saradc_ch7=1405.dtb rk3588-alientek-2mipi800x1280-2hdmi#_saradc_ch7=2880.dtb
+/rk3588_dev
+Multiple device trees compilation completed
+[35m+ /rk3588_dev/device/rockchip/common/scripts/mk-fitimage.sh kernel/boot.img /rk3588_dev/device/rockchip/.chip/boot.its kernel/arch/arm64/boot/Image kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi720x1280-2hdmi.dtb kernel/resource.img[0m
+FIT description: U-Boot FIT source file for arm
+Created:         Mon Aug 24 23:02:50 2026
+ Image 0 (fdt)
+  Description:  unavailable
+  Created:      Mon Aug 24 23:02:50 2026
+  Type:         Flat Device Tree
+  Compression:  uncompressed
+  Data Size:    290164 Bytes = 283.36 KiB = 0.28 MiB
+  Architecture: AArch64
+  Load Address: 0xffffff00
+  Hash algo:    sha256
+  Hash value:   7516aaf3a833a0f127ae7bc56cc19f9d602c7b5800e4bb8acd11bd00eb278f30
+ Image 1 (kernel)
+  Description:  unavailable
+  Created:      Mon Aug 24 23:02:50 2026
+  Type:         Kernel Image
+  Compression:  uncompressed
+  Data Size:    36274688 Bytes = 35424.50 KiB = 34.59 MiB
+  Architecture: AArch64
+  OS:           Linux
+  Load Address: 0xffffff01
+  Entry Point:  0xffffff01
+  Hash algo:    sha256
+  Hash value:   6b9f23f63ec31952dd0ec209e017a819f4808c9a9006f28eba5d0103cc95e699
+ Image 2 (resource)
+  Description:  unavailable
+  Created:      Mon Aug 24 23:02:50 2026
+  Type:         Multi-File Image
+  Compression:  uncompressed
+  Data Size:    2127872 Bytes = 2078.00 KiB = 2.03 MiB
+  Hash algo:    sha256
+  Hash value:   0b542f48fd6106898e0f5cb80f44db067d3de3f308ee6f26000ff4829bfca7f0
+ Default Configuration: 'conf'
+ Configuration 0 (conf)
+  Description:  unavailable
+  Kernel:       kernel
+  FDT:          fdt
+[35m+ ln -rsf kernel/boot.img /rk3588_dev/output/firmware/boot.img[0m
+Not Found io-domains in kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi720x1280-2hdmi.dts
+[35mRunning 10-kernel.sh - build_kernel succeeded.[0m

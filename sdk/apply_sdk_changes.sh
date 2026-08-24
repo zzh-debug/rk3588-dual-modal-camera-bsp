@@ -102,6 +102,7 @@ UBOOT_STATE=$(patch_state "$SDK_ROOT/u-boot" "$UBOOT_PATCH")
 OVERLAYS='kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-imx415-minimal.dtsi
 kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-imx415-stage2.dtsi
 kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-mlx90640-stage5.dtsi
+kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-led-stage7.dtsi
 kernel/drivers/media/i2c/zzh_imx415_builtin.c
 kernel/drivers/media/i2c/zzh_mlx90640_builtin.c
 kernel/drivers/media/platform/rockchip/cif/trace.h

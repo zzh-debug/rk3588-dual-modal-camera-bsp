@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+
+/ {
+	zzh_pwm_leds: pwm-leds {
+		compatible = "pwm-leds";
+		status = "okay";
+
+		white-fill {
+			label = "zzh:white:fill";
+			pwms = <&pwm5 0 50000 0>;
+			max-brightness = <255>;
+			default-state = "off";
+		};
+	};
+};
+
+/*
+ * JP5 pin 10 is GPIO0_C6 / PWM5_M1. The base board DTS also assigns
+ * this pad to an optional 5G reset and an unused I2C5 RTC interrupt.
+ * Both consumers must release the pad before PWM5 can own it.
+ */
+&rm500u_5g_modem {
+	status = "disabled";
+};
+
+&pcf8563 {
+	status = "disabled";
+};
+
+&pwm5 {
+	pinctrl-names = "active";
+	pinctrl-0 = <&pwm5m1_pins>;
+	status = "okay";
+};

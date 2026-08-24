@@ -1,0 +1,15 @@
+CONFIG_LEDS_PWM=y
+LED_COMPATIBLE=pwm-leds
+LED_LABEL=zzh:white:fill
+LED_PWMS=224 0 c350 0
+LED_MAX=255
+LED_DEFAULT=off
+PWM5_STATUS=okay
+PWM5_PINCTRL=19f
+PWM5M1_PINS=0 16 b 1cc
+MODEM_STATUS=disabled
+I2C5_RTC_STATUS=disabled
+6b9f23f63ec31952dd0ec209e017a819f4808c9a9006f28eba5d0103cc95e699  tftpboot/atk_dlrk3588/Image
+e6a88ba802ef7265fbc94f478f4eb16fad958340647a7818df4656d988a13c15  tftpboot/atk_dlrk3588/rk3588-alientek-nfs.dtb
+b4d586325efee4a0a9d839c995ab0ea3f4027c889f9244db508749a596078839  kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dtb
+29837c96a7bbb955fae8b7df732e5ef0cc77ee9b53911629b8edafb0817c01ed  projects/rk3588_camera_bsp/scripts/verify_led_stage7.sh

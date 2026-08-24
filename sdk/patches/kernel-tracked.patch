@@ -1,17 +1,18 @@
 diff --git a/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dts b/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dts
-index 31d5b936e..e80cce8c2 100644
+index 31d5b936e..5d0637aeb 100644
 --- a/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dts
 +++ b/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dts
-@@ -9,6 +9,8 @@
+@@ -9,6 +9,9 @@
  #include "rk3588-alientek.dtsi"
  #include "rk3588-alientek-cameras.dtsi"
  #include "rk3588-linux.dtsi"
 +#include "rk3588-alientek-imx415-stage2.dtsi"
 +#include "rk3588-alientek-mlx90640-stage5.dtsi"
++#include "rk3588-alientek-led-stage7.dtsi"
  
  // DSI0显示
  &dsi0_in_vp2 {
-@@ -120,6 +122,7 @@ dsi_out_panel: endpoint {
+@@ -120,6 +123,7 @@ dsi_out_panel: endpoint {
  };
  
  &i2c5{
@@ -20,7 +21,7 @@ index 31d5b936e..e80cce8c2 100644
                  compatible = "goodix,gt911";
                  reg = <0x14>;
 diff --git a/arch/arm64/configs/alientek_rk3588_defconfig b/arch/arm64/configs/alientek_rk3588_defconfig
-index 10839bc9e..fbc0e8125 100644
+index 10839bc9e..fab1d2bad 100644
 --- a/arch/arm64/configs/alientek_rk3588_defconfig
 +++ b/arch/arm64/configs/alientek_rk3588_defconfig
 @@ -108,6 +108,8 @@ CONFIG_UNIX=y
@@ -41,7 +42,15 @@ index 10839bc9e..fbc0e8125 100644
  CONFIG_VIDEO_IMX464=y
  CONFIG_VIDEO_OS04A10=y
  CONFIG_VIDEO_OV4689=y
-@@ -647,6 +651,7 @@ CONFIG_PSTORE=y
+@@ -523,6 +527,7 @@ CONFIG_MMC_DW=y
+ CONFIG_MMC_DW_ROCKCHIP=y
+ CONFIG_NEW_LEDS=y
+ CONFIG_LEDS_CLASS=y
++CONFIG_LEDS_PWM=y
+ CONFIG_LEDS_GPIO=y
+ CONFIG_LEDS_IS31FL32XX=y
+ CONFIG_LEDS_TRIGGER_HEARTBEAT=y
+@@ -647,6 +652,7 @@ CONFIG_PSTORE=y
  CONFIG_PSTORE_CONSOLE=y
  CONFIG_PSTORE_RAM=y
  CONFIG_NFS_FS=y
