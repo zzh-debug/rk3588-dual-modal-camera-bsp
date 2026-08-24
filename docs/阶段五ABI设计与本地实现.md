@@ -116,7 +116,7 @@ P1.4的 `clock-frequency = <400000>` 保持不变。
 ```text
 eeb654120afbdfc27768b97b9570a6a3b4f8a41137df4cd52727df1fdde15c3b  zzh_mlx90640.c
 241058cbb9c56224a2b055134302bc85776c2b06dd7e375c85f3c03e5a54cea4  zzh_mlx90640_meta.h
-fa3f203da35a860cc539f98c59bb56605a766f165d1b12b78ad840205be3fb51  verify_mlx90640_stage5.c
+b0b236b39e87e1765de24225b3ea8f237846bb40b0cb5896f67891aea8ee7a58  verify_mlx90640_stage5.c
 ```
 
 部署载荷：
@@ -181,3 +181,4 @@ Buffer期间的新pair，不复用用户持有的Buffer；STREAMOFF后立即正�
 上述built-in门禁已于2026-08-24全部通过，P1.5关闭；证据见
 `evidence/stage5/2026-08-24/builtin/`，完整结论见`docs/阶段五总结.md`。
 
+长稳扩展：2026-08-24仅将`pairs`命令行验收上限由10000提高到1000000，以支持57600对的2小时门禁；采集、ABI、校验和Buffer处理逻辑未改变。AArch64工具SHA-256为`b72021e5fa39ff3a4a22ca4c1a124776b0dbe47e3417581e96b1e37a67e0706d`。

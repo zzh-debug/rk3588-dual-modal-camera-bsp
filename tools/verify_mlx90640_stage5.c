@@ -347,8 +347,8 @@ int main(int argc, char **argv)
 			argv[0]);
 		return EXIT_FAILURE;
 	}
-	if (argc >= 2 && parse_count(argv[1], 1, 10000, &pairs) < 0) {
-		fprintf(stderr, "pairs must be in the range 1..10000\n");
+	if (argc >= 2 && parse_count(argv[1], 1, 1000000, &pairs) < 0) {
+		fprintf(stderr, "pairs must be in the range 1..1000000\n");
 		return EXIT_FAILURE;
 	}
 	if (argc >= 3 && parse_count(argv[2], 1, 1000, &cycles) < 0) {
