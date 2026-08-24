@@ -59,3 +59,11 @@ RAW trace FS/FE/DMA/VB2为309/308/308/308，IRQ→VB2为1.166–19.834µs。
 - 自动门禁：`scripts/verify_rkisp_l1_timeout_stage6.sh`。
 - `l1/runtime/rkisp-l1-timeout-stage6-final3/`：#9内核500ms超时、DQBUF EIO、关闭/重开双路恢复的正式证据。
 - `l1/first-boot/`：#8内核故障未arm及function tracer定位ISP V30真实生命周期的证据；随后在#9内核正式通过。
+
+## 重复启停与预长稳
+
+- `l1/cycles/`：L1启用状态下100次mainpath短流，generation 6..105连续，
+  0健康timeout，循环后双路PASS。
+- `soak/10min/`：18000 NV12 + 4800 Meta预长稳，0 gap/0错误，
+  RKISP ErrCnt=0，MLX no-buffer/duplicate=0/0，L1误报0；11组资源样本为
+  33.307–36.076°C、MemAvailable 7,513,440–7,569,292kB。

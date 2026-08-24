@@ -1,0 +1,1400 @@
+[  780.093191] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  780.093299] rkcif-mipi-lvds2: stream[0] start streaming
+[  780.093365] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  780.093370] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  780.093395] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  780.093428] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  780.152917] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  780.153006] rkisp0-vir0: L1 timeout armed: stream=0 generation=6 timeout_ms=500
+[  780.333352] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  780.366562] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  780.366581] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  780.366597] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  780.366604] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  780.367118] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  780.432298] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  780.432408] rkcif-mipi-lvds2: stream[0] start streaming
+[  780.432474] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  780.432481] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  780.432507] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  780.432543] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  780.487959] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  780.488030] rkisp0-vir0: L1 timeout armed: stream=0 generation=7 timeout_ms=500
+[  780.668401] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  780.701791] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  780.701878] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  780.701918] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  780.701948] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  780.702664] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  780.766261] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  780.766361] rkcif-mipi-lvds2: stream[0] start streaming
+[  780.766420] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  780.766427] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  780.766449] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  780.766482] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  780.825562] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  780.825647] rkisp0-vir0: L1 timeout armed: stream=0 generation=8 timeout_ms=500
+[  781.005857] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  781.039234] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  781.039253] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  781.039270] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  781.039277] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  781.039814] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  781.111205] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  781.111304] rkcif-mipi-lvds2: stream[0] start streaming
+[  781.111368] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  781.111375] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  781.111398] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  781.111431] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  781.169492] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  781.169586] rkisp0-vir0: L1 timeout armed: stream=0 generation=9 timeout_ms=500
+[  781.349761] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  781.383243] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  781.383329] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  781.383368] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  781.383399] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  781.384048] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  781.456758] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  781.456883] rkcif-mipi-lvds2: stream[0] start streaming
+[  781.456958] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  781.456965] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  781.456992] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  781.457027] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  781.513164] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  781.513236] rkisp0-vir0: L1 timeout armed: stream=0 generation=10 timeout_ms=500
+[  781.693629] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  781.726930] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  781.726950] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  781.726967] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  781.726975] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  781.727515] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  781.786274] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  781.786372] rkcif-mipi-lvds2: stream[0] start streaming
+[  781.786433] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  781.786438] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  781.786461] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  781.786494] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  781.842479] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  781.842573] rkisp0-vir0: L1 timeout armed: stream=0 generation=11 timeout_ms=500
+[  782.022745] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  782.056267] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  782.056352] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  782.056503] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  782.056536] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  782.057350] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  782.116566] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  782.116669] rkcif-mipi-lvds2: stream[0] start streaming
+[  782.116735] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  782.116741] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  782.116764] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  782.116798] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  782.176641] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  782.176739] rkisp0-vir0: L1 timeout armed: stream=0 generation=12 timeout_ms=500
+[  782.356986] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  782.390284] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  782.390305] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  782.390321] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  782.390328] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  782.390866] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  782.445885] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  782.446033] rkcif-mipi-lvds2: stream[0] start streaming
+[  782.446104] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  782.446111] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  782.446134] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  782.446168] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  782.503636] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  782.503671] rkisp0-vir0: L1 timeout armed: stream=0 generation=13 timeout_ms=500
+[  782.684205] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  782.717442] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  782.717535] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  782.717606] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  782.717638] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  782.718414] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  782.789544] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  782.789645] rkcif-mipi-lvds2: stream[0] start streaming
+[  782.789707] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  782.789712] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  782.789735] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  782.789769] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  782.849596] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  782.849692] rkisp0-vir0: L1 timeout armed: stream=0 generation=14 timeout_ms=500
+[  783.030035] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  783.063246] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  783.063265] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  783.063282] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  783.063289] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  783.063821] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  783.125742] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  783.125853] rkcif-mipi-lvds2: stream[0] start streaming
+[  783.125923] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  783.125930] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  783.125955] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  783.125990] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  783.182120] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  783.182159] rkisp0-vir0: L1 timeout armed: stream=0 generation=15 timeout_ms=500
+[  783.362465] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  783.395842] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  783.395862] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  783.395878] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  783.395886] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  783.396409] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  783.463183] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  783.463281] rkcif-mipi-lvds2: stream[0] start streaming
+[  783.463342] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  783.463348] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  783.463371] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  783.463404] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  783.520998] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  783.521094] rkisp0-vir0: L1 timeout armed: stream=0 generation=16 timeout_ms=500
+[  783.701404] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  783.734644] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  783.734664] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  783.734680] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  783.734688] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  783.735225] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  783.789678] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  783.789778] rkcif-mipi-lvds2: stream[0] start streaming
+[  783.789838] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  783.789844] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  783.789866] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  783.789899] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  783.847656] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  783.847724] rkisp0-vir0: L1 timeout armed: stream=0 generation=17 timeout_ms=500
+[  784.027957] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  784.061430] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  784.061514] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  784.061610] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  784.061643] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  784.062448] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  784.119288] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  784.119390] rkcif-mipi-lvds2: stream[0] start streaming
+[  784.119453] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  784.119459] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  784.119484] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  784.119517] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  784.176753] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  784.176790] rkisp0-vir0: L1 timeout armed: stream=0 generation=18 timeout_ms=500
+[  784.357095] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  784.390570] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  784.390655] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  784.390696] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  784.390727] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  784.391502] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  784.448650] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  784.448807] rkcif-mipi-lvds2: stream[0] start streaming
+[  784.448892] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  784.448900] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  784.448983] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  784.449020] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  784.507631] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  784.507664] rkisp0-vir0: L1 timeout armed: stream=0 generation=19 timeout_ms=500
+[  784.687978] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  784.721447] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  784.721532] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  784.721571] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  784.721601] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  784.722412] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  784.772117] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  784.772213] rkcif-mipi-lvds2: stream[0] start streaming
+[  784.772295] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  784.772302] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  784.772326] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  784.772363] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  784.829481] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  784.829574] rkisp0-vir0: L1 timeout armed: stream=0 generation=20 timeout_ms=500
+[  785.009895] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  785.043127] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  785.043147] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  785.043164] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  785.043172] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  785.043708] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  785.136429] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  785.136593] rkcif-mipi-lvds2: stream[0] start streaming
+[  785.136666] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  785.136676] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  785.136706] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  785.136741] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  785.197594] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  785.197630] rkisp0-vir0: L1 timeout armed: stream=0 generation=21 timeout_ms=500
+[  785.377938] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  785.411463] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  785.411539] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  785.411579] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  785.411611] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  785.412347] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  785.485026] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  785.485125] rkcif-mipi-lvds2: stream[0] start streaming
+[  785.485184] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  785.485190] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  785.485213] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  785.485246] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  785.544977] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  785.545021] rkisp0-vir0: L1 timeout armed: stream=0 generation=22 timeout_ms=500
+[  785.725413] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  785.758698] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  785.758718] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  785.758734] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  785.758742] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  785.759236] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  785.813756] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  785.813861] rkcif-mipi-lvds2: stream[0] start streaming
+[  785.813921] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  785.813927] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  785.813951] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  785.813983] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  785.873554] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  785.873623] rkisp0-vir0: L1 timeout armed: stream=0 generation=23 timeout_ms=500
+[  786.053936] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  786.087233] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  786.087253] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  786.087270] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  786.087279] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  786.087772] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  786.142860] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  786.142973] rkcif-mipi-lvds2: stream[0] start streaming
+[  786.143038] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  786.143045] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  786.143071] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  786.143105] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  786.201427] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  786.201509] rkisp0-vir0: L1 timeout armed: stream=0 generation=24 timeout_ms=500
+[  786.381822] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  786.415114] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  786.415134] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  786.415151] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  786.415158] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  786.415691] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  786.481495] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  786.481593] rkcif-mipi-lvds2: stream[0] start streaming
+[  786.481651] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  786.481656] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  786.481679] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  786.481712] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  786.539857] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  786.539953] rkisp0-vir0: L1 timeout armed: stream=0 generation=25 timeout_ms=500
+[  786.720306] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  786.753520] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  786.753540] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  786.753556] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  786.753564] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  786.754056] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  786.814489] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  786.814589] rkcif-mipi-lvds2: stream[0] start streaming
+[  786.814643] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  786.814648] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  786.814672] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  786.814704] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  786.871741] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  786.871834] rkisp0-vir0: L1 timeout armed: stream=0 generation=26 timeout_ms=500
+[  787.052002] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  787.085476] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  787.085563] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  787.085686] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  787.085719] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  787.086428] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  787.156866] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  787.156964] rkcif-mipi-lvds2: stream[0] start streaming
+[  787.157024] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  787.157030] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  787.157054] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  787.157088] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  787.216180] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  787.216284] rkisp0-vir0: L1 timeout armed: stream=0 generation=27 timeout_ms=500
+[  787.396529] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  787.429823] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  787.429844] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  787.429861] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  787.429869] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  787.430364] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  787.487046] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  787.487157] rkcif-mipi-lvds2: stream[0] start streaming
+[  787.487240] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  787.487246] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  787.487272] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  787.487305] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  787.545496] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  787.545528] rkisp0-vir0: L1 timeout armed: stream=0 generation=28 timeout_ms=500
+[  787.725841] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  787.759212] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  787.759233] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  787.759249] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  787.759256] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  787.759773] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  787.820455] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  787.820551] rkcif-mipi-lvds2: stream[0] start streaming
+[  787.820606] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  787.820612] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  787.820635] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  787.820668] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  787.877548] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  787.877588] rkisp0-vir0: L1 timeout armed: stream=0 generation=29 timeout_ms=500
+[  788.057892] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  788.091362] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  788.091448] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  788.091489] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  788.091521] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  788.092442] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  788.153251] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  788.153349] rkcif-mipi-lvds2: stream[0] start streaming
+[  788.153410] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  788.153416] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  788.153439] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  788.153472] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  788.208458] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  788.208497] rkisp0-vir0: L1 timeout armed: stream=0 generation=30 timeout_ms=500
+[  788.388844] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  788.422223] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  788.422252] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  788.422269] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  788.422277] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  788.422798] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  788.479142] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  788.479243] rkcif-mipi-lvds2: stream[0] start streaming
+[  788.479303] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  788.479308] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  788.479333] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  788.479365] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  788.537446] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  788.537518] rkisp0-vir0: L1 timeout armed: stream=0 generation=31 timeout_ms=500
+[  788.717806] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  788.751117] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  788.751136] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  788.751153] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  788.751161] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  788.751693] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  788.820409] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  788.820581] rkcif-mipi-lvds2: stream[0] start streaming
+[  788.820693] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  788.820702] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  788.820754] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  788.820789] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  788.879359] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  788.879397] rkisp0-vir0: L1 timeout armed: stream=0 generation=32 timeout_ms=500
+[  789.059762] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  789.093257] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  789.093343] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  789.093385] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  789.093416] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  789.094071] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  789.151002] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  789.151103] rkcif-mipi-lvds2: stream[0] start streaming
+[  789.151166] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  789.151171] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  789.151195] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  789.151228] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  789.209373] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  789.209469] rkisp0-vir0: L1 timeout armed: stream=0 generation=33 timeout_ms=500
+[  789.389775] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  789.423311] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  789.423387] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  789.423428] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  789.423458] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  789.424227] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  789.522279] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  789.522570] rkcif-mipi-lvds2: stream[0] start streaming
+[  789.522649] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  789.522660] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  789.522693] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  789.522728] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  789.582390] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  789.582428] rkisp0-vir0: L1 timeout armed: stream=0 generation=34 timeout_ms=500
+[  789.762727] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  789.796205] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  789.796290] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  789.796331] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  789.796359] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  789.797016] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  789.853777] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  789.853876] rkcif-mipi-lvds2: stream[0] start streaming
+[  789.853936] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  789.853942] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  789.853965] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  789.853998] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  789.914308] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  789.914356] rkisp0-vir0: L1 timeout armed: stream=0 generation=35 timeout_ms=500
+[  790.094878] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  790.128176] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  790.128266] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  790.128336] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  790.128367] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  790.128933] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  790.184788] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  790.184961] rkcif-mipi-lvds2: stream[0] start streaming
+[  790.185048] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  790.185055] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  790.185080] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  790.185115] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  790.242569] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  790.242661] rkisp0-vir0: L1 timeout armed: stream=0 generation=36 timeout_ms=500
+[  790.422823] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  790.456216] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  790.456238] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  790.456255] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  790.456262] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  790.456899] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  790.530655] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  790.530750] rkcif-mipi-lvds2: stream[0] start streaming
+[  790.530809] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  790.530815] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  790.530838] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  790.530870] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  790.589136] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  790.589231] rkisp0-vir0: L1 timeout armed: stream=0 generation=37 timeout_ms=500
+[  790.769583] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  790.802780] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  790.802800] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  790.802817] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  790.802824] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  790.803325] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  790.865405] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  790.865551] rkcif-mipi-lvds2: stream[0] start streaming
+[  790.865703] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  790.865711] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  790.865738] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  790.865772] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  790.923244] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  790.923289] rkisp0-vir0: L1 timeout armed: stream=0 generation=38 timeout_ms=500
+[  791.103585] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  791.137069] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  791.137156] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  791.137197] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  791.137227] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  791.137876] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  791.198516] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  791.198615] rkcif-mipi-lvds2: stream[0] start streaming
+[  791.198677] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  791.198683] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  791.198706] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  791.198739] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  791.259386] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  791.259477] rkisp0-vir0: L1 timeout armed: stream=0 generation=39 timeout_ms=500
+[  791.439716] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  791.473031] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  791.473050] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  791.473067] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  791.473074] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  791.473642] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  791.532341] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  791.532453] rkcif-mipi-lvds2: stream[0] start streaming
+[  791.532519] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  791.532526] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  791.532554] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  791.532589] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  791.587848] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  791.587894] rkisp0-vir0: L1 timeout armed: stream=0 generation=40 timeout_ms=500
+[  791.768186] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  791.801596] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  791.801680] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  791.801720] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  791.801750] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  791.802464] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  791.861743] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  791.861844] rkcif-mipi-lvds2: stream[0] start streaming
+[  791.861900] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  791.861906] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  791.861930] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  791.861963] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  791.920010] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  791.920083] rkisp0-vir0: L1 timeout armed: stream=0 generation=41 timeout_ms=500
+[  792.100446] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  792.133766] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  792.133787] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  792.133804] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  792.133813] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  792.134307] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  792.192132] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  792.192271] rkcif-mipi-lvds2: stream[0] start streaming
+[  792.192341] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  792.192350] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  792.192378] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  792.192415] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  792.248040] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  792.248078] rkisp0-vir0: L1 timeout armed: stream=0 generation=42 timeout_ms=500
+[  792.428400] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  792.461856] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  792.461943] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  792.461984] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  792.462015] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  792.462754] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  792.530960] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  792.531059] rkcif-mipi-lvds2: stream[0] start streaming
+[  792.531118] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  792.531124] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  792.531147] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  792.531179] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  792.590594] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  792.590689] rkisp0-vir0: L1 timeout armed: stream=0 generation=43 timeout_ms=500
+[  792.770929] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  792.804414] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  792.804501] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  792.804542] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  792.804573] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  792.805343] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  792.906764] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  792.906903] rkcif-mipi-lvds2: stream[0] start streaming
+[  792.906999] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  792.907008] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  792.907036] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  792.907073] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  792.966064] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  792.966112] rkisp0-vir0: L1 timeout armed: stream=0 generation=44 timeout_ms=500
+[  793.146478] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  793.179787] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  793.179807] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  793.179823] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  793.179831] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  793.180321] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  793.233720] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  793.233871] rkcif-mipi-lvds2: stream[0] start streaming
+[  793.233956] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  793.233965] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  793.234009] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  793.234043] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  793.291674] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  793.291707] rkisp0-vir0: L1 timeout armed: stream=0 generation=45 timeout_ms=500
+[  793.472081] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  793.505319] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  793.505339] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  793.505355] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  793.505363] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  793.505891] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  793.583762] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  793.583857] rkcif-mipi-lvds2: stream[0] start streaming
+[  793.583909] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  793.583915] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  793.583938] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  793.583971] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  793.639936] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  793.640030] rkisp0-vir0: L1 timeout armed: stream=0 generation=46 timeout_ms=500
+[  793.820273] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  793.853743] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  793.853885] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  793.853927] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  793.853957] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  793.854608] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  793.917469] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  793.917622] rkcif-mipi-lvds2: stream[0] start streaming
+[  793.917697] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  793.917703] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  793.917727] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  793.917761] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  793.975931] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  793.976024] rkisp0-vir0: L1 timeout armed: stream=0 generation=47 timeout_ms=500
+[  794.156268] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  794.189512] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  794.189532] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  794.189548] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  794.189556] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  794.190050] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  794.249631] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  794.249748] rkcif-mipi-lvds2: stream[0] start streaming
+[  794.249816] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  794.249823] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  794.249848] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  794.249883] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  794.306863] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  794.306899] rkisp0-vir0: L1 timeout armed: stream=0 generation=48 timeout_ms=500
+[  794.487270] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  794.520535] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  794.520556] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  794.520572] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  794.520579] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  794.521091] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  794.590606] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  794.590707] rkcif-mipi-lvds2: stream[0] start streaming
+[  794.590761] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  794.590767] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  794.590790] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  794.590823] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  794.648740] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  794.648778] rkisp0-vir0: L1 timeout armed: stream=0 generation=49 timeout_ms=500
+[  794.829078] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  794.862457] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  794.862476] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  794.862492] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  794.862500] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  794.862983] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  794.918069] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  794.918146] rkcif-mipi-lvds2: stream[0] start streaming
+[  794.918187] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  794.918191] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  794.918210] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  794.918236] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  794.975499] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  794.975549] rkisp0-vir0: L1 timeout armed: stream=0 generation=50 timeout_ms=500
+[  795.155912] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  795.189204] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  795.189223] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  795.189238] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  795.189245] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  795.189757] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  795.251189] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  795.251287] rkcif-mipi-lvds2: stream[0] start streaming
+[  795.251345] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  795.251351] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  795.251375] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  795.251408] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  795.310107] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  795.310207] rkisp0-vir0: L1 timeout armed: stream=0 generation=51 timeout_ms=500
+[  795.490394] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  795.523845] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  795.523931] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  795.523972] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  795.524002] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  795.524648] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  795.584652] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  795.584751] rkcif-mipi-lvds2: stream[0] start streaming
+[  795.584808] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  795.584814] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  795.584838] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  795.584871] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  795.642385] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  795.642425] rkisp0-vir0: L1 timeout armed: stream=0 generation=52 timeout_ms=500
+[  795.822791] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  795.856104] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  795.856124] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  795.856139] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  795.856147] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  795.856676] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  795.925793] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  795.925909] rkcif-mipi-lvds2: stream[0] start streaming
+[  795.925986] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  795.925994] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  795.926023] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  795.926060] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  795.982490] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  795.982533] rkisp0-vir0: L1 timeout armed: stream=0 generation=53 timeout_ms=500
+[  796.162827] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  796.196364] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  796.196444] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  796.196484] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  796.196514] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  796.197160] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  796.264570] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  796.264673] rkcif-mipi-lvds2: stream[0] start streaming
+[  796.264739] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  796.264745] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  796.264770] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  796.264803] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  796.324272] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  796.324368] rkisp0-vir0: L1 timeout armed: stream=0 generation=54 timeout_ms=500
+[  796.504548] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  796.537955] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  796.538040] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  796.538079] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  796.538109] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  796.538869] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  796.616676] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  796.616776] rkcif-mipi-lvds2: stream[0] start streaming
+[  796.616836] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  796.616842] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  796.616866] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  796.616899] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  796.677308] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  796.677345] rkisp0-vir0: L1 timeout armed: stream=0 generation=55 timeout_ms=500
+[  796.857711] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  796.891119] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  796.891207] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  796.891248] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  796.891279] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  796.891920] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  796.958545] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  796.958664] rkcif-mipi-lvds2: stream[0] start streaming
+[  796.958735] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  796.958742] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  796.958769] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  796.958804] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  797.017122] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  797.017220] rkisp0-vir0: L1 timeout armed: stream=0 generation=56 timeout_ms=500
+[  797.197460] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  797.230912] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  797.230964] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  797.231011] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  797.231025] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  797.231933] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  797.289602] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  797.289702] rkcif-mipi-lvds2: stream[0] start streaming
+[  797.289754] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  797.289760] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  797.289797] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  797.289830] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  797.346766] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  797.346861] rkisp0-vir0: L1 timeout armed: stream=0 generation=57 timeout_ms=500
+[  797.527120] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  797.560570] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  797.560655] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  797.560696] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  797.560727] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  797.561498] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  797.618772] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  797.618871] rkcif-mipi-lvds2: stream[0] start streaming
+[  797.618953] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  797.618960] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  797.618984] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  797.619020] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  797.678848] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  797.678995] rkisp0-vir0: L1 timeout armed: stream=0 generation=58 timeout_ms=500
+[  797.859128] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  797.892562] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  797.892648] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  797.892690] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  797.892720] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  797.893438] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  797.993687] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  797.993799] rkcif-mipi-lvds2: stream[0] start streaming
+[  797.993894] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  797.993902] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  797.993933] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  797.993967] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  798.050729] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  798.050769] rkisp0-vir0: L1 timeout armed: stream=0 generation=59 timeout_ms=500
+[  798.231138] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  798.264433] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  798.264454] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  798.264470] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  798.264478] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  798.264969] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  798.319983] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  798.320129] rkcif-mipi-lvds2: stream[0] start streaming
+[  798.320220] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  798.320227] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  798.320251] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  798.320286] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  798.380304] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  798.380339] rkisp0-vir0: L1 timeout armed: stream=0 generation=60 timeout_ms=500
+[  798.560675] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  798.594124] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  798.594211] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  798.594250] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  798.594280] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  798.594929] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  798.649607] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  798.649703] rkcif-mipi-lvds2: stream[0] start streaming
+[  798.649761] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  798.649767] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  798.649790] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  798.649823] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  798.708040] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  798.708133] rkisp0-vir0: L1 timeout armed: stream=0 generation=61 timeout_ms=500
+[  798.888526] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  798.921694] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  798.921717] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  798.921735] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  798.921744] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  798.922318] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  798.980879] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  798.980980] rkcif-mipi-lvds2: stream[0] start streaming
+[  798.981042] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  798.981048] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  798.981071] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  798.981104] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  799.039522] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  799.039617] rkisp0-vir0: L1 timeout armed: stream=0 generation=62 timeout_ms=500
+[  799.219889] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  799.253171] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  799.253192] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  799.253208] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  799.253216] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  799.253753] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  799.319191] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  799.319288] rkcif-mipi-lvds2: stream[0] start streaming
+[  799.319350] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  799.319356] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  799.319378] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  799.319411] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  799.378587] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  799.378621] rkisp0-vir0: L1 timeout armed: stream=0 generation=63 timeout_ms=500
+[  799.558959] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  799.592403] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  799.592489] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  799.592528] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  799.592557] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  799.593259] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  799.651972] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  799.652074] rkcif-mipi-lvds2: stream[0] start streaming
+[  799.652133] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  799.652139] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  799.652164] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  799.652197] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  799.707046] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  799.707081] rkisp0-vir0: L1 timeout armed: stream=0 generation=64 timeout_ms=500
+[  799.887411] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  799.920864] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  799.921038] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  799.921082] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  799.921113] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  799.921773] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  799.977306] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  799.977405] rkcif-mipi-lvds2: stream[0] start streaming
+[  799.977464] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  799.977470] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  799.977494] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  799.977527] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  800.034951] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  800.034992] rkisp0-vir0: L1 timeout armed: stream=0 generation=65 timeout_ms=500
+[  800.215332] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  800.248761] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  800.248850] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  800.248891] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  800.249011] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  800.249743] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  800.313556] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  800.313704] rkcif-mipi-lvds2: stream[0] start streaming
+[  800.313788] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  800.313797] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  800.313841] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  800.313876] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  800.373650] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  800.373689] rkisp0-vir0: L1 timeout armed: stream=0 generation=66 timeout_ms=500
+[  800.554066] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  800.587493] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  800.587579] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  800.587619] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  800.587649] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  800.588290] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  800.651454] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  800.651567] rkcif-mipi-lvds2: stream[0] start streaming
+[  800.651632] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  800.651639] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  800.651665] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  800.651700] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  800.707407] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  800.707444] rkisp0-vir0: L1 timeout armed: stream=0 generation=67 timeout_ms=500
+[  800.887894] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  800.921189] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  800.921212] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  800.921229] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  800.921237] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  800.921724] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  800.987536] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  800.987634] rkcif-mipi-lvds2: stream[0] start streaming
+[  800.987698] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  800.987704] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  800.987728] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  800.987761] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  801.044467] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  801.044562] rkisp0-vir0: L1 timeout armed: stream=0 generation=68 timeout_ms=500
+[  801.224835] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  801.258102] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  801.258123] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  801.258140] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  801.258147] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  801.258661] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  801.314666] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  801.314778] rkcif-mipi-lvds2: stream[0] start streaming
+[  801.314845] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  801.314852] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  801.314879] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  801.314913] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  801.371921] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  801.371961] rkisp0-vir0: L1 timeout armed: stream=0 generation=69 timeout_ms=500
+[  801.552296] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  801.585648] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  801.585669] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  801.585685] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  801.585693] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  801.586230] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  801.641260] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  801.641359] rkcif-mipi-lvds2: stream[0] start streaming
+[  801.641419] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  801.641425] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  801.641448] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  801.641481] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  801.700745] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  801.700789] rkisp0-vir0: L1 timeout armed: stream=0 generation=70 timeout_ms=500
+[  801.881228] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  801.914409] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  801.914433] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  801.914451] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  801.914458] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  801.914975] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  801.970458] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  801.970595] rkcif-mipi-lvds2: stream[0] start streaming
+[  801.970722] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  801.970730] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  801.970757] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  801.970792] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  802.026027] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  802.026115] rkisp0-vir0: L1 timeout armed: stream=0 generation=71 timeout_ms=500
+[  802.206379] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  802.239811] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  802.239895] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  802.239935] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  802.239965] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  802.240762] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  802.298491] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  802.298591] rkcif-mipi-lvds2: stream[0] start streaming
+[  802.298651] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  802.298657] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  802.298681] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  802.298714] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  802.356064] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  802.356103] rkisp0-vir0: L1 timeout armed: stream=0 generation=72 timeout_ms=500
+[  802.536475] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  802.569824] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  802.569844] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  802.569860] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  802.569868] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  802.570397] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  802.631192] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  802.631294] rkcif-mipi-lvds2: stream[0] start streaming
+[  802.631351] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  802.631357] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  802.631380] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  802.631413] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  802.690356] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  802.690429] rkisp0-vir0: L1 timeout armed: stream=0 generation=73 timeout_ms=500
+[  802.870776] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  802.904036] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  802.904058] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  802.904075] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  802.904084] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  802.904602] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  802.963769] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  802.963871] rkcif-mipi-lvds2: stream[0] start streaming
+[  802.963931] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  802.963937] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  802.963961] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  802.963995] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  803.023532] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  803.023571] rkisp0-vir0: L1 timeout armed: stream=0 generation=74 timeout_ms=500
+[  803.203950] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  803.237244] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  803.237265] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  803.237281] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  803.237289] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  803.237828] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  803.299619] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  803.299715] rkcif-mipi-lvds2: stream[0] start streaming
+[  803.299770] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  803.299776] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  803.299799] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  803.299832] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  803.358688] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  803.358787] rkisp0-vir0: L1 timeout armed: stream=0 generation=75 timeout_ms=500
+[  803.538986] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  803.572417] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  803.572503] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  803.572542] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  803.572571] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  803.573220] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  803.650100] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  803.650331] rkcif-mipi-lvds2: stream[0] start streaming
+[  803.650373] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  803.650377] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  803.650397] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  803.650424] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  803.709331] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  803.709406] rkisp0-vir0: L1 timeout armed: stream=0 generation=76 timeout_ms=500
+[  803.889707] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  803.923097] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  803.923186] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  803.923227] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  803.923257] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  803.923960] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  804.033459] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  804.033583] rkcif-mipi-lvds2: stream[0] start streaming
+[  804.033657] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  804.033665] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  804.033693] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  804.033730] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  804.092277] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  804.092316] rkisp0-vir0: L1 timeout armed: stream=0 generation=77 timeout_ms=500
+[  804.272645] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  804.305997] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  804.306018] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  804.306033] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  804.306041] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  804.306676] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  804.383606] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  804.383705] rkcif-mipi-lvds2: stream[0] start streaming
+[  804.383764] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  804.383770] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  804.383794] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  804.383826] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  804.440170] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  804.440266] rkisp0-vir0: L1 timeout armed: stream=0 generation=78 timeout_ms=500
+[  804.620518] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  804.653808] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  804.653829] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  804.653846] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  804.653854] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  804.654394] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  804.718697] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  804.718793] rkcif-mipi-lvds2: stream[0] start streaming
+[  804.718853] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  804.718859] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  804.718882] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  804.718939] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  804.776688] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  804.776724] rkisp0-vir0: L1 timeout armed: stream=0 generation=79 timeout_ms=500
+[  804.957137] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  804.990508] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  804.990641] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  804.990683] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  804.990713] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  804.991421] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  805.056578] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  805.056682] rkcif-mipi-lvds2: stream[0] start streaming
+[  805.056776] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  805.056783] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  805.056806] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  805.056840] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  805.112624] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  805.112718] rkisp0-vir0: L1 timeout armed: stream=0 generation=80 timeout_ms=500
+[  805.293060] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  805.326436] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  805.326521] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  805.326562] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  805.326590] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  805.327245] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  805.385998] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  805.386110] rkcif-mipi-lvds2: stream[0] start streaming
+[  805.386174] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  805.386181] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  805.386206] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  805.386241] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  805.443345] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  805.443417] rkisp0-vir0: L1 timeout armed: stream=0 generation=81 timeout_ms=500
+[  805.623813] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  805.657006] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  805.657026] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  805.657042] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  805.657050] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  805.657558] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  805.715694] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  805.715812] rkcif-mipi-lvds2: stream[0] start streaming
+[  805.715914] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  805.715922] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  805.715948] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  805.715985] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  805.774574] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  805.774663] rkisp0-vir0: L1 timeout armed: stream=0 generation=82 timeout_ms=500
+[  805.954963] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  805.988308] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  805.988330] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  805.988347] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  805.988355] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  805.988884] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  806.047902] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  806.048002] rkcif-mipi-lvds2: stream[0] start streaming
+[  806.048064] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  806.048070] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  806.048093] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  806.048126] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  806.107064] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  806.107157] rkisp0-vir0: L1 timeout armed: stream=0 generation=83 timeout_ms=500
+[  806.287474] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  806.320704] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  806.320725] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  806.320742] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  806.320749] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  806.321290] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  806.378338] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  806.378452] rkcif-mipi-lvds2: stream[0] start streaming
+[  806.378518] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  806.378525] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  806.378551] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  806.378587] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  806.437835] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  806.437943] rkisp0-vir0: L1 timeout armed: stream=0 generation=84 timeout_ms=500
+[  806.618200] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  806.651536] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  806.651557] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  806.651573] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  806.651580] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  806.652160] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  806.740632] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  806.740729] rkcif-mipi-lvds2: stream[0] start streaming
+[  806.740793] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  806.740799] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  806.740824] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  806.740857] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  806.797790] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  806.797883] rkisp0-vir0: L1 timeout armed: stream=0 generation=85 timeout_ms=500
+[  806.978151] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  807.011447] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  807.011468] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  807.011485] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  807.011493] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  807.012021] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  807.076712] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  807.076815] rkcif-mipi-lvds2: stream[0] start streaming
+[  807.076878] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  807.076884] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  807.076907] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  807.076940] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  807.132489] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  807.132530] rkisp0-vir0: L1 timeout armed: stream=0 generation=86 timeout_ms=500
+[  807.312925] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  807.346208] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  807.346228] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  807.346244] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  807.346252] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  807.346785] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  807.405778] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  807.405875] rkcif-mipi-lvds2: stream[0] start streaming
+[  807.405935] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  807.405941] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  807.405964] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  807.405997] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  807.463869] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  807.463964] rkisp0-vir0: L1 timeout armed: stream=0 generation=87 timeout_ms=500
+[  807.644284] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  807.677616] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  807.677700] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  807.677742] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  807.677772] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  807.678424] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  807.740876] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  807.741020] rkcif-mipi-lvds2: stream[0] start streaming
+[  807.741108] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  807.741116] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  807.741161] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  807.741195] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  807.800497] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  807.800536] rkisp0-vir0: L1 timeout armed: stream=0 generation=88 timeout_ms=500
+[  807.980940] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  808.014430] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  808.014519] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  808.014560] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  808.014590] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  808.015244] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  808.072852] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  808.072950] rkcif-mipi-lvds2: stream[0] start streaming
+[  808.073014] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  808.073020] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  808.073043] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  808.073076] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  808.129269] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  808.129308] rkisp0-vir0: L1 timeout armed: stream=0 generation=89 timeout_ms=500
+[  808.309638] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  808.343191] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  808.343273] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  808.343314] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  808.343343] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  808.344116] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  808.398729] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  808.398839] rkcif-mipi-lvds2: stream[0] start streaming
+[  808.398941] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  808.398953] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  808.398979] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  808.399016] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  808.458355] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  808.458447] rkisp0-vir0: L1 timeout armed: stream=0 generation=90 timeout_ms=500
+[  808.638638] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  808.672130] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  808.672208] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  808.672326] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  808.672359] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  808.673135] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  808.731155] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  808.731305] rkcif-mipi-lvds2: stream[0] start streaming
+[  808.731365] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  808.731373] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  808.731403] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  808.731437] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  808.791935] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  808.791972] rkisp0-vir0: L1 timeout armed: stream=0 generation=91 timeout_ms=500
+[  808.972312] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  809.005894] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  809.005979] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  809.006020] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  809.006049] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  809.006798] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  809.066454] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  809.066553] rkcif-mipi-lvds2: stream[0] start streaming
+[  809.066615] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  809.066621] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  809.066645] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  809.066678] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  809.127110] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  809.127148] rkisp0-vir0: L1 timeout armed: stream=0 generation=92 timeout_ms=500
+[  809.307540] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  809.340835] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  809.340855] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  809.340872] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  809.340879] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  809.341405] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  809.397053] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  809.397164] rkcif-mipi-lvds2: stream[0] start streaming
+[  809.397232] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  809.397239] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  809.397264] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  809.397299] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  809.455244] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  809.455281] rkisp0-vir0: L1 timeout armed: stream=0 generation=93 timeout_ms=500
+[  809.635620] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  809.669070] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  809.669157] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  809.669197] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  809.669230] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  809.669883] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  809.736302] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  809.736406] rkcif-mipi-lvds2: stream[0] start streaming
+[  809.736468] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  809.736473] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  809.736510] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  809.736543] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  809.795397] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  809.795467] rkisp0-vir0: L1 timeout armed: stream=0 generation=94 timeout_ms=500
+[  809.975814] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  810.009076] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  810.009097] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  810.009114] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  810.009122] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  810.009650] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  810.075644] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  810.075743] rkcif-mipi-lvds2: stream[0] start streaming
+[  810.075806] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  810.075812] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  810.075835] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  810.075868] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  810.131260] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  810.131307] rkisp0-vir0: L1 timeout armed: stream=0 generation=95 timeout_ms=500
+[  810.311630] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  810.344983] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  810.345004] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  810.345021] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  810.345029] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  810.345568] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  810.403088] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  810.403188] rkcif-mipi-lvds2: stream[0] start streaming
+[  810.403246] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  810.403252] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  810.403276] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  810.403309] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  810.462154] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  810.462297] rkisp0-vir0: L1 timeout armed: stream=0 generation=96 timeout_ms=500
+[  810.642505] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  810.675882] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  810.675967] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  810.676006] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  810.676036] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  810.676649] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  810.736665] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  810.736778] rkcif-mipi-lvds2: stream[0] start streaming
+[  810.736839] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  810.736846] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  810.736873] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  810.736908] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  810.797496] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  810.797588] rkisp0-vir0: L1 timeout armed: stream=0 generation=97 timeout_ms=500
+[  810.977963] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  811.011146] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  811.011167] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  811.011184] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  811.011192] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  811.011728] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  811.110065] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  811.110164] rkcif-mipi-lvds2: stream[0] start streaming
+[  811.110225] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  811.110231] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  811.110254] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  811.110286] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  811.168547] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  811.168684] rkisp0-vir0: L1 timeout armed: stream=0 generation=98 timeout_ms=500
+[  811.348844] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  811.382194] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  811.382224] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  811.382257] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  811.382266] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  811.383028] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  811.481887] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  811.481988] rkcif-mipi-lvds2: stream[0] start streaming
+[  811.482044] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  811.482050] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  811.482074] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  811.482107] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  811.541911] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  811.542006] rkisp0-vir0: L1 timeout armed: stream=0 generation=99 timeout_ms=500
+[  811.722237] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  811.755691] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  811.755778] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  811.755871] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  811.755901] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  811.756623] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  811.817546] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  811.817646] rkcif-mipi-lvds2: stream[0] start streaming
+[  811.817706] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  811.817712] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  811.817736] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  811.817769] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  811.875254] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  811.875325] rkisp0-vir0: L1 timeout armed: stream=0 generation=100 timeout_ms=500
+[  812.055719] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  812.088940] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  812.088960] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  812.088977] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  812.088985] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  812.089526] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  812.147438] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  812.147538] rkcif-mipi-lvds2: stream[0] start streaming
+[  812.147596] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  812.147602] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  812.147625] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  812.147658] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  812.206349] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  812.206382] rkisp0-vir0: L1 timeout armed: stream=0 generation=101 timeout_ms=500
+[  812.386778] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  812.420075] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  812.420095] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  812.420111] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  812.420119] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  812.420610] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  812.477201] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  812.477316] rkcif-mipi-lvds2: stream[0] start streaming
+[  812.477381] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  812.477388] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  812.477415] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  812.477451] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  812.536418] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  812.536508] rkisp0-vir0: L1 timeout armed: stream=0 generation=102 timeout_ms=500
+[  812.716819] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  812.750030] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  812.750051] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  812.750067] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  812.750076] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  812.750614] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  812.810836] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  812.810933] rkcif-mipi-lvds2: stream[0] start streaming
+[  812.810989] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  812.810995] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  812.811018] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  812.811051] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  812.868879] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  812.868982] rkisp0-vir0: L1 timeout armed: stream=0 generation=103 timeout_ms=500
+[  813.049280] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  813.082688] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  813.082774] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  813.082815] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  813.082845] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  813.083600] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  813.144673] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  813.144783] rkcif-mipi-lvds2: stream[0] start streaming
+[  813.144851] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  813.144859] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  813.144885] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  813.144920] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  813.201139] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  813.201180] rkisp0-vir0: L1 timeout armed: stream=0 generation=104 timeout_ms=500
+[  813.381512] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  813.414859] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  813.414879] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  813.414895] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  813.414902] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  813.415432] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  813.510321] rkisp_hw fdcb0000.rkisp: set isp clk = 594000000Hz
+[  813.510416] rkcif-mipi-lvds2: stream[0] start streaming
+[  813.510475] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  813.510481] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[  813.510504] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[  813.510536] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[  813.569929] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  813.570024] rkisp0-vir0: L1 timeout armed: stream=0 generation=105 timeout_ms=500
+[  813.750294] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  813.783573] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000000ef1d02b, sd_name:rockchip-csi2-dphy0
+[  813.783594] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[  813.783609] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  813.783617] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[  813.784130] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0

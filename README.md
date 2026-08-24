@@ -1,6 +1,6 @@
 # 基于 RK3588 的 IMX415 MIPI 双模态成像 BSP 适配与采集链路可靠性开发
 
-> 当前进度：P1.6-C generation-aware timeout、mainpath EIO与关闭/重开真机门禁通过；进入可靠性矩阵  
+> 当前进度：P1.6-C通过；100次启停和10分钟双路预长稳通过，2小时最终长稳待执行  
 > 目标平台：ATK-DLRK3588，Rockchip Linux 5.10.209  
 > 项目关系：本项目独立开发；项目二使用本项目验证通过的稳定接口
 
@@ -41,7 +41,7 @@ U-Boot 修改仍位于 SDK 原有目录，不在此处复制或迁移。
 | MLX90640 V4L2 Meta/VB2 | P1.5 built-in正式验收通过 | `docs/阶段五总结.md`、`evidence/stage5/2026-08-24/builtin/`；自动probe、1664-byte NVMEM黄金哈希、`ZMLX` 3400-byte、200对/10周期、control恢复和共享总线回归通过 | 向P1.6/项目二提供稳定热阵列ABI；后续故障注入继续复用该接口 |
 | Host可观测性和L1恢复 | P1.6-B统计/trace与P1.6-C L1错误传播均真机通过 | `docs/阶段六RKCIF可观测性.md`、`docs/阶段六L1错误传播.md`、`evidence/stage6/2026-08-24/l1/runtime/`；500ms受控超时、DQBUF EIO、关闭重开双路PASS、0残留timeout | 进入重复故障/启停、2小时并采和Buffer守恒 |
 | LED GPIO/PWM | 需新增硬件 | 仅有板级候选引脚分析 | 外部恒流/MOSFET、电源/PWM 冲突表、波形、电流、温升和默认关 |
-| 双路并采与可靠性矩阵 | P1.6-A基线、P1.6-B可观测性、P1.6-C L1传播通过；完整长稳/故障矩阵待做 | `docs/阶段六双路并采基线.md`、`docs/阶段六RKCIF可观测性.md`；300/3000帧基线和trace开/关回归均PASS | 进入L1错误传播、2小时并采和故障矩阵 |
+| 双路并采与可靠性矩阵 | P1.6-A/B/C、100次启停与10分钟预长稳通过；2小时门禁待做 | `docs/阶段六可靠性矩阵.md`；generation 6..105连续、0健康timeout；18000 NV12+4800 Meta、0 gap/0错误、33.3–36.1°C | 执行2小时并采与结束后重开回归 |
 
 ## 3. 开发计划
 
@@ -73,6 +73,7 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
 - `docs/阶段六双路并采基线.md`
 - `docs/阶段六RKCIF可观测性.md`
 - `docs/阶段六L1错误传播.md`
+- `docs/阶段六可靠性矩阵.md`
 - `docs/independent-imx415-bringup-plan.md`
 - `docs/resume-project-feasibility-audit.md`
 - `docs/feasibility-study.md`
