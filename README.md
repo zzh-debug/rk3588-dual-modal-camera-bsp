@@ -1,6 +1,6 @@
 # 基于 RK3588 的 IMX415 MIPI 双模态成像 BSP 适配与采集链路可靠性开发
 
-> 当前进度：MLX瞬态坏Subpage恢复修正版10分钟双路回归通过；2小时最终长稳已重新后台运行  
+> 当前进度：P1.6双路可靠性阶段全部通过并关闭；项目二可正式开始，P1.7外置LED硬件保留  
 > 目标平台：ATK-DLRK3588，Rockchip Linux 5.10.209  
 > 项目关系：本项目独立开发；项目二使用本项目验证通过的稳定接口
 
@@ -39,9 +39,9 @@ U-Boot 修改仍位于 SDK 原有目录，不在此处复制或迁移。
 | IMX415 Media Graph/RKCIF RAW/RKISP NV12 | P1.3 目标路径板端验收通过 | `docs/阶段三总结.md`；GB10/NV12 单帧、300/3000 帧，sequence 无断号、RKISP ErrCnt=0；曝光/增益亮度变化与 VBLANK 15/30 fps 动态验证 | ISP IQ/标准色卡画质和 Host 故障恢复保留到具备相应标定与故障门禁时 |
 | MLX90640 原始传输 | P1.4 板端功能验收通过；仪器波形不纳入当前验收，FOV型号在项目二标定前确认 | `docs/阶段四总结.md`；`0x33`、EEPROM 20/20 同哈希；400 kHz；8/16 Hz 各20个正式 Subpage，0交替/周期/数据错误；控制寄存器恢复 | P1.5 冻结版本化 V4L2 Meta/VB2 ABI；项目二跨光谱标定前确认精确FOV型号 |
 | MLX90640 V4L2 Meta/VB2 | P1.5 built-in正式验收通过 | `docs/阶段五总结.md`、`evidence/stage5/2026-08-24/builtin/`；自动probe、1664-byte NVMEM黄金哈希、`ZMLX` 3400-byte、200对/10周期、control恢复和共享总线回归通过 | 向P1.6/项目二提供稳定热阵列ABI；后续故障注入继续复用该接口 |
-| Host可观测性和L1恢复 | P1.6-B统计/trace与P1.6-C L1错误传播均真机通过 | `docs/阶段六RKCIF可观测性.md`、`docs/阶段六L1错误传播.md`、`evidence/stage6/2026-08-24/l1/runtime/`；500ms受控超时、DQBUF EIO、关闭重开双路PASS、0残留timeout | 进入重复故障/启停、2小时并采和Buffer守恒 |
+| Host可观测性和L1恢复 | P1.6-B/C正式通过 | `docs/阶段六RKCIF可观测性.md`、`docs/阶段六L1错误传播.md`；逐stream统计/trace、500ms EIO、关闭重开、100次generation连续、0残留work | L2/L3透明恢复明确不做 |
 | LED GPIO/PWM | 需新增硬件 | 仅有板级候选引脚分析 | 外部恒流/MOSFET、电源/PWM 冲突表、波形、电流、温升和默认关 |
-| 双路并采与可靠性矩阵 | P1.6-A/B/C、100次启停与10分钟预长稳通过；2小时中检发现MLX瞬态frame error恢复缺口，修正版待复验 | `docs/阶段六可靠性矩阵.md`；generation 6..105连续、0健康timeout；18000 NV12+4800 Meta、0 gap/0错误、33.3–36.1°C | 执行2小时并采与结束后重开回归 |
+| 双路并采与可靠性矩阵 | P1.6正式关闭：2小时双路和结束后重开均PASS | `docs/阶段六总结.md`；216000 NV12+57600 Meta，0 gap/0错误，真实恢复2个坏Subpage，0 L1误报，35.2–37.0°C | 项目二可复用稳定接口；LED硬件与专项画质另行推进 |
 
 ## 3. 开发计划
 
@@ -51,7 +51,7 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
   -> P1.3  独立 Media Graph、RKCIF RAW、RKISP NV12（已通过）
   -> P1.4  MLX90640 电气确认、原始读取和 EEPROM（板端功能验收通过）
   -> P1.5  MLX90640 V4L2 Meta/VB2 ABI（built-in板端验收通过）
-  -> P1.6  双路并采、RKCIF 可观测性和 L1 错误传播（双路基线通过，当前阶段）
+  -> P1.6  双路并采、RKCIF 可观测性、L1 错误传播和2小时长稳（已通过）
   -> P1.7  外置 LED GPIO/PWM 与完整可靠性矩阵
   -> 向项目二提供验证通过的接口
 ```
@@ -74,6 +74,7 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
 - `docs/阶段六RKCIF可观测性.md`
 - `docs/阶段六L1错误传播.md`
 - `docs/阶段六可靠性矩阵.md`
+- `docs/阶段六总结.md`
 - `docs/independent-imx415-bringup-plan.md`
 - `docs/resume-project-feasibility-audit.md`
 - `docs/feasibility-study.md`

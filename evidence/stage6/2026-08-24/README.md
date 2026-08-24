@@ -81,3 +81,13 @@ RAW trace FS/FE/DMA/VB2为309/308/308/308，IRQ→VB2为1.166–19.834µs。
 `soak/10min-recovery/`保存#10内核的压缩逐帧日志、资源采样、汇总与SHA-256。
 结果为18000 NV12 + 4800 Meta，0 gap/0错误，MLX
 no-buffer/duplicate/invalid=0/0/0，L1误报0。
+
+## 2小时最终长稳
+
+- `soak/final/dual-soak-stage6-2h/`：COMPLETE状态、压缩逐帧日志、123组资源采样、
+  SHA256SUMS和最终汇总。
+- `soak/final/dual-soak-stage6-2h-post-reopen/`：长稳结束后的300 NV12+80 Meta重开回归。
+
+最终216000 NV12+57600 Meta全部完成；0 gap/0错误、RKISP ErrCnt=0、
+L1误报0。MLX真实遇到2个坏Subpage并成功恢复，停止计数为
+no-buffer/duplicate/invalid=0/0/2。
