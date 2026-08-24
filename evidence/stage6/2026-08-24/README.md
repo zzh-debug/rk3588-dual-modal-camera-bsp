@@ -67,3 +67,11 @@ RAW trace FS/FE/DMA/VB2为309/308/308/308，IRQ→VB2为1.166–19.834µs。
 - `soak/10min/`：18000 NV12 + 4800 Meta预长稳，0 gap/0错误，
   RKISP ErrCnt=0，MLX no-buffer/duplicate=0/0，L1误报0；11组资源样本为
   33.307–36.076°C、MemAvailable 7,513,440–7,569,292kB。
+
+## 2小时长稳中途故障证据
+
+- `soak/failures/limit/`：热工具10000 pair参数上限导致的无效第一次尝试。
+- `soak/failures/frame-error/`：真正双路运行在1292 pair出现`-EILSEQ`并
+  queue error的热日志、dmesg与资源样本。
+- `soak/mlx-frame-recovery-kernel-build.log`：单次坏Subpage恢复修正版的
+  Kernel成功构建日志。

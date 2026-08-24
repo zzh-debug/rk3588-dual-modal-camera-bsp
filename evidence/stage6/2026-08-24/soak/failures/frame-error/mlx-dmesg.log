@@ -1,0 +1,18 @@
+[   17.718703] zzh_mlx90640 5-0033: EEPROM cached, reference ID 131a-4948-0190
+[   17.718919] zzh_mlx90640 5-0033: registered Meta v1 (3400 bytes), status=0x0009 control=0x1901, 16 Hz subpages
+[  343.717485] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  353.953525] zzh_mlx90640 5-0033: restored control 0x1901
+[  353.953630] zzh_mlx90640 5-0033: stream stopped: pairs=80 no-buffer=0 duplicate=0
+[  514.370799] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  524.600767] zzh_mlx90640 5-0033: restored control 0x1901
+[  524.600791] zzh_mlx90640 5-0033: stream stopped: pairs=80 no-buffer=0 duplicate=0
+[  814.588687] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  824.815153] zzh_mlx90640 5-0033: restored control 0x1901
+[  824.815178] zzh_mlx90640 5-0033: stream stopped: pairs=80 no-buffer=0 duplicate=0
+[  919.847554] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[ 1533.318155] zzh_mlx90640 5-0033: restored control 0x1901
+[ 1533.318187] zzh_mlx90640 5-0033: stream stopped: pairs=4800 no-buffer=0 duplicate=0
+[ 7163.814121] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[ 7328.981554] zzh_mlx90640 5-0033: capture failed, propagating queue error: -84
+[ 7328.982050] zzh_mlx90640 5-0033: restored control 0x1901
+[ 7328.982059] zzh_mlx90640 5-0033: stream stopped: pairs=1292 no-buffer=0 duplicate=0

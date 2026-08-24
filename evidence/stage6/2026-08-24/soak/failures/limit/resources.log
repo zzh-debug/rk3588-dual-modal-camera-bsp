@@ -1,0 +1,1120 @@
+UPTIME=2113.65 16329.72
+LOAD=0.51 1.00 1.16 2/248 2083
+MemFree:         7452036 kB
+MemAvailable:    7562836 kB
+Slab:              85392 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=2173.78 16792.52
+LOAD=0.72 0.96 1.14 1/249 2143
+MemFree:         7402096 kB
+MemAvailable:    7513044 kB
+Slab:              85564 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2233.90 17255.44
+LOAD=0.84 0.95 1.12 1/249 2164
+MemFree:         7401812 kB
+MemAvailable:    7512760 kB
+Slab:              85568 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2294.02 17718.28
+LOAD=0.63 0.87 1.08 1/247 2184
+MemFree:         7401592 kB
+MemAvailable:    7512540 kB
+Slab:              85584 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2354.15 18181.56
+LOAD=0.64 0.82 1.05 1/247 2204
+MemFree:         7401844 kB
+MemAvailable:    7512792 kB
+Slab:              85596 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2414.30 18644.74
+LOAD=0.98 0.88 1.06 3/249 2227
+MemFree:         7401088 kB
+MemAvailable:    7512036 kB
+Slab:              85612 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2474.45 19108.00
+LOAD=1.17 0.95 1.07 1/248 2247
+MemFree:         7400340 kB
+MemAvailable:    7511288 kB
+Slab:              85616 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2534.62 19571.52
+LOAD=1.03 0.95 1.06 1/248 2268
+MemFree:         7400364 kB
+MemAvailable:    7511312 kB
+Slab:              85596 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2594.75 20034.91
+LOAD=0.86 0.94 1.05 1/248 2288
+MemFree:         7400340 kB
+MemAvailable:    7511288 kB
+Slab:              85596 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2654.89 20498.33
+LOAD=0.94 0.96 1.05 1/248 2308
+MemFree:         7399860 kB
+MemAvailable:    7510808 kB
+Slab:              85596 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2715.03 20961.50
+LOAD=1.00 0.98 1.05 1/248 2328
+MemFree:         7399576 kB
+MemAvailable:    7510524 kB
+Slab:              85632 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2775.18 21424.87
+LOAD=0.91 0.97 1.04 1/246 2348
+MemFree:         7399804 kB
+MemAvailable:    7510752 kB
+Slab:              85632 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2835.32 21888.31
+LOAD=0.93 0.96 1.03 1/246 2369
+MemFree:         7399048 kB
+MemAvailable:    7509996 kB
+Slab:              85624 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2895.51 22352.04
+LOAD=0.80 0.92 1.01 1/247 2390
+MemFree:         7399324 kB
+MemAvailable:    7510272 kB
+Slab:              85624 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=2955.64 22815.27
+LOAD=0.84 0.91 1.00 1/248 2412
+MemFree:         7399356 kB
+MemAvailable:    7510304 kB
+Slab:              85624 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=3015.79 23278.48
+LOAD=1.11 0.97 1.01 1/248 2433
+MemFree:         7398600 kB
+MemAvailable:    7509548 kB
+Slab:              85624 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=3075.91 23741.79
+LOAD=1.19 1.02 1.02 1/248 2453
+MemFree:         7398348 kB
+MemAvailable:    7509296 kB
+Slab:              85624 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=3136.06 24205.38
+LOAD=1.00 0.99 1.01 1/248 2473
+MemFree:         7398072 kB
+MemAvailable:    7509020 kB
+Slab:              85620 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=3196.19 24668.76
+LOAD=0.82 0.94 0.99 1/247 2494
+MemFree:         7397592 kB
+MemAvailable:    7508540 kB
+Slab:              85616 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=3256.32 25132.19
+LOAD=0.85 0.93 0.98 1/245 2514
+MemFree:         7397152 kB
+MemAvailable:    7508100 kB
+Slab:              85616 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 33307
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=3316.45 25595.69
+LOAD=0.73 0.88 0.96 2/247 2536
+MemFree:         7397120 kB
+MemAvailable:    7508068 kB
+Slab:              85616 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 33307
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 33307
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=3376.60 26059.27
+LOAD=0.92 0.90 0.97 1/248 2557
+MemFree:         7396836 kB
+MemAvailable:    7507784 kB
+Slab:              85648 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 33307
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 33307
+---
+UPTIME=3436.72 26522.63
+LOAD=1.25 0.99 1.00 1/248 2577
+MemFree:         7397088 kB
+MemAvailable:    7508036 kB
+Slab:              85648 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 33307
+---
+UPTIME=3496.87 26986.21
+LOAD=1.92 1.22 1.08 1/248 2598
+MemFree:         7396836 kB
+MemAvailable:    7507784 kB
+Slab:              85680 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=3557.00 27449.59
+LOAD=1.19 1.15 1.06 1/248 2618
+MemFree:         7396332 kB
+MemAvailable:    7507280 kB
+Slab:              85688 kB
+SReclaimable:      41576 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=3617.13 27912.81
+LOAD=0.73 1.02 1.02 1/247 2659
+MemFree:         7395544 kB
+MemAvailable:    7506456 kB
+Slab:              85664 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=3677.26 28376.17
+LOAD=0.90 1.02 1.02 3/246 2679
+MemFree:         7395520 kB
+MemAvailable:    7506432 kB
+Slab:              85664 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=3737.40 28839.55
+LOAD=1.02 1.01 1.01 1/246 2699
+MemFree:         7395292 kB
+MemAvailable:    7506204 kB
+Slab:              85660 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=3797.53 29302.76
+LOAD=1.05 1.03 1.02 2/248 2722
+MemFree:         7394984 kB
+MemAvailable:    7505896 kB
+Slab:              85696 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 35153
+---
+UPTIME=3857.67 29766.22
+LOAD=0.98 1.02 1.01 1/248 2742
+MemFree:         7395008 kB
+MemAvailable:    7505920 kB
+Slab:              85700 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 35153
+---
+UPTIME=3917.79 30229.64
+LOAD=0.68 0.92 0.98 1/249 2763
+MemFree:         7395008 kB
+MemAvailable:    7505920 kB
+Slab:              85704 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 35153
+---
+UPTIME=3977.93 30693.10
+LOAD=0.74 0.89 0.97 1/249 2783
+MemFree:         7394252 kB
+MemAvailable:    7505164 kB
+Slab:              85704 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4038.06 31156.57
+LOAD=1.35 1.02 1.01 1/249 2803
+MemFree:         7393748 kB
+MemAvailable:    7504660 kB
+Slab:              85712 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 35153
+---
+UPTIME=4098.20 31619.98
+LOAD=1.30 1.06 1.02 1/248 2825
+MemFree:         7393496 kB
+MemAvailable:    7504408 kB
+Slab:              85780 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=4158.33 32083.54
+LOAD=0.78 0.95 0.98 1/248 2845
+MemFree:         7393496 kB
+MemAvailable:    7504408 kB
+Slab:              85760 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=4218.48 32547.16
+LOAD=0.90 0.96 0.99 1/247 2866
+MemFree:         7393212 kB
+MemAvailable:    7504124 kB
+Slab:              85796 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=4278.62 33010.55
+LOAD=1.02 0.99 1.00 1/249 2888
+MemFree:         7392188 kB
+MemAvailable:    7503116 kB
+Slab:              85808 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 35153
+---
+UPTIME=4338.76 33473.99
+LOAD=0.73 0.90 0.97 2/249 2908
+MemFree:         7392440 kB
+MemAvailable:    7503368 kB
+Slab:              85800 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 35153
+---
+UPTIME=4398.89 33937.35
+LOAD=0.89 0.92 0.97 1/248 2928
+MemFree:         7392416 kB
+MemAvailable:    7503344 kB
+Slab:              85796 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4459.03 34400.97
+LOAD=1.07 0.97 0.99 1/249 2949
+MemFree:         7392692 kB
+MemAvailable:    7503620 kB
+Slab:              85796 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4519.16 34864.13
+LOAD=1.46 1.09 1.03 2/249 2969
+MemFree:         7392188 kB
+MemAvailable:    7503116 kB
+Slab:              85824 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4579.32 35327.63
+LOAD=0.91 1.00 1.00 1/247 2989
+MemFree:         7391920 kB
+MemAvailable:    7502832 kB
+Slab:              85812 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4639.46 35791.00
+LOAD=1.11 1.03 1.01 1/248 3010
+MemFree:         7391448 kB
+MemAvailable:    7502360 kB
+Slab:              85800 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4699.72 36255.36
+LOAD=0.99 1.01 1.00 1/247 3030
+MemFree:         7391700 kB
+MemAvailable:    7502612 kB
+Slab:              85800 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 36076
+---
+UPTIME=4759.94 36719.21
+LOAD=0.95 0.98 0.99 1/247 3051
+MemFree:         7391448 kB
+MemAvailable:    7502360 kB
+Slab:              85796 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 36076
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4820.13 37183.10
+LOAD=0.93 0.97 0.99 1/248 3073
+MemFree:         7391700 kB
+MemAvailable:    7502612 kB
+Slab:              85776 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4880.31 37646.76
+LOAD=1.08 1.01 1.00 1/248 3093
+MemFree:         7390724 kB
+MemAvailable:    7501636 kB
+Slab:              85780 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 36076
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=4940.45 38110.19
+LOAD=0.92 0.96 0.99 1/247 3114
+MemFree:         7390008 kB
+MemAvailable:    7500920 kB
+Slab:              85748 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 36076
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=5000.59 38573.52
+LOAD=1.76 1.19 1.07 1/247 3134
+MemFree:         7390284 kB
+MemAvailable:    7501196 kB
+Slab:              85772 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 36076
+THERMAL bigcore0-thermal 36076
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 36076
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=5060.73 39037.12
+LOAD=1.13 1.11 1.05 2/247 3155
+MemFree:         7390032 kB
+MemAvailable:    7500944 kB
+Slab:              85764 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 36076
+THERMAL bigcore0-thermal 36076
+THERMAL bigcore1-thermal 36076
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 36076
+THERMAL gpu-thermal 36076
+THERMAL npu-thermal 36076
+---
+UPTIME=5120.89 39500.76
+LOAD=0.77 1.00 1.01 1/246 3175
+MemFree:         7389276 kB
+MemAvailable:    7500188 kB
+Slab:              85772 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 36076
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 36076
+THERMAL littlecore-thermal 36076
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=5181.03 39964.06
+LOAD=0.72 0.95 0.99 1/246 3195
+MemFree:         7389528 kB
+MemAvailable:    7500440 kB
+Slab:              85796 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=5241.17 40427.41
+LOAD=0.73 0.92 0.98 2/247 3217
+MemFree:         7388772 kB
+MemAvailable:    7499684 kB
+Slab:              85756 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 35153
+THERMAL gpu-thermal 35153
+THERMAL npu-thermal 35153
+---
+UPTIME=5301.32 40891.04
+LOAD=0.77 0.90 0.97 1/247 3237
+MemFree:         7389056 kB
+MemAvailable:    7499968 kB
+Slab:              85756 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 35153
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5361.46 41354.41
+LOAD=0.91 0.92 0.97 1/248 3259
+MemFree:         7388740 kB
+MemAvailable:    7499652 kB
+Slab:              85764 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 35153
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5421.59 41817.88
+LOAD=1.03 0.94 0.98 1/248 3281
+MemFree:         7387764 kB
+MemAvailable:    7498676 kB
+Slab:              85752 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5481.75 42281.47
+LOAD=0.90 0.91 0.97 1/248 3301
+MemFree:         7387764 kB
+MemAvailable:    7498676 kB
+Slab:              85752 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5541.90 42745.13
+LOAD=0.83 0.88 0.95 2/247 3321
+MemFree:         7387260 kB
+MemAvailable:    7498172 kB
+Slab:              85752 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5602.02 43208.44
+LOAD=0.73 0.84 0.93 1/248 3342
+MemFree:         7387260 kB
+MemAvailable:    7498172 kB
+Slab:              85760 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5662.16 43672.07
+LOAD=1.02 0.89 0.94 1/247 3362
+MemFree:         7386504 kB
+MemAvailable:    7497416 kB
+Slab:              85776 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5722.44 44136.57
+LOAD=1.12 0.93 0.95 1/247 3383
+MemFree:         7386440 kB
+MemAvailable:    7497352 kB
+Slab:              85776 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5782.62 44600.40
+LOAD=1.04 0.94 0.96 2/248 3404
+MemFree:         7386756 kB
+MemAvailable:    7497668 kB
+Slab:              85764 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=5842.75 45063.73
+LOAD=0.76 0.89 0.94 1/249 3425
+MemFree:         7386504 kB
+MemAvailable:    7497416 kB
+Slab:              85784 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5902.90 45527.02
+LOAD=1.07 0.96 0.96 1/248 3445
+MemFree:         7386480 kB
+MemAvailable:    7497392 kB
+Slab:              85820 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=5963.03 45990.44
+LOAD=0.96 0.95 0.96 1/248 3466
+MemFree:         7386000 kB
+MemAvailable:    7496912 kB
+Slab:              85796 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=6023.16 46453.82
+LOAD=0.86 0.92 0.95 1/248 3488
+MemFree:         7385724 kB
+MemAvailable:    7496636 kB
+Slab:              85796 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=6083.35 46917.73
+LOAD=1.12 0.98 0.97 1/247 3508
+MemFree:         7385244 kB
+MemAvailable:    7496156 kB
+Slab:              85780 kB
+SReclaimable:      41540 kB
+THERMAL soc-thermal 35153
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=6143.50 47381.31
+LOAD=0.89 0.94 0.95 3/246 3528
+MemFree:         7384724 kB
+MemAvailable:    7495652 kB
+Slab:              85796 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=6203.64 47844.60
+LOAD=1.16 1.01 0.98 1/246 3548
+MemFree:         7385228 kB
+MemAvailable:    7496156 kB
+Slab:              85800 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 35153
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=6263.79 48308.11
+LOAD=0.90 0.96 0.97 2/246 3568
+MemFree:         7385204 kB
+MemAvailable:    7496132 kB
+Slab:              85800 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=6323.94 48771.80
+LOAD=1.04 0.98 0.97 1/246 3589
+MemFree:         7384220 kB
+MemAvailable:    7495148 kB
+Slab:              85800 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=6384.19 49236.06
+LOAD=1.26 1.04 1.00 1/247 3610
+MemFree:         7384472 kB
+MemAvailable:    7495400 kB
+Slab:              85804 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=6444.31 49699.54
+LOAD=0.91 0.98 0.98 1/248 3631
+MemFree:         7384220 kB
+MemAvailable:    7495148 kB
+Slab:              85860 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---
+UPTIME=6504.51 50163.24
+LOAD=1.48 1.14 1.04 1/248 3651
+MemFree:         7383716 kB
+MemAvailable:    7494644 kB
+Slab:              85812 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 33307
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 33307
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 33307
+---
+UPTIME=6564.64 50626.75
+LOAD=0.82 1.02 1.00 2/248 3671
+MemFree:         7383464 kB
+MemAvailable:    7494392 kB
+Slab:              85808 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 33307
+---
+UPTIME=6624.79 51090.24
+LOAD=0.56 0.91 0.97 1/247 3692
+MemFree:         7383212 kB
+MemAvailable:    7494140 kB
+Slab:              85808 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 33307
+THERMAL bigcore0-thermal 33307
+THERMAL bigcore1-thermal 33307
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 33307
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 33307
+---
+UPTIME=6684.92 51553.50
+LOAD=1.03 0.99 0.99 1/247 3713
+MemFree:         7382740 kB
+MemAvailable:    7493668 kB
+Slab:              85776 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 33307
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 33307
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 33307
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 33307
+---
+UPTIME=6745.06 52016.90
+LOAD=1.06 1.01 1.00 1/246 3734
+MemFree:         7382992 kB
+MemAvailable:    7493920 kB
+Slab:              85776 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 33307
+---
+UPTIME=6805.20 52480.28
+LOAD=1.14 1.01 1.00 1/246 3754
+MemFree:         7382740 kB
+MemAvailable:    7493668 kB
+Slab:              85776 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 33307
+THERMAL gpu-thermal 33307
+THERMAL npu-thermal 34230
+---
+UPTIME=6865.40 52944.17
+LOAD=0.98 0.99 1.00 1/246 3782
+MemFree:         7382204 kB
+MemAvailable:    7493132 kB
+Slab:              85788 kB
+SReclaimable:      41556 kB
+THERMAL soc-thermal 34230
+THERMAL bigcore0-thermal 34230
+THERMAL bigcore1-thermal 34230
+THERMAL littlecore-thermal 34230
+THERMAL center-thermal 34230
+THERMAL gpu-thermal 34230
+THERMAL npu-thermal 34230
+---

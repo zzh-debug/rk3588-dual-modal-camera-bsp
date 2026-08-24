@@ -42,6 +42,7 @@
 #define ZZH_MLX90640_CONTROL_CHESS        BIT(12)
 #define ZZH_MLX90640_WARMUP_SUBPAGES      2
 #define ZZH_MLX90640_READY_TIMEOUT_NS     (2ULL * NSEC_PER_SEC)
+#define ZZH_MLX90640_FRAME_ERROR_LIMIT    8
 
 struct zzh_mlx90640_buffer {
 	struct vb2_v4l2_buffer vb;
@@ -74,6 +75,8 @@ struct zzh_mlx90640 {
 	u32 subpage_rate_hz;
 	u32 dropped_no_buffer;
 	u32 duplicate_subpage;
+	u32 invalid_subpage;
+	u32 consecutive_frame_errors;
 	u16 original_control;
 	u16 active_control;
 	bool control_modified;
@@ -454,12 +457,27 @@ static int zzh_mlx90640_capture_thread(void *private)
 		ret = zzh_mlx90640_capture_subpage(mlx, next, true, true);
 		if (ret == -EINTR && kthread_should_stop())
 			break;
+		if (ret == -EILSEQ) {
+			mlx->invalid_subpage++;
+			mlx->consecutive_frame_errors++;
+			have_first = false;
+			dev_warn_ratelimited(&mlx->client->dev,
+				"invalid subpage dropped: total=%u consecutive=%u\n",
+				mlx->invalid_subpage,
+				mlx->consecutive_frame_errors);
+			if (mlx->consecutive_frame_errors <=
+			    ZZH_MLX90640_FRAME_ERROR_LIMIT)
+				continue;
+			dev_err(&mlx->client->dev,
+				"consecutive frame error limit exceeded\n");
+		}
 		if (ret) {
 			dev_err(&mlx->client->dev,
 				"capture failed, propagating queue error: %d\n", ret);
 			vb2_queue_error(&mlx->queue);
 			break;
 		}
+		mlx->consecutive_frame_errors = 0;
 
 		if (!have_first) {
 			*first = *next;
@@ -553,6 +571,8 @@ static int zzh_mlx90640_start_streaming(struct vb2_queue *queue,
 	mlx->pair_sequence = 0;
 	mlx->dropped_no_buffer = 0;
 	mlx->duplicate_subpage = 0;
+	mlx->invalid_subpage = 0;
+	mlx->consecutive_frame_errors = 0;
 	ret = zzh_mlx90640_prepare_stream(mlx);
 	if (ret)
 		goto error_buffers;
@@ -592,9 +612,9 @@ static void zzh_mlx90640_stop_streaming(struct vb2_queue *queue)
 		vb2_queue_error(queue);
 	zzh_mlx90640_return_buffers(mlx, VB2_BUF_STATE_ERROR);
 	dev_info(&mlx->client->dev,
-		 "stream stopped: pairs=%u no-buffer=%u duplicate=%u\n",
+		 "stream stopped: pairs=%u no-buffer=%u duplicate=%u invalid=%u\n",
 		 mlx->pair_sequence, mlx->dropped_no_buffer,
-		 mlx->duplicate_subpage);
+		 mlx->duplicate_subpage, mlx->invalid_subpage);
 }
 
 static const struct vb2_ops zzh_mlx90640_queue_ops = {

@@ -114,7 +114,7 @@ P1.4的 `clock-frequency = <400000>` 保持不变。
 源码SHA-256：
 
 ```text
-eeb654120afbdfc27768b97b9570a6a3b4f8a41137df4cd52727df1fdde15c3b  zzh_mlx90640.c
+8efb1d7bcaaa475be7c6b48a4caeebacf45af39ac1bb30ce49c9df52fd881259  zzh_mlx90640.c
 241058cbb9c56224a2b055134302bc85776c2b06dd7e375c85f3c03e5a54cea4  zzh_mlx90640_meta.h
 b0b236b39e87e1765de24225b3ea8f237846bb40b0cb5896f67891aea8ee7a58  verify_mlx90640_stage5.c
 ```
@@ -182,3 +182,7 @@ Buffer期间的新pair，不复用用户持有的Buffer；STREAMOFF后立即正�
 `evidence/stage5/2026-08-24/builtin/`，完整结论见`docs/阶段五总结.md`。
 
 长稳扩展：2026-08-24仅将`pairs`命令行验收上限由10000提高到1000000，以支持57600对的2小时门禁；采集、ABI、校验和Buffer处理逻辑未改变。AArch64工具SHA-256为`b72021e5fa39ff3a4a22ca4c1a124776b0dbe47e3417581e96b1e37a67e0706d`。
+
+长稳恢复扩展：对参考API定义的frame data error（有效区域出现`0x7FFF`），
+单次错误改为丢弃Subpage并重新配对；连续超过8次才升级为fatal。其他I2C、
+control和ready timeout错误仍立即传播。
