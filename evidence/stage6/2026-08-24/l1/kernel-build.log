@@ -1,4 +1,4 @@
-# 2026-08-24 13:18:31
+# 2026-08-24 14:20:27
 # run func: build_hook kernel
 
 [36mToolchain for kernel:[0m
@@ -32,32 +32,7 @@ make: Entering directory '/rk3588_dev/kernel'
   CALL    scripts/atomic/check-atomics.sh
   CALL    scripts/checksyscalls.sh
   CHK     include/generated/compile.h
-  CC      drivers/media/platform/rockchip/isp/hw.o
-  CC      drivers/media/platform/rockchip/isp/dev.o
-  CC      drivers/media/platform/rockchip/isp/rkisp.o
-  CC      drivers/media/platform/rockchip/isp/regs.o
-  CC      drivers/media/platform/rockchip/isp/common.o
-  CC      drivers/media/platform/rockchip/isp/isp_stats.o
-  CC      drivers/media/platform/rockchip/isp/isp_params.o
-  CC      drivers/media/platform/rockchip/isp/capture.o
-  CC      drivers/media/platform/rockchip/isp/dmarx.o
-  CC      drivers/media/platform/rockchip/isp/csi.o
-  CC      drivers/media/platform/rockchip/isp/procfs.o
-  CC      drivers/media/platform/rockchip/isp/isp_stats_v1x.o
-  CC      drivers/media/platform/rockchip/isp/isp_params_v1x.o
-  CC      drivers/media/platform/rockchip/isp/capture_v1x.o
-  CC      drivers/media/platform/rockchip/isp/isp_stats_v21.o
-  CC      drivers/media/platform/rockchip/isp/isp_params_v21.o
-  CC      drivers/media/platform/rockchip/isp/capture_v21.o
   CC      drivers/media/platform/rockchip/isp/capture_v30.o
-  CC      drivers/media/platform/rockchip/isp/isp_stats_v3x.o
-  CC      drivers/media/platform/rockchip/isp/isp_params_v3x.o
-  CC      drivers/media/platform/rockchip/isp/bridge.o
-  CC      drivers/media/platform/rockchip/isp/bridge_v30.o
-  CC      drivers/media/platform/rockchip/isp/capture_v32.o
-  CC      drivers/media/platform/rockchip/isp/isp_params_v32.o
-  CC      drivers/media/platform/rockchip/isp/isp_stats_v32.o
-  CC      drivers/media/platform/rockchip/isp/isp_rockit.o
   AR      drivers/media/platform/rockchip/isp/built-in.a
   AR      drivers/media/platform/built-in.a
   AR      drivers/media/built-in.a
@@ -109,10 +84,10 @@ rk-kernel.dtb  rk3588-alientek-2mipi720x1280-2hdmi#_saradc_ch7=12.dtb rk3588-ali
 Multiple device trees compilation completed
 [35m+ /rk3588_dev/device/rockchip/common/scripts/mk-fitimage.sh kernel/boot.img /rk3588_dev/device/rockchip/.chip/boot.its kernel/arch/arm64/boot/Image kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi720x1280-2hdmi.dtb kernel/resource.img[0m
 FIT description: U-Boot FIT source file for arm
-Created:         Mon Aug 24 13:19:46 2026
+Created:         Mon Aug 24 14:21:31 2026
  Image 0 (fdt)
   Description:  unavailable
-  Created:      Mon Aug 24 13:19:46 2026
+  Created:      Mon Aug 24 14:21:31 2026
   Type:         Flat Device Tree
   Compression:  uncompressed
   Data Size:    290164 Bytes = 283.36 KiB = 0.28 MiB
@@ -122,7 +97,7 @@ Created:         Mon Aug 24 13:19:46 2026
   Hash value:   7516aaf3a833a0f127ae7bc56cc19f9d602c7b5800e4bb8acd11bd00eb278f30
  Image 1 (kernel)
   Description:  unavailable
-  Created:      Mon Aug 24 13:19:46 2026
+  Created:      Mon Aug 24 14:21:31 2026
   Type:         Kernel Image
   Compression:  uncompressed
   Data Size:    36274688 Bytes = 35424.50 KiB = 34.59 MiB
@@ -131,10 +106,10 @@ Created:         Mon Aug 24 13:19:46 2026
   Load Address: 0xffffff01
   Entry Point:  0xffffff01
   Hash algo:    sha256
-  Hash value:   2743702d5adba54365d2d86b4f79f029f2cb17de14b4aaaf05adceff66cae643
+  Hash value:   e2fb30aaf1234516375e2d60d91848a6af1e1d5e6b534cc19063d4ddcfe6846d
  Image 2 (resource)
   Description:  unavailable
-  Created:      Mon Aug 24 13:19:46 2026
+  Created:      Mon Aug 24 14:21:31 2026
   Type:         Multi-File Image
   Compression:  uncompressed
   Data Size:    2127872 Bytes = 2078.00 KiB = 2.03 MiB

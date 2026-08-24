@@ -58,3 +58,4 @@ RAW trace FS/FE/DMA/VB2为309/308/308/308，IRQ→VB2为1.166–19.834µs。
   `vb2_queue_error()`的成功构建日志。
 - 自动门禁：`scripts/verify_rkisp_l1_timeout_stage6.sh`。
 - 当前仅记录实现/编译/部署状态；用户态EIO和关闭/重开结果必须等待新Image真机运行后补充。
+- `l1/first-boot/`：#8内核故障未arm及function tracer定位ISP V30真实生命周期的证据；V30修正版待再次加载。

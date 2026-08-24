@@ -621,6 +621,26 @@ index 26b9ee90a..8d96d9d62 100644
 +void rkisp_l1_timeout_start(struct rkisp_stream *stream);
 +void rkisp_l1_timeout_stop(struct rkisp_stream *stream);
  #endif /* _RKISP_PATH_VIDEO_H */
+diff --git a/drivers/media/platform/rockchip/isp/capture_v30.c b/drivers/media/platform/rockchip/isp/capture_v30.c
+index 801aad3d6..764c90f8c 100644
+--- a/drivers/media/platform/rockchip/isp/capture_v30.c
++++ b/drivers/media/platform/rockchip/isp/capture_v30.c
+@@ -1262,6 +1262,7 @@ static void rkisp_stop_streaming(struct vb2_queue *queue)
+ 	struct v4l2_device *v4l2_dev = &dev->v4l2_dev;
+ 	int ret;
+ 
++	rkisp_l1_timeout_stop(stream);
+ 	mutex_lock(&dev->hw_dev->dev_lock);
+ 
+ 	v4l2_dbg(1, rkisp_debug, v4l2_dev, "%s %s %d\n",
+@@ -1516,6 +1517,7 @@ rkisp_start_streaming(struct vb2_queue *queue, unsigned int count)
+ 		goto pipe_stream_off;
+ 	}
+ 	tasklet_enable(&stream->buf_done_tasklet);
++	rkisp_l1_timeout_start(stream);
+ 	mutex_unlock(&dev->hw_dev->dev_lock);
+ 	return 0;
+ 
 diff --git a/drivers/media/platform/rockchip/isp/capture_v32.c b/drivers/media/platform/rockchip/isp/capture_v32.c
 index 7931a3ec8..f0449973f 100644
 --- a/drivers/media/platform/rockchip/isp/capture_v32.c
