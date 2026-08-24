@@ -77,8 +77,14 @@ sampled=0
 while kill -0 "$dual_pid" 2>/dev/null; do
 	if grep -q 'per-stream observability:' "$PROC_FILE" 2>/dev/null; then
 		cat "$PROC_FILE" >"$PROC_LOG"
-		sampled=1
-		break
+		stream0_now=$(grep 'stream\[0\] generation:' "$PROC_LOG" |
+			tail -n 1)
+		fs_now=$(printf '%s\n' "$stream0_now" |
+			sed -n 's/.*fs:\([0-9][0-9]*\).*/\1/p')
+		if [ "${fs_now:-0}" -gt 0 ]; then
+			sampled=1
+			break
+		fi
 	fi
 	sleep 1
 done

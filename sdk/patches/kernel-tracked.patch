@@ -100,7 +100,7 @@ index 4b6ade1a6..220f1b1e4 100644
  obj-$(CONFIG_VIDEO_IMX492)	+= imx492.o
  obj-$(CONFIG_VIDEO_IMX355)	+= imx355.o
 diff --git a/drivers/media/platform/rockchip/cif/capture.c b/drivers/media/platform/rockchip/cif/capture.c
-index bb9ca9b8f..6a4426f5d 100644
+index bb9ca9b8f..2a11d7b41 100644
 --- a/drivers/media/platform/rockchip/cif/capture.c
 +++ b/drivers/media/platform/rockchip/cif/capture.c
 @@ -28,6 +28,9 @@
@@ -223,7 +223,34 @@ index bb9ca9b8f..6a4426f5d 100644
  	vb2_buffer_done(&vb_done->vb2_buf, VB2_BUF_STATE_DONE);
  	v4l2_dbg(2, rkcif_debug, &stream->cifdev->v4l2_dev,
  		 "stream[%d] vb done, index: %d, sequence %d\n", stream->id,
-@@ -12790,6 +12868,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
+@@ -11577,6 +11655,15 @@ static void rkcif_toisp_check_stop_status(struct sditf_priv *priv,
+ 				stream = &priv->cif_dev->stream[0];
+ 			else
+ 				stream = &priv->cif_dev->stream[src_id % 4];
++			cur_time = rkcif_time_get_ns(stream->cifdev);
++			rkcif_observe_event(stream, RKCIF_OBSERVE_FE,
++					    cur_time,
++					    stream->frame_idx ? stream->frame_idx - 1 : 0,
++					    0);
++			rkcif_observe_event(stream, RKCIF_OBSERVE_DMA,
++					    cur_time,
++					    stream->frame_idx ? stream->frame_idx - 1 : 0,
++					    0);
+ 			if (stream->stopping) {
+ 				v4l2_dbg(3, rkcif_debug, &priv->cif_dev->v4l2_dev,
+ 					 "stream[%d] stop\n",
+@@ -11678,6 +11765,10 @@ static void rkcif_toisp_check_stop_status(struct sditf_priv *priv,
+ 				stream->fps_stats.frm0_timestamp = rkcif_time_get_ns(stream->cifdev);
+ 			else
+ 				stream->fps_stats.frm1_timestamp = rkcif_time_get_ns(stream->cifdev);
++			rkcif_observe_event(stream, RKCIF_OBSERVE_FS,
++					    cur_time,
++					    stream->frame_idx ? stream->frame_idx - 1 : 0,
++					    0);
+ 			if (stream->cifdev->rdbk_debug &&
+ 			    stream->frame_idx < 15)
+ 				v4l2_info(&priv->cif_dev->v4l2_dev,
+@@ -12790,6 +12881,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
  				intstat &= ~CSI_FRAME_END_ID3;
  				break;
  			}
@@ -234,7 +261,7 @@ index bb9ca9b8f..6a4426f5d 100644
  			if (stream->cifdev->rdbk_debug &&
  			    stream->frame_idx < 15 &&
  			    (!cif_dev->sditf[0] || cif_dev->sditf[0]->mode.rdbk_mode))
-@@ -12826,6 +12908,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
+@@ -12826,6 +12921,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
  					 "dma capture by vicap, is_updata %d, group mode %d, dma_en %d\n",
  					 is_update, cif_dev->sync_cfg.type, stream->dma_en);
  				if (is_update) {
@@ -245,7 +272,7 @@ index bb9ca9b8f..6a4426f5d 100644
  					if (rkcif_get_interlace_mode(stream) == RKCIF_INTERLACE_SOFT_AUTO)
  						rkcif_update_stream_interlace(cif_dev, stream, mipi_id);
  					else
-@@ -12835,11 +12921,19 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
+@@ -12835,11 +12934,19 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
  				v4l2_dbg(4, rkcif_debug, &cif_dev->v4l2_dev,
  					 "dma capture by isp, dma_en 0x%x\n",
  					 stream->dma_en);
@@ -265,7 +292,7 @@ index bb9ca9b8f..6a4426f5d 100644
  				rkcif_update_stream_rockit(cif_dev, stream, mipi_id);
  			}
  			spin_lock_irqsave(&stream->fps_lock, fps_flags);
-@@ -12930,6 +13024,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
+@@ -12930,6 +13037,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
  						sditf_event_inc_sof(cif_dev->sditf[stream->id]);
  					spin_unlock_irqrestore(&stream->fps_lock, flags);
  				}

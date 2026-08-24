@@ -1,0 +1,49 @@
+Driver Version:v00.02.00
+Work Mode:ping pong
+Monitor Mode:idle
+aclk_cif:750000000
+hclk_cif:198000000
+dclk_cif:594000000
+iclk_host0:396000000
+iclk_host1:396000000
+Input Info:
+	src subdev:zzh_imx415 3-001a
+	interface:mipi csi2 dphy
+	lanes:4
+	vc channel: 0
+	hdr mode: normal
+	format:SGBRG10_1X10/3864x2192@30
+	crop.bounds:(12, 16)/3840x2160
+Output Info:
+	format:GB10/3840x2160(12,16)
+	compact:enable
+	frame amount:16
+	early:0 ms
+	readout:33 ms
+	rate:33 ms
+	fps:30
+	irq statistics:
+			total:0
+			csi over flow:0
+			csi bandwidth lack:0
+			csi size err:0
+			not active buf cnt:0 0 0 0
+			all err count:0
+			frame dma end:0 0 0 0
+irq time: 9333 ns
+dma enable: 0x0 0x0 0x0 0x0
+buf_cnt in drv: 0 0 0 0
+total buf_cnt: 0 0 0 0
+per-stream observability:
+	stream[0] generation:1 dma_mode:0x0 fs:0 fe:0 dma:0 vb2:0 sequence:0
+		start:105774851195 last_fs:0 last_fe:0 last_dma:0 last_vb2:0
+		irq_to_vb2_ns last/min/max:0/0/0
+	stream[1] generation:0 dma_mode:0x0 fs:0 fe:0 dma:0 vb2:0 sequence:0
+		start:0 last_fs:0 last_fe:0 last_dma:0 last_vb2:0
+		irq_to_vb2_ns last/min/max:0/0/0
+	stream[2] generation:0 dma_mode:0x0 fs:0 fe:0 dma:0 vb2:0 sequence:0
+		start:0 last_fs:0 last_fe:0 last_dma:0 last_vb2:0
+		irq_to_vb2_ns last/min/max:0/0/0
+	stream[3] generation:0 dma_mode:0x0 fs:0 fe:0 dma:0 vb2:0 sequence:0
+		start:0 last_fs:0 last_fe:0 last_dma:0 last_vb2:0
+		irq_to_vb2_ns last/min/max:0/0/0

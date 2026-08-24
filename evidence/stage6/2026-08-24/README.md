@@ -38,3 +38,16 @@ aaf3857972bee7488ef464df5e4c6b57a550942a470b358e9c1ec54ada73bff0  long/thermal-m
 ```
 
 完整结论见`docs/阶段六双路并采基线.md`。
+
+## P1.6-B RKCIF可观测性
+
+| 目录/文件 | 内容 |
+|---|---|
+| `observability/kernel-build-online-path.log` | 含TOISP online插点的Kernel成功构建日志 |
+| `observability/first-boot/` | #6内核确认trace注册、发现online路径缺口的原始数据 |
+| `observability/runtime/rkcif-observability-stage6-final/` | #7内核online双路proc/trace/自动门禁 |
+| `observability/runtime/rkcif-observability-stage6-trace-off/` | 同规模trace关闭A/B结果 |
+| `observability/runtime/rkcif-raw-*.log` | RAW 300帧、proc快照和完整trace |
+
+正式结果：online双路与RAW均PASS；online trace FS/FE/DMA为310/310/310，
+RAW trace FS/FE/DMA/VB2为309/308/308/308，IRQ→VB2为1.166–19.834µs。
