@@ -75,3 +75,9 @@ RAW trace FS/FE/DMA/VB2为309/308/308/308，IRQ→VB2为1.166–19.834µs。
   queue error的热日志、dmesg与资源样本。
 - `soak/mlx-frame-recovery-kernel-build.log`：单次坏Subpage恢复修正版的
   Kernel成功构建日志。
+
+## MLX恢复修正版10分钟回归
+
+`soak/10min-recovery/`保存#10内核的压缩逐帧日志、资源采样、汇总与SHA-256。
+结果为18000 NV12 + 4800 Meta，0 gap/0错误，MLX
+no-buffer/duplicate/invalid=0/0/0，L1误报0。
