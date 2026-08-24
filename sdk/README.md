@@ -13,7 +13,8 @@ patches/u-boot-network-boot.patch
   Lab-specific U-Boot TFTP/NFS defaults and TFTP block-size optimization.
 
 overlay/kernel/
-  New DTSI files and built-in wrappers that are untracked in the vendor tree.
+  New DTSI files, built-in wrappers and the RKCIF tracepoint header that are
+  untracked in the vendor tree.
 
 overlay/projects/scripts/deploy_net_boot.sh
   Shared Image/DTB/NFS deployment helper.

@@ -104,6 +104,7 @@ kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-imx415-stage2.dtsi
 kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-mlx90640-stage5.dtsi
 kernel/drivers/media/i2c/zzh_imx415_builtin.c
 kernel/drivers/media/i2c/zzh_mlx90640_builtin.c
+kernel/drivers/media/platform/rockchip/cif/trace.h
 projects/scripts/deploy_net_boot.sh'
 
 for relative in $OVERLAYS; do

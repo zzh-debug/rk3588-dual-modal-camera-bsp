@@ -1,6 +1,6 @@
 # 基于 RK3588 的 IMX415 MIPI 双模态成像 BSP 适配与采集链路可靠性开发
 
-> 当前进度：P1.6-A IMX415 4K NV12 + MLX90640 ZMLX Meta双路并采基线通过；进入RKCIF可观测性与L1错误传播  
+> 当前进度：P1.6-B RKCIF逐stream统计与trace已实现、编译并部署；等待新内核真机验收  
 > 目标平台：ATK-DLRK3588，Rockchip Linux 5.10.209  
 > 项目关系：本项目独立开发；项目二使用本项目验证通过的稳定接口
 
@@ -25,7 +25,7 @@ U-Boot 修改仍位于 SDK 原有目录，不在此处复制或迁移。
 - 基于 Rockchip Linux 5.10 SDK 完成 Loader、U-Boot、Kernel、DTB 及 Buildroot RootFS 构建，打通“TFTP 加载 Image/DTB + NFS RootFS”网络启动调试链路，并保留 eMMC 原厂启动和镜像回退路径；通过调优 TFTP Blocksize 并启用 U-Boot IP 分片重组，将 36 MiB Image 下载速度由约 1.4 MiB/s 提升至 4.1 MiB/s。
 - 基于原理图和厂商参考实现，独立完成 IMX415 驱动及设备树适配，实现 I2C 识别、MCLK、RESET/PWDN 控制和 3864×2192 RAW10 30 fps 采集，并接入 V4L2 Subdev 及曝光、增益、VBLANK 控制；完成 Sensor-RKCIF-RKISP 媒体链路配置，通过独立 compatible 和 DTB 保留原厂方案进行 A/B 验证。
 - 参考并分析内核 `video-i2c` 中的 MLX90640 实现，完成独立热成像采集驱动，采用 400 kHz 分段 I2C 读取并缓存 EEPROM 校准数据，实现 Chess 模式双 Subpage 配对组帧；基于 V4L2 Meta/VB2 向用户态输出热成像数据，支持 MMAP、poll 和时间戳，并完善 STREAMOFF 及异常路径下的 Buffer 回收。
-- 针对采集卡死和丢帧问题，在 RKCIF 中补充 FS/FE、DMA Buffer 切换、VB2 完成及无可用 Buffer 等 debugfs 统计与 tracepoint 跟踪；增加带采集代际校验的帧超时检测，通过 `vb2_queue_error()` 向用户态传播异常，避免残留超时任务影响新的采集会话，并验证用户态关闭、重开后的采集恢复。
+- 针对采集卡死和丢帧问题，在 RKCIF 中补充 FS/FE、DMA Buffer 切换、VB2 完成及无可用 Buffer等现有procfs快照与tracepoint跟踪；增加带采集代际校验的帧超时检测，通过 `vb2_queue_error()` 向用户态传播异常，避免残留超时任务影响新的采集会话，并验证用户态关闭、重开后的采集恢复。
 - 完成 IMX415 与 MLX90640 双路并行采集及白光 LED GPIO/PWM 控制，并编写自动化部署、故障注入和稳定性测试脚本；覆盖重复 STREAMON/OFF、慢速 DQBUF、I2C 异常及长时间并采等场景，验证 Buffer 回收、错误传播和异常退出后的重新采集能力。
 
 ## 2. 当前进展
@@ -39,9 +39,9 @@ U-Boot 修改仍位于 SDK 原有目录，不在此处复制或迁移。
 | IMX415 Media Graph/RKCIF RAW/RKISP NV12 | P1.3 目标路径板端验收通过 | `docs/阶段三总结.md`；GB10/NV12 单帧、300/3000 帧，sequence 无断号、RKISP ErrCnt=0；曝光/增益亮度变化与 VBLANK 15/30 fps 动态验证 | ISP IQ/标准色卡画质和 Host 故障恢复保留到具备相应标定与故障门禁时 |
 | MLX90640 原始传输 | P1.4 板端功能验收通过；仪器波形不纳入当前验收，FOV型号在项目二标定前确认 | `docs/阶段四总结.md`；`0x33`、EEPROM 20/20 同哈希；400 kHz；8/16 Hz 各20个正式 Subpage，0交替/周期/数据错误；控制寄存器恢复 | P1.5 冻结版本化 V4L2 Meta/VB2 ABI；项目二跨光谱标定前确认精确FOV型号 |
 | MLX90640 V4L2 Meta/VB2 | P1.5 built-in正式验收通过 | `docs/阶段五总结.md`、`evidence/stage5/2026-08-24/builtin/`；自动probe、1664-byte NVMEM黄金哈希、`ZMLX` 3400-byte、200对/10周期、control恢复和共享总线回归通过 | 向P1.6/项目二提供稳定热阵列ABI；后续故障注入继续复用该接口 |
-| RKCIF 增量观测和 L1 恢复 | 未实现 | 原厂 IRQ/procfs/reset 框架存在 | 独立 diff、trace/debugfs 数据、可控故障、Buffer 守恒和用户态重开 |
+| RKCIF 增量观测和 L1 恢复 | P1.6-B逐stream统计/trace已实现、编译并部署；板端待验收，L1恢复未实现 | `docs/阶段六RKCIF可观测性.md`；独立generation、FS/FE/DMA/VB2/延迟快照，默认关闭tracepoint，Kernel分项编译和SDK复现检查PASS | 重启加载新Image，运行自动门禁；通过后实现generation-aware timeout和`vb2_queue_error()` |
 | LED GPIO/PWM | 需新增硬件 | 仅有板级候选引脚分析 | 外部恒流/MOSFET、电源/PWM 冲突表、波形、电流、温升和默认关 |
-| 双路并采与可靠性矩阵 | P1.6-A双路基线通过；完整长稳/故障矩阵待做 | `docs/阶段六双路并采基线.md`；300 NV12+80 Meta与3000 NV12+800 Meta均PASS，可见光0 gap/0 bad bytes，MLX no-buffer/duplicate=0/0，RKISP ErrCnt=0 | 进入逐stream可观测性、trace、L1错误传播、2小时并采和故障矩阵 |
+| 双路并采与可靠性矩阵 | P1.6-A双路基线通过；完整长稳/故障矩阵待做 | `docs/阶段六双路并采基线.md`；300 NV12+80 Meta与3000 NV12+800 Meta均PASS，可见光0 gap/0 bad bytes，MLX no-buffer/duplicate=0/0，RKISP ErrCnt=0 | 完成P1.6-B真机门禁，再进入L1错误传播、2小时并采和故障矩阵 |
 
 ## 3. 开发计划
 
@@ -71,6 +71,7 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
 - `docs/阶段五总结.md`
 - `docs/阶段六实施计划.md`
 - `docs/阶段六双路并采基线.md`
+- `docs/阶段六RKCIF可观测性.md`
 - `docs/independent-imx415-bringup-plan.md`
 - `docs/resume-project-feasibility-audit.md`
 - `docs/feasibility-study.md`

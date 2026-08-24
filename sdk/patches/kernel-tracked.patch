@@ -99,3 +99,285 @@ index 4b6ade1a6..220f1b1e4 100644
  obj-$(CONFIG_VIDEO_IMX464)	+= imx464.o
  obj-$(CONFIG_VIDEO_IMX492)	+= imx492.o
  obj-$(CONFIG_VIDEO_IMX355)	+= imx355.o
+diff --git a/drivers/media/platform/rockchip/cif/capture.c b/drivers/media/platform/rockchip/cif/capture.c
+index bb9ca9b8f..6a4426f5d 100644
+--- a/drivers/media/platform/rockchip/cif/capture.c
++++ b/drivers/media/platform/rockchip/cif/capture.c
+@@ -28,6 +28,9 @@
+ #include "rkcif-externel.h"
+ #include "../../../i2c/cam-tb-setup.h"
+ 
++#define CREATE_TRACE_POINTS
++#include "trace.h"
++
+ #define CIF_REQ_BUFS_MIN	1
+ #define CIF_MIN_WIDTH		64
+ #define CIF_MIN_HEIGHT		64
+@@ -54,6 +57,71 @@
+  */
+ #define MEMORY_ALIGN_ROUND_UP_HEIGHT		16
+ 
++static void rkcif_observe_reset(struct rkcif_stream *stream)
++{
++	struct rkcif_observe_stats *observe = &stream->observe;
++	unsigned long flags;
++	u64 generation;
++
++	spin_lock_irqsave(&stream->observe_lock, flags);
++	generation = observe->generation + 1;
++	memset(observe, 0, sizeof(*observe));
++	observe->generation = generation;
++	observe->stream_start_ns = rkcif_time_get_ns(stream->cifdev);
++	spin_unlock_irqrestore(&stream->observe_lock, flags);
++}
++
++static void rkcif_observe_event(struct rkcif_stream *stream,
++				enum rkcif_observe_event event,
++				u64 timestamp_ns,
++				u32 sequence,
++				u64 irq_timestamp_ns)
++{
++	struct rkcif_observe_stats *observe = &stream->observe;
++	unsigned long flags;
++	u64 generation;
++	u64 latency_ns = 0;
++	u32 dma_mode = READ_ONCE(stream->dma_en);
++
++	if (irq_timestamp_ns && timestamp_ns >= irq_timestamp_ns)
++		latency_ns = timestamp_ns - irq_timestamp_ns;
++
++	spin_lock_irqsave(&stream->observe_lock, flags);
++	switch (event) {
++	case RKCIF_OBSERVE_FS:
++		observe->fs_count++;
++		observe->last_fs_ns = timestamp_ns;
++		break;
++	case RKCIF_OBSERVE_FE:
++		observe->fe_count++;
++		observe->last_fe_ns = timestamp_ns;
++		break;
++	case RKCIF_OBSERVE_DMA:
++		observe->dma_update_count++;
++		observe->last_dma_ns = timestamp_ns;
++		observe->last_dma_mode = dma_mode;
++		break;
++	case RKCIF_OBSERVE_VB2_DONE:
++		observe->vb2_done_count++;
++		observe->last_vb2_done_ns = timestamp_ns;
++		observe->last_irq_to_vb2_ns = latency_ns;
++		if (latency_ns &&
++		    (!observe->min_irq_to_vb2_ns ||
++		     latency_ns < observe->min_irq_to_vb2_ns))
++			observe->min_irq_to_vb2_ns = latency_ns;
++		if (latency_ns > observe->max_irq_to_vb2_ns)
++			observe->max_irq_to_vb2_ns = latency_ns;
++		break;
++	}
++	observe->last_sequence = sequence;
++	generation = observe->generation;
++	spin_unlock_irqrestore(&stream->observe_lock, flags);
++
++	trace_rkcif_stream_event(dev_name(stream->cifdev->dev),
++				 stream->id, generation, event, sequence,
++				 dma_mode, timestamp_ns, latency_ns);
++}
++
+ /* Get xsubs and ysubs for fourcc formats
+  *
+  * @xsubs: horizontal color samples in a 4*4 matrix, for yuv
+@@ -7148,6 +7216,8 @@ int rkcif_do_start_stream(struct rkcif_stream *stream, enum rkcif_stream_mode mo
+ 		v4l2_err(v4l2_dev, "stream in busy state\n");
+ 		goto destroy_buf;
+ 	}
++	if (stream->cur_stream_mode == RKCIF_STREAM_MODE_NONE)
++		rkcif_observe_reset(stream);
+ 	if (stream->dma_en == 0)
+ 		stream->fs_cnt_in_single_frame = 0;
+ 	if (stream->is_line_wake_up)
+@@ -7612,6 +7682,7 @@ void rkcif_stream_init(struct rkcif_device *dev, u32 id)
+ 	INIT_LIST_HEAD(&stream->rockit_buf_head);
+ 	spin_lock_init(&stream->vbq_lock);
+ 	spin_lock_init(&stream->fps_lock);
++	spin_lock_init(&stream->observe_lock);
+ 	stream->state = RKCIF_STATE_READY;
+ 	init_waitqueue_head(&stream->wq_stopped);
+ 
+@@ -8660,6 +8731,8 @@ void rkcif_vb_done_oneframe(struct rkcif_stream *stream,
+ 			    struct vb2_v4l2_buffer *vb_done)
+ {
+ 	const struct cif_output_fmt *fmt = stream->cif_fmt_out;
++	struct rkcif_buffer *cifbuf = to_rkcif_buffer(vb_done);
++	u64 done_ns;
+ 	u32 i;
+ 
+ 	/* Dequeue a filled buffer */
+@@ -8668,6 +8741,11 @@ void rkcif_vb_done_oneframe(struct rkcif_stream *stream,
+ 				      stream->pixm.plane_fmt[i].sizeimage);
+ 	}
+ 
++	done_ns = rkcif_time_get_ns(stream->cifdev);
++	rkcif_observe_event(stream, RKCIF_OBSERVE_VB2_DONE,
++			    done_ns, vb_done->sequence,
++			    cifbuf->fe_timestamp);
++
+ 	vb2_buffer_done(&vb_done->vb2_buf, VB2_BUF_STATE_DONE);
+ 	v4l2_dbg(2, rkcif_debug, &stream->cifdev->v4l2_dev,
+ 		 "stream[%d] vb done, index: %d, sequence %d\n", stream->id,
+@@ -12790,6 +12868,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
+ 				intstat &= ~CSI_FRAME_END_ID3;
+ 				break;
+ 			}
++			rkcif_observe_event(stream, RKCIF_OBSERVE_FE,
++					    rkcif_time_get_ns(cif_dev),
++					    stream->frame_idx ? stream->frame_idx - 1 : 0,
++					    0);
+ 			if (stream->cifdev->rdbk_debug &&
+ 			    stream->frame_idx < 15 &&
+ 			    (!cif_dev->sditf[0] || cif_dev->sditf[0]->mode.rdbk_mode))
+@@ -12826,6 +12908,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
+ 					 "dma capture by vicap, is_updata %d, group mode %d, dma_en %d\n",
+ 					 is_update, cif_dev->sync_cfg.type, stream->dma_en);
+ 				if (is_update) {
++					rkcif_observe_event(stream, RKCIF_OBSERVE_DMA,
++							    rkcif_time_get_ns(cif_dev),
++							    stream->frame_idx ? stream->frame_idx - 1 : 0,
++							    0);
+ 					if (rkcif_get_interlace_mode(stream) == RKCIF_INTERLACE_SOFT_AUTO)
+ 						rkcif_update_stream_interlace(cif_dev, stream, mipi_id);
+ 					else
+@@ -12835,11 +12921,19 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
+ 				v4l2_dbg(4, rkcif_debug, &cif_dev->v4l2_dev,
+ 					 "dma capture by isp, dma_en 0x%x\n",
+ 					 stream->dma_en);
++				rkcif_observe_event(stream, RKCIF_OBSERVE_DMA,
++						    rkcif_time_get_ns(cif_dev),
++						    stream->frame_idx ? stream->frame_idx - 1 : 0,
++						    0);
+ 				rkcif_update_stream_toisp(cif_dev, stream, mipi_id);
+ 			} else if (stream->dma_en & RKCIF_DMAEN_BY_ROCKIT) {
+ 				v4l2_dbg(4, rkcif_debug, &cif_dev->v4l2_dev,
+ 					 "dma capture by rockit, dma_en 0x%x\n",
+ 					 stream->dma_en);
++				rkcif_observe_event(stream, RKCIF_OBSERVE_DMA,
++						    rkcif_time_get_ns(cif_dev),
++						    stream->frame_idx ? stream->frame_idx - 1 : 0,
++						    0);
+ 				rkcif_update_stream_rockit(cif_dev, stream, mipi_id);
+ 			}
+ 			spin_lock_irqsave(&stream->fps_lock, fps_flags);
+@@ -12930,6 +13024,10 @@ void rkcif_irq_pingpong_v1(struct rkcif_device *cif_dev)
+ 						sditf_event_inc_sof(cif_dev->sditf[stream->id]);
+ 					spin_unlock_irqrestore(&stream->fps_lock, flags);
+ 				}
++				rkcif_observe_event(stream, RKCIF_OBSERVE_FS,
++						    rkcif_time_get_ns(cif_dev),
++						    stream->frame_idx ? stream->frame_idx - 1 : 0,
++						    0);
+ 				stream->is_in_vblank = false;
+ 				spin_lock_irqsave(&stream->vbq_lock, flags);
+ 				if (stream->stopping && stream->dma_en) {
+diff --git a/drivers/media/platform/rockchip/cif/dev.h b/drivers/media/platform/rockchip/cif/dev.h
+index 9f51fbe86..5071939ab 100644
+--- a/drivers/media/platform/rockchip/cif/dev.h
++++ b/drivers/media/platform/rockchip/cif/dev.h
+@@ -350,6 +350,36 @@ struct rkcif_readout_stats {
+ 	u64 total_time;
+ };
+ 
++enum rkcif_observe_event {
++	RKCIF_OBSERVE_FS = 0,
++	RKCIF_OBSERVE_FE,
++	RKCIF_OBSERVE_DMA,
++	RKCIF_OBSERVE_VB2_DONE,
++};
++
++/*
++ * Per-stream, low-overhead observability added on top of the vendor-wide
++ * irq_stats counters. Writers run from IRQ/tasklet context and readers take
++ * observe_lock before copying a snapshot for procfs.
++ */
++struct rkcif_observe_stats {
++	u64 generation;
++	u64 stream_start_ns;
++	u64 fs_count;
++	u64 fe_count;
++	u64 dma_update_count;
++	u64 vb2_done_count;
++	u64 last_fs_ns;
++	u64 last_fe_ns;
++	u64 last_dma_ns;
++	u64 last_vb2_done_ns;
++	u64 last_irq_to_vb2_ns;
++	u64 min_irq_to_vb2_ns;
++	u64 max_irq_to_vb2_ns;
++	u32 last_sequence;
++	u32 last_dma_mode;
++};
++
+ /* struct rkcif_irq_stats - take notes on irq number
+  * @csi_overflow_cnt: count of csi overflow irq
+  * @csi_bwidth_lack_cnt: count of csi bandwidth lack irq
+@@ -535,6 +565,7 @@ struct rkcif_stream {
+ 
+ 	spinlock_t vbq_lock; /* vfd lock */
+ 	spinlock_t fps_lock;
++	spinlock_t observe_lock;
+ 	/* TODO: pad for dvp and mipi separately? */
+ 	struct media_pad		pad;
+ 
+@@ -545,6 +576,7 @@ struct rkcif_stream {
+ 	struct rkcif_fps_stats		fps_stats;
+ 	struct rkcif_extend_info	extend_line;
+ 	struct rkcif_readout_stats	readout;
++	struct rkcif_observe_stats	observe;
+ 	unsigned int			fs_cnt_in_single_frame;
+ 	unsigned int			capture_mode;
+ 	struct rkcif_scale_vdev		*scale_vdev;
+diff --git a/drivers/media/platform/rockchip/cif/procfs.c b/drivers/media/platform/rockchip/cif/procfs.c
+index d9f063f63..b5ec2a447 100644
+--- a/drivers/media/platform/rockchip/cif/procfs.c
++++ b/drivers/media/platform/rockchip/cif/procfs.c
+@@ -250,7 +250,9 @@ static void rkcif_show_format(struct rkcif_device *dev, struct seq_file *f)
+ 	struct v4l2_subdev_selection *sel = &sensor->selection;
+ 	u32 i, mbus_flags;
+ 	u64 fps, timestamp0, timestamp1;
++	struct rkcif_observe_stats observe;
+ 	unsigned long flags;
++	unsigned long observe_flags;
+ 	u32 time_val = 0;
+ 
+ 	if (atomic_read(&pipe->stream_cnt) < 1)
+@@ -381,6 +383,33 @@ static void rkcif_show_format(struct rkcif_device *dev, struct seq_file *f)
+ 			   dev->stream[1].total_buf_num,
+ 			   dev->stream[2].total_buf_num,
+ 			   dev->stream[3].total_buf_num);
++		seq_puts(f, "per-stream observability:\n");
++		for (i = 0; i < RKCIF_MAX_STREAM_MIPI; i++) {
++			spin_lock_irqsave(&dev->stream[i].observe_lock,
++					  observe_flags);
++			observe = dev->stream[i].observe;
++			spin_unlock_irqrestore(&dev->stream[i].observe_lock,
++					       observe_flags);
++			seq_printf(f,
++				   "\tstream[%u] generation:%llu dma_mode:0x%x "
++				   "fs:%llu fe:%llu dma:%llu vb2:%llu sequence:%u\n",
++				   i, observe.generation, observe.last_dma_mode,
++				   observe.fs_count, observe.fe_count,
++				   observe.dma_update_count,
++				   observe.vb2_done_count,
++				   observe.last_sequence);
++			seq_printf(f,
++				   "\t\tstart:%llu last_fs:%llu last_fe:%llu "
++				   "last_dma:%llu last_vb2:%llu\n",
++				   observe.stream_start_ns, observe.last_fs_ns,
++				   observe.last_fe_ns, observe.last_dma_ns,
++				   observe.last_vb2_done_ns);
++			seq_printf(f,
++				   "\t\tirq_to_vb2_ns last/min/max:%llu/%llu/%llu\n",
++				   observe.last_irq_to_vb2_ns,
++				   observe.min_irq_to_vb2_ns,
++				   observe.max_irq_to_vb2_ns);
++		}
+ 	}
+ }
+ 
