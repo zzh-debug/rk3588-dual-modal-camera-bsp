@@ -1,0 +1,35 @@
+[   22.192096] Goodix-TS 5-0014: supply AVDD28 not found, using dummy regulator
+[   22.192156] Goodix-TS 5-0014: supply VDDIO not found, using dummy regulator
+[   22.284106] Goodix-TS 5-0014: ID 911, version: 1060
+[   22.587485] zzh_mlx90640 5-0033: EEPROM cached, reference ID 131a-4948-0190
+[   22.587597] zzh_mlx90640 5-0033: registered Meta v1 (3400 bytes), status=0x0008 control=0x1901, 16 Hz subpages
+[  136.393943] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  138.955255] zzh_mlx90640 5-0033: restored control 0x1901
+[  138.955360] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  139.081555] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  141.644958] zzh_mlx90640 5-0033: restored control 0x1901
+[  141.644988] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  141.768620] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  144.331111] zzh_mlx90640 5-0033: restored control 0x1901
+[  144.331142] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  144.452628] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  147.017521] zzh_mlx90640 5-0033: restored control 0x1901
+[  147.017552] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  147.139159] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  149.702827] zzh_mlx90640 5-0033: restored control 0x1901
+[  149.702921] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  149.834711] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  152.395089] zzh_mlx90640 5-0033: restored control 0x1901
+[  152.395119] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  152.520258] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  155.079841] zzh_mlx90640 5-0033: restored control 0x1901
+[  155.079870] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  155.204398] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  157.768306] zzh_mlx90640 5-0033: restored control 0x1901
+[  157.768336] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  157.897817] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  160.462924] zzh_mlx90640 5-0033: restored control 0x1901
+[  160.462954] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[  160.582432] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  163.143993] zzh_mlx90640 5-0033: restored control 0x1901
+[  163.144023] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0

@@ -1,0 +1,56 @@
+# 本文件是教学镜像，不会被内核顶层 Kconfig source。
+# 权威文件：projects/rk3588_camera_bsp/driver/Kconfig
+
+# CONFIG_VIDEO_ZZH_IMX415_MINIMAL 是阶段一配置符号；本文件下方还定义了并列的
+# 阶段二 CONFIG_VIDEO_ZZH_IMX415，两个符号对应两条独立 compatible 路径。
+# tristate 允许三种值：
+#   y：编进 Image；
+#   m：编译成 zzh_imx415_minimal.ko；
+#   n：不编译。
+# 阶段一选择 m，便于在板端反复 modprobe/modprobe -r 验证 probe/remove。
+config VIDEO_ZZH_IMX415_MINIMAL
+	tristate "ZZH IMX415 minimal I2C identification driver"
+
+	# 驱动通过 Linux I2C core 发送 i2c_msg，必须启用 I2C。
+	depends on I2C
+
+	# 驱动通过 OF compatible 与 DTS 节点匹配，必须启用 Device Tree。
+	depends on OF
+
+	# RESET/PWDN 使用 descriptor GPIO API，需要 GPIOLIB。
+	depends on GPIOLIB
+
+	# MCLK 使用 clk_set_rate()/clk_prepare_enable()，需要 Common Clock Framework。
+	depends on COMMON_CLK
+
+	# 代码支持“全部三路 regulator 都存在”或“模组本地 LDO”两种板级情况。
+	depends on REGULATOR
+	help
+	  Build the isolated stage-one IMX415 hardware-contract experiment.
+	  This driver intentionally has no V4L2, media-controller, streaming,
+	  mode-table, or Rockchip ISP/CIF dependency.
+
+# CONFIG_VIDEO_ZZH_IMX415 是阶段二独立固定模式 Sensor 配置符号。
+# 它与 MINIMAL 是两个并列模块选项，不是同一个模块的模式开关。实验 DTB 只能
+# 启用一个同地址 compatible，因此正常板测也只加载与当前 DTB 对应的模块。
+config VIDEO_ZZH_IMX415
+	tristate "ZZH IMX415 fixed-mode V4L2 sensor driver"
+
+	# 继承阶段一的 I2C、Device Tree、GPIO、clock 和 regulator 资源依赖。
+	depends on I2C
+	depends on OF
+	depends on GPIOLIB
+	depends on COMMON_CLK
+	depends on REGULATOR
+
+	# V4L2 Subdev、Controls 和 async Sensor 注册依赖 VIDEO_V4L2。
+	depends on VIDEO_V4L2
+
+	# 一个 source pad 和 Sensor entity 依赖 Media Controller core。
+	depends on MEDIA_CONTROLLER
+	help
+	  Build the isolated stage-two IMX415 experiment for ATK-DLRK3588
+	  J20. The driver exposes one 3864x2192 RAW10 30 fps mode, standard
+	  V4L2 sub-device format operations, exposure/gain/blanking controls,
+	  and runtime power management. It does not implement HDR, Rockchip
+	  private camera ioctls, RKCIF recovery, or RKISP tuning.

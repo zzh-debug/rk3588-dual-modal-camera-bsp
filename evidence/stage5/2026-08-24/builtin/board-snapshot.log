@@ -1,0 +1,10 @@
+DATE=1970-01-01 00:03:08 +0000
+Linux ATK-DLRK3588 5.10.209 #5 SMP Sun Aug 23 23:37:16 CST 2026 aarch64 GNU/Linux
+storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  rootwait rw earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs nfsroot=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588,v3,tcp ip=192.168.5.20:192.168.5.11::255.255.255.0:atk-dlrk3588:eth0:off androidboot.fwver=ddr-v1.17-3488111f83,spl-v1.13,bl31-v1.46,bl32-v1.16,uboot-23c0020-di-07/31/2026
+192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588 on / type nfs (rw,relatime,vers=3,rsize=4096,wsize=4096,namlen=255,hard,nolock,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.5.11,mountvers=3,mountproto=tcp,local_lock=all,addr=192.168.5.11)
+I2C5_CLOCK= 00 06 1a 80
+CONFIG_VIDEO_ZZH_MLX90640=y
+../../../../../bus/i2c/drivers/zzh_mlx90640
+1664 /sys/bus/nvmem/devices/zzh_mlx90640_eeprom-5-33/nvmem
+cc4628409b57ca3137065b10fd40c684fcef9d16ab493ace882710ad490185b2  /sys/bus/nvmem/devices/zzh_mlx90640_eeprom-5-33/nvmem
+c69d40e8b99e79484e028808d16737b05d55564f1c5b3803c13bce3ab5431ffc  /usr/local/sbin/verify_mlx90640_stage5

@@ -1,0 +1,19 @@
+* text=auto
+*.c text eol=lf
+*.h text eol=lf
+*.dts text eol=lf
+*.dtsi text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.log text eol=lf
+*.patch text eol=lf
+
+# Markdown uses CommonMark two-space hard breaks; logs and patch payloads must
+# preserve captured/source whitespace exactly.
+*.md whitespace=-blank-at-eol,-blank-at-eof
+*.log -whitespace
+*.patch -whitespace
+*.jpg binary
+*.png binary
+*.pdf binary
+*.zip binary

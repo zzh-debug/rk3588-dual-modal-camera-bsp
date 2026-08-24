@@ -1,0 +1,64 @@
+diff --git a/include/configs/evb_rk3588.h b/include/configs/evb_rk3588.h
+index 737ee68..04c61bb 100644
+--- a/include/configs/evb_rk3588.h
++++ b/include/configs/evb_rk3588.h
+@@ -11,10 +11,58 @@
+ 
+ #ifndef CONFIG_SPL_BUILD
+ 
++/*
++ * Network boot defaults for the ATK-DLRK3588 lab setup. CONFIG_ENV_IS_NOWHERE
++ * is set on this SDK, so saveenv is a no-op and anything we want to keep has
++ * to be compiled into the default environment.
++ *
++ * "nfsboot" only fetches the kernel and rewrites /chosen/bootargs in the DTB
++ * that init_kernel_dtb() already auto-selected from resource.img via SARADC
++ * ch7 (arch/arm/mach-rockchip/resource_hwid.c). TFTP'ing a fixed DTB instead
++ * would bypass that panel detection and light up the wrong LCD timing - that
++ * is what "nfsbootfdt" does, kept only for A/B debugging.
++ *
++ * CONFIG_BOOTCOMMAND is deliberately left alone: a plain reset still boots
++ * from eMMC, "run nfsboot" is the only way into the network path.
++ */
++#define ATK_NET_BOOT_SETTINGS \
++		"ipaddr=192.168.5.20\0" \
++		"serverip=192.168.5.11\0" \
++		"netmask=255.255.255.0\0" \
++		"nfsimage=atk_dlrk3588/Image\0" \
++		"nfsfdt=atk_dlrk3588/rk3588-alientek-nfs.dtb\0" \
++		"nfsargs=earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 " \
++			"irqchip.gicv3_pseudo_nmi=0 rootwait " \
++			"rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs rw " \
++			"nfsroot=192.168.5.11:/home/zzh/workspace/myproject/" \
++			"nfs_rootfs/atk_dlrk3588,v3,tcp " \
++			"ip=192.168.5.20:192.168.5.11::255.255.255.0:" \
++			"atk-dlrk3588:eth0:off\0" \
++		"nfsboot=tftp ${kernel_addr_r} ${nfsimage};" \
++			"fdt addr ${fdt_addr_r};" \
++			"fdt resize 1024;" \
++			"fdt set /chosen bootargs \"${nfsargs}\";" \
++			"booti ${kernel_addr_r} - ${fdt_addr_r}\0" \
++		"nfsbootfdt=tftp ${kernel_addr_r} ${nfsimage};" \
++			"tftp ${fdt_addr_r} ${nfsfdt};" \
++			"booti ${kernel_addr_r} - ${fdt_addr_r}\0"
++
+ #undef ROCKCHIP_DEVICE_SETTINGS
+ #define ROCKCHIP_DEVICE_SETTINGS \
+ 		"stdout=serial,vidconsole\0" \
+-		"stderr=serial,vidconsole\0"
++		"stderr=serial,vidconsole\0" \
++		ATK_NET_BOOT_SETTINGS
++
++/*
++ * TFTP throughput: the transfer is round-trip bound, not bandwidth bound -
++ * one ACK per block over a ~1.1ms RTT caps the default 1468-byte blocks at
++ * ~1.4 MiB/s, so the 36 MiB kernel takes ~26s. Asking for 8192-byte blocks
++ * needs IP reassembly on our side since they arrive fragmented; the defrag
++ * buffer defaults to 16384 bytes (net/net.c), which covers it. Same pairing
++ * apalis_imx6.h and apalis_t30.h use.
++ */
++#define CONFIG_IP_DEFRAG
++#define CONFIG_TFTP_BLOCKSIZE		8192
+ 
+ #define CONFIG_SYS_MMC_ENV_DEV		0
+ 

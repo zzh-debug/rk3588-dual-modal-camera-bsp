@@ -1,0 +1,27 @@
+# Out-of-tree kernel module products
+driver/*.o
+driver/*.ko
+driver/*.mod
+driver/*.mod.c
+driver/.*.cmd
+driver/Module.symvers
+driver/modules.order
+driver/.tmp_versions/
+
+# Local build/output directories
+build/
+out/
+tmp/
+
+# Large raw captures are not source evidence
+evidence/**/*.raw
+evidence/**/*.bin
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

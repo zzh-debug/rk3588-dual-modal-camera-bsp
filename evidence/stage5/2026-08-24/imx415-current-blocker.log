@@ -1,0 +1,5 @@
+of:Nimx415-stage2T(null)Czzh,imx415
+[   27.614821] zzh_imx415 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[   27.616532] zzh_imx415 3-001a: failed to read reference register 0x311a: -6
+[13564.769802] zzh_imx415 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[13564.771953] zzh_imx415 3-001a: failed to read reference register 0x311a: -6

@@ -1,0 +1,20 @@
+Driver Info:
+	Driver name      : zzh_mlx90640
+	Card type        : zzh-mlx90640-meta
+	Bus info         : I2C:5-0033
+	Driver version   : 5.10.209
+	Capabilities     : 0x85a00000
+		Metadata Capture
+		Read/Write
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x05a00000
+		Metadata Capture
+		Read/Write
+		Streaming
+		Extended Pix Format
+Priority: 2
+Format Metadata Capture:
+	Sample Format   : 'ZMLX' (ZMLX)
+	Buffer Size     : 3400

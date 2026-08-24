@@ -1,0 +1,128 @@
+=== IMX415 STAGE1 BOARD EVIDENCE ===
+Board RTC is unset; use host collection time for test date.
+Linux ATK-DLRK3588 5.10.209 #2 SMP Thu Jul 30 22:17:07 CST 2026 aarch64 GNU/Linux
+ 00:08:19 up 8 min,  1 user,  load average: 1.61, 1.15, 0.59
+cmdline=storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  rootwait rw earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs nfsroot=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588,v3,tcp ip=192.168.5.20:192.168.5.11::255.255.255.0:atk-dlrk3588:eth0:off androidboot.fwver=ddr-v1.17-3488111f83,spl-v1.13,bl31-v1.46,bl32-v1.16,uboot-23c0020-di-07/31/2026
+root_mount=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588 on / type nfs (rw,relatime,vers=3,rsize=4096,wsize=4096,namlen=255,hard,nolock,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.5.11,mountvers=3,mountproto=tcp,local_lock=all,addr=192.168.5.11)
+rootfs_source=NFS rootfs (192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588)
+exported from buildroot/output/alientek_rk3588/images/rootfs.ext2
+connman disabled: etc/init.d/S45connman -> K45connman
+eth0             UP             192.168.5.20/24 fe80::d471:faff:fe13:dadd/64 
+carrier=1
+minimal_compatible=zzh,imx415-minimal
+minimal_status=okay
+minimal_reg= 00 00 00 1a
+vendor_compatible=sony,imx415
+vendor_status=disabled
+i2c_client=imx415-minimal
+bound_driver=/sys/bus/i2c/drivers/zzh_imx415_minimal
+filename:       /lib/modules/5.10.209/extra/zzh_imx415_minimal.ko
+license:        GPL v2
+author:         zzh
+description:    ZZH IMX415 minimal I2C identification driver
+alias:          of:N*T*Czzh,imx415-minimalC*
+alias:          of:N*T*Czzh,imx415-minimal
+alias:          i2c:zzh_imx415_minimal
+depends:        
+name:           zzh_imx415_minimal
+vermagic:       5.10.209 SMP mod_unload aarch64
+9a82e8127cc9726e718adeb5715fd2a008c0e40d5f0f2253c63bb76b6560167b  /lib/modules/5.10.209/extra/zzh_imx415_minimal.ko
+signature_matches_total=21
+probe_lines_total=21
+          mclk_i2s3_2ch               0        0        0    12000000          0     0  50000
+          clk_mipi_camaraout_m3       0        1        0    37125000          0     0  50000
+                mclk_spdif3           0        0        0   198000000          0     0  50000
+                   mclk_i2s6_8ch_tx       3        6        0    12288000          0     0  50000
+                   mclk_i2s5_8ch_tx       3        6        0     6144000          0     0  50000
+          mclk_pdm1                   0        0        0   300000000          0     0  50000
+                mclk_pdm0             0        0        0   300000000          0     0  50000
+       armclk_b23                     0        0        0     8000000          0     0  50000
+=== BOOT AND DRIVER DMESG ===
+[  877.796923] Kernel command line: storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  rootwait rw earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs nfsroot=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588,v3,tcp ip=192.168.5.20:192.168.5.11::255.255.255.0:atk-dlrk3588:eth0:off androidboot.fwver=ddr-v1.17-3488111f83,spl-v1.13,bl31-v1.46,bl32-v1.16,uboot-23c0020-di-07/31/2026
+[  883.981028] IP-Config: Complete:
+[  884.073960] VFS: Mounted root (nfs filesystem) on device 0:16.
+[  886.084227] zzh_imx415_minimal: loading out-of-tree module taints kernel.
+[  886.085047] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[  886.085192] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[  886.088104] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[  886.088116] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1247.726045] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1247.726183] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1247.728165] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1247.728191] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1247.792977] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1247.803368] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1247.805565] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1247.805586] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1247.856742] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1247.856876] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1247.859608] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1247.859637] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1247.917938] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1247.918330] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1247.920543] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1247.920568] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1247.972343] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1247.972459] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1247.974810] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1247.974828] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.027735] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.027844] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.030487] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.030513] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.085294] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.085397] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.088056] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.088078] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.137353] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.137524] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.140259] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.140289] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.203720] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.203879] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.206641] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.206676] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.276675] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.276831] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.279472] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.279490] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.330321] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.330414] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.333186] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.333221] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.383949] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.384140] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.386498] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.386517] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.435567] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.435670] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.438147] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.438167] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.489521] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.489628] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.491475] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.491501] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.544899] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.545003] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.547690] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.547709] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.598612] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.600784] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.603437] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.603445] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.652525] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.652682] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.654854] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.654888] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.712527] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.712634] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.714787] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.714804] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.762255] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.762361] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.764804] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.764831] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)
+[ 1248.816241] zzh_imx415_minimal 3-001a: probing adapter rk3x-i2c, 7-bit addr 0x1a (wire write/read 0x34/0x35)
+[ 1248.816379] zzh_imx415_minimal 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[ 1248.818828] zzh_imx415_minimal 3-001a: reference register 0x311a = 0xe0
+[ 1248.818856] zzh_imx415_minimal 3-001a: reference signature matched (vendor reference, not an official unique Chip ID)

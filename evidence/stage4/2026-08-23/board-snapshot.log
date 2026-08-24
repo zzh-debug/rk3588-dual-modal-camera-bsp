@@ -1,0 +1,10 @@
+DATE=1970-01-01 00:07:19 +0000
+storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  rootwait rw earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs nfsroot=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588,v3,tcp ip=192.168.5.20:192.168.5.11::255.255.255.0:atk-dlrk3588:eth0:off androidboot.fwver=ddr-v1.17-3488111f83,spl-v1.13,bl31-v1.46,bl32-v1.16,uboot-23c0020-di-07/31/2026
+192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588 on / type nfs (rw,relatime,vers=3,rsize=4096,wsize=4096,namlen=255,hard,nolock,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.5.11,mountvers=3,mountproto=tcp,local_lock=all,addr=192.168.5.11)
+I2C5_CLOCK_BYTES= 00 06 1a 80
+/sys/bus/i2c/devices/5-0014
+/sys/bus/i2c/devices/5-0022
+/sys/bus/i2c/devices/5-0051
+cc4628409b57ca3137065b10fd40c684fcef9d16ab493ace882710ad490185b2  /tmp/mlx90640-eeprom-400k-be.bin
+951da2fe52f330709462ee486327d37503f4b6090af34af9f5524c96884596e3  /usr/local/sbin/mlx90640_readonly_probe
+cea7f116106389bd2faaf4217ac6e50e90451929af4c68c3d3711d295adb818d  /usr/local/sbin/mlx90640_raw_probe

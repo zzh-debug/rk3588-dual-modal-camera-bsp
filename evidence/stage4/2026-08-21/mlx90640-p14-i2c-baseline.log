@@ -1,0 +1,26 @@
+P14_BASELINE_DATE=2026-08-21
+BOARD=ATK-DLRK3588
+i2c-0	i2c       	rk3x-i2c                        	I2C adapter
+i2c-1	i2c       	rk3x-i2c                        	I2C adapter
+i2c-2	i2c       	rk3x-i2c                        	I2C adapter
+i2c-3	i2c       	rk3x-i2c                        	I2C adapter
+i2c-4	i2c       	rk3x-i2c                        	I2C adapter
+i2c-5	i2c       	rk3x-i2c                        	I2C adapter
+i2c-6	i2c       	rk3x-i2c                        	I2C adapter
+i2c-7	i2c       	rk3x-i2c                        	I2C adapter
+i2c-9	i2c       	ddc                             	I2C adapter
+i2c-10	i2c       	ddc                             	I2C adapter
+BUS=5
+OF_NODE=/sys/firmware/devicetree/base/i2c@fead0000
+5-0014 gt911
+5-0022 fusb302
+5-0051 pcf8563
+BUS=6
+OF_NODE=/sys/firmware/devicetree/base/i2c@fec80000
+6-0014 gt911
+6-0022 fusb302
+6-0051 pcf8563
+MLX90640_CLIENTS=
+VIDEO_I2C_CONFIG=
+# CONFIG_VIDEO_I2C is not set
+CMDLINE=storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  rootwait rw earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs nfsroot=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588,v3,tcp ip=192.168.5.20:192.168.5.11::255.255.255.0:atk-dlrk3588:eth0:off androidboot.fwver=ddr-v1.17-3488111f83,spl-v1.13,bl31-v1.46,bl32-v1.16,uboot-23c0020-di-07/31/2026

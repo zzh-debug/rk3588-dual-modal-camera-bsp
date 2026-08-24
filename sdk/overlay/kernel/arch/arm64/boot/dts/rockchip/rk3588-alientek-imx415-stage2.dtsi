@@ -1,0 +1,46 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Stage-two independent IMX415 fixed-mode V4L2 Sensor experiment.
+ *
+ * Target connector: J20 / MIPI CSI3.  This include is selected only by the
+ * 1080x1920 network-development DTB.  The vendor node remains in its source
+ * file for A/B rollback, but only this node may own i2c3 address 0x1a here.
+ */
+
+&imx415 {
+	status = "disabled";
+};
+
+&imx415_c3_out {
+	/delete-property/ remote-endpoint;
+};
+
+&i2c3 {
+	zzh_imx415_stage2: imx415-stage2@1a {
+		compatible = "zzh,imx415";
+		reg = <0x1a>;
+		clocks = <&cru CLK_MIPI_CAMARAOUT_M3>;
+		clock-names = "xvclk";
+		pinctrl-names = "default";
+		pinctrl-0 = <&mipim0_camera3_clk>;
+		power-domains = <&power RK3588_PD_VI>;
+		reset-gpios = <&gpio1 RK_PB1 GPIO_ACTIVE_LOW>;
+		pwdn-gpios = <&gpio1 RK_PA7 GPIO_ACTIVE_LOW>;
+		/* The camera module derives its internal rails from VCC3V3_SYS. */
+		status = "okay";
+
+		port {
+			zzh_imx415_stage2_out: endpoint {
+				remote-endpoint = <&mipidphy0_in_ucam0>;
+				data-lanes = <1 2 3 4>;
+				link-frequencies = /bits/ 64 <445500000>;
+			};
+		};
+	};
+};
+
+&mipidphy0_in_ucam0 {
+	remote-endpoint = <&zzh_imx415_stage2_out>;
+	data-lanes = <1 2 3 4>;
+	link-frequencies = /bits/ 64 <445500000>;
+};

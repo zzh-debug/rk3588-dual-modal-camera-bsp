@@ -1,0 +1,13 @@
+=== CLOCK_GPIO_UNBIND_REBIND_CHECK ===
+before_unload
+          clk_mipi_camaraout_m3       0        1        0    37125000          0     0  50000
+after_unload
+          clk_mipi_camaraout_m3       0        0        0    37125000          0     0  50000
+ gpio-22  (                    |4G,reset            ) out lo 
+ gpio-113 (                    |reset               ) in  hi 
+ gpio-131 (                    |reset               ) out hi ACTIVE LOW
+ gpio-132 (                    |reset               ) out hi ACTIVE LOW
+after_reload
+          clk_mipi_camaraout_m3       0        1        0    37125000          0     0  50000
+driver=/sys/bus/i2c/drivers/zzh_imx415_minimal
+signature_matches_total=22

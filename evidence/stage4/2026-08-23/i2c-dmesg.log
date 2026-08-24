@@ -1,0 +1,25 @@
+[   26.211958] i2c /dev entries driver
+[   26.239608] i2c i2c-4: sensor_probe: sh3001_acc,00000000fa6c349d
+[   26.887457] input: gsensor as /devices/platform/feac0000.i2c/i2c-4/4-0036/input/input1
+[   26.887563] i2c i2c-4: 1 i2c clients have been registered at 0x36
+[   26.888589] rtc-pcf8563 5-0051: pcf8563_write_block_data: err=-6 addr=0e, data=03
+[   26.888594] rtc-pcf8563 5-0051: pcf8563_probe: write error
+[   26.888617] rtc-pcf8563: probe of 5-0051 failed with error -5
+[   26.893977] Goodix-TS 5-0014: supply AVDD28 not found, using dummy regulator
+[   26.894098] Goodix-TS 5-0014: supply VDDIO not found, using dummy regulator
+[   26.985647] Goodix-TS 5-0014: ID 911, version: 1060
+[   26.990951] input: dsi0_ts_gt9xx as /devices/platform/fead0000.i2c/i2c-5/5-0014/input/input2
+[   27.015446] rtc-pcf8563 6-0051: low voltage detected, date/time is not reliable.
+[   27.015582] rtc-pcf8563 6-0051: registered as rtc0
+[   27.021304] rtc-pcf8563 6-0051: low voltage detected, date/time is not reliable.
+[   27.021321] rtc-pcf8563 6-0051: hctosys: unable to read the hardware clock
+[   27.024460] Goodix-TS 6-0014: supply AVDD28 not found, using dummy regulator
+[   27.024626] Goodix-TS 6-0014: supply VDDIO not found, using dummy regulator
+[   27.118033] Goodix-TS 6-0014: i2c test failed attempt 1: -6
+[   27.144701] Goodix-TS 6-0014: i2c test failed attempt 2: -6
+[   27.171217] Goodix-TS 6-0014: I2C communication failure: -6
+[   27.187680] usbcore: registered new interface driver bfusb
+[   27.349791] i2c i2c-4: sensor_probe: sh3001_gyro,000000004f4f05b4
+[   27.350346] input: gyro as /devices/platform/feac0000.i2c/i2c-4/4-0036-1/input/input7
+[   27.695815] dwhdmi-rockchip fde80000.hdmi: registered ddc I2C bus driver
+[   27.697724] dwhdmi-rockchip fdea0000.hdmi: registered ddc I2C bus driver

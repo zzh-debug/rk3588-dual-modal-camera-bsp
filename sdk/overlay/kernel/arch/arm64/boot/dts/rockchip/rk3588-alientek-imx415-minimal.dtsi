@@ -1,0 +1,57 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Stage-one IMX415 hardware-contract experiment.
+ *
+ * The physical target is assumed to be J20 / MIPI CSI3.  The assumption
+ * must be confirmed by connecting the module to J20 before board testing.
+ * Keep this include out of production DTS files; it deliberately removes
+ * the sensor from the vendor media graph and leaves only I2C resources.
+ */
+
+/* Do not let the vendor driver and the experiment bind the same I2C address. */
+&imx415 {
+	status = "disabled";
+};
+
+&i2c3 {
+	zzh_imx415_minimal: imx415-minimal@1a {
+		compatible = "zzh,imx415-minimal";
+		reg = <0x1a>;
+		clocks = <&cru CLK_MIPI_CAMARAOUT_M3>;
+		clock-names = "xvclk";
+		pinctrl-names = "default";
+		pinctrl-0 = <&mipim0_camera3_clk>;
+		power-domains = <&power RK3588_PD_VI>;
+		reset-gpios = <&gpio1 RK_PB1 GPIO_ACTIVE_LOW>;
+		pwdn-gpios = <&gpio1 RK_PA7 GPIO_ACTIVE_LOW>;
+		/* The module makes AVDD/DOVDD/DVDD locally from VCC3V3_SYS. */
+		status = "okay";
+	};
+};
+
+/* No sensor endpoint is present in this phase.  Keep the unused J20 branch
+ * from probing an incomplete Media graph while the other camera branches
+ * remain available for the vendor fallback DTB. */
+&csi2_dphy0 {
+	status = "disabled";
+};
+
+&csi2_dphy0_hw {
+	status = "disabled";
+};
+
+&mipi2_csi2 {
+	status = "disabled";
+};
+
+&rkcif_mipi_lvds2 {
+	status = "disabled";
+};
+
+&rkcif_mipi_lvds2_sditf {
+	status = "disabled";
+};
+
+&rkisp0_vir0 {
+	status = "disabled";
+};

@@ -1,0 +1,99 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * 阶段二 DTSI 教学镜像，不参与 DTC。
+ * 权威文件：
+ * kernel/arch/arm64/boot/dts/rockchip/rk3588-alientek-imx415-stage2.dtsi
+ *
+ * 顶层 1080x1920 DTS 在 rk3588-alientek-cameras.dtsi 之后 include 权威文件。
+ * 因而这里使用 &label 修改已经定义的原厂节点和 D-PHY endpoint，并增加实验
+ * I2C child。它不是独立 DTB，也不需要 DTS Makefile 的 dtb-* 登记。
+ */
+
+/*
+ * 原厂 sony,imx415 的源节点仍保留在 cameras.dtsi，便于删掉本 include 后 A/B
+ * 回退；实验 DTB 中把它标为 disabled，Linux OF/I2C core 不会为它创建设备。
+ */
+&imx415 {
+	status = "disabled";
+};
+
+/*
+ * 原厂 Sensor endpoint 原来指向 mipidphy0_in_ucam0。接收端下面会改指向新
+ * endpoint；若不删除旧 remote-endpoint，DTC 会报告 graph 非双向。这里只删
+ * 实验 DTB 中的属性，不修改原厂 cameras.dtsi。
+ */
+&imx415_c3_out {
+	/delete-property/ remote-endpoint;
+};
+
+/*
+ * &i2c3 对应 J20/MIPI CSI3 的控制总线，物理控制器基址 feab0000。
+ * cameras.dtsi 已将 controller status 设为 okay，所以本段只增加 child。
+ */
+&i2c3 {
+	zzh_imx415_stage2: imx415-stage2@1a {
+		/* OF modalias 匹配 zzh_imx415 驱动，不会绑定 sony,imx415。 */
+		compatible = "zzh,imx415";
+
+		/* Linux/DTS 一律使用 7 位地址 0x1a；线上写/读字节为 0x34/0x35。 */
+		reg = <0x1a>;
+
+		/* RK3588 camera clock output M3，经 J20 送到模组 INCK/MCLK。 */
+		clocks = <&cru CLK_MIPI_CAMARAOUT_M3>;
+		clock-names = "xvclk";
+
+		/* GPIO1_PD6 切到 MIPI camera clock function，而不是普通 GPIO。 */
+		pinctrl-names = "default";
+		pinctrl-0 = <&mipim0_camera3_clk>;
+
+		/* Sensor 使用视频输入电源域；device core 负责建立 domain 依赖。 */
+		power-domains = <&power RK3588_PD_VI>;
+
+		/*
+		 * GPIO descriptor 使用逻辑值：驱动写 1 表示断言 active state。
+		 * ACTIVE_LOW 会把逻辑 1 转成物理低电平。
+		 * RESET：GPIO1_PB1 -> J20 MIPI_CAM3_RST_L -> 模组 CSI_RST。
+		 * PWDN： GPIO1_PA7 -> J20 MIPI_CAM3_PDN_L -> 模组 CSI_PDN。
+		 */
+		reset-gpios = <&gpio1 RK_PB1 GPIO_ACTIVE_LOW>;
+		pwdn-gpios = <&gpio1 RK_PA7 GPIO_ACTIVE_LOW>;
+
+		/*
+		 * 没有 dvdd-supply/dovdd-supply/avdd-supply：模组从 VCC3V3_SYS
+		 * 通过板载 LDO 生成内部轨，软件不能声称控制了三路独立电源时序。
+		 */
+		status = "okay";
+
+		port {
+			zzh_imx415_stage2_out: endpoint {
+				/* graph 必须与接收端 remote-endpoint 互相指回。 */
+				remote-endpoint = <&mipidphy0_in_ucam0>;
+
+				/* 四条 CSI-2 data lane，编号 1..4；clock lane 隐含。 */
+				data-lanes = <1 2 3 4>;
+
+				/*
+				 * 891 Mbit/s/lane 的 DDR clock 是 445.5 MHz。
+				 * /bits/ 64 保证属性单元宽度符合 V4L2 fwnode 解析契约。
+				 */
+				link-frequencies = /bits/ 64 <445500000>;
+			};
+		};
+	};
+};
+
+/*
+ * 这个 label 由 cameras.dtsi 在 csi2_dphy0 的 input port 定义。覆盖它的远端
+ * 后，完整实验链为：
+ *
+ *   zzh Sensor -> csi2_dphy0 -> mipi2_csi2 -> rkcif_mipi_lvds2
+ *              -> rkcif_mipi_lvds2_sditf -> rkisp0_vir0
+ *
+ * 阶段二只对前端固定模式/Subdev做验收；后续 RKCIF RAW 和 RKISP NV12 正式
+ * 门禁仍属于阶段三，节点出现在 graph 不等于那些成果已经完成。
+ */
+&mipidphy0_in_ucam0 {
+	remote-endpoint = <&zzh_imx415_stage2_out>;
+	data-lanes = <1 2 3 4>;
+	link-frequencies = /bits/ 64 <445500000>;
+};

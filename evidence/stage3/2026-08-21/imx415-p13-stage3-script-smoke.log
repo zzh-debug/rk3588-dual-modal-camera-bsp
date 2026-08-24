@@ -1,0 +1,16 @@
+RKCIF_MEDIA=/dev/media2 RAW_NODE=/dev/video22
+RKISP_MEDIA=/dev/media4 ISP_NODE=/dev/video44 SENSOR_SUBDEV=/dev/v4l-subdev2
+raw-single: PASS, uptime=5955.07..5955.57, dqbuf=9, seq=0..8, bytes=10506240
+raw-short: PASS, uptime=5955.63..5956.20, dqbuf=11, seq=0..10, bytes=10506240
+raw-long: PASS, uptime=5956.26..5956.89, dqbuf=13, seq=0..12, bytes=10506240
+nv12-single: PASS, uptime=5956.94..5957.48, dqbuf=9, seq=0..8, bytes=12441600
+nv12-short: PASS, uptime=5957.53..5958.14, dqbuf=11, seq=0..10, bytes=12441600
+nv12-long: PASS, uptime=5958.23..5958.90, dqbuf=13, seq=0..12, bytes=12441600
+control-exp200: PASS, uptime=5958.97..5959.52, dqbuf=9, seq=0..8, bytes=12441600
+control-exp2000: PASS, uptime=5969.30..5969.84, dqbuf=9, seq=0..8, bytes=12441600
+control-gain120: PASS, uptime=5979.58..5980.12, dqbuf=9, seq=0..8, bytes=12441600
+controls: PASS, Y mean exp200=14.063 exp2000=26.519 gain120=92.581
+vblank-2308: PASS, uptime=5989.96..5992.80, dqbuf=38, seq=0..37, bytes=12441600
+vblank-restored: PASS, uptime=5992.89..5993.72, dqbuf=18, seq=0..17, bytes=12441600
+vblank: PASS, extended=66.667 ms restored=33.333 ms
+STAGE3_RUNTIME_CHECK=PASS

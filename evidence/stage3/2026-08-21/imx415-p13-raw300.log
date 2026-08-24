@@ -1,0 +1,1514 @@
+=== stage-two environment ===
+Linux ATK-DLRK3588 5.10.209 #4 SMP Sat Aug 8 20:22:47 CST 2026 aarch64 GNU/Linux
+cmdline: storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  rootwait rw earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs nfsroot=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588,v3,tcp ip=192.168.5.20:192.168.5.11::255.255.255.0:atk-dlrk3588:eth0:off androidboot.fwver=ddr-v1.17-3488111f83,spl-v1.13,bl31-v1.46,bl32-v1.16,uboot-23c0020-di-07/31/2026
+rootfs: 192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588 / nfs rw,relatime,vers=3,rsize=4096,wsize=4096,namlen=255,hard,nolock,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.5.11,mountvers=3,mountproto=tcp,local_lock=all,addr=192.168.5.11 0 0
+rootfs-source: NFS rootfs (192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588)
+exported from buildroot/output/alientek_rk3588/images/rootfs.ext2
+connman disabled: etc/init.d/S45connman -> K45connman
+module: (builtin)
+module-vermagic: built-in (kernel 5.10.209)
+dt-compatible: zzh,imx415
+vendor-node-status: disabled
+available-i2c3-address-0x1a-nodes: 1
+i2c-client: imx415, driver: zzh_imx415
+sensor-subdev: /dev/v4l-subdev2 (zzh_imx415 3-001a)
+sensor-media: /dev/media2
+rkcif-raw-node: /dev/video22 (stream_cif_mipi_id0)
+=== media graph ===
+Media controller API version 5.10.209
+
+Media device information
+------------------------
+driver          rkcif
+model           rkcif-mipi-lvds2
+serial          
+bus info        
+hw revision     0x0
+driver version  5.10.209
+
+Device topology
+- entity 1: stream_cif_mipi_id0 (1 pad, 11 links)
+            type Node subtype V4L flags 0
+            device node name /dev/video22
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 [ENABLED]
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 5: stream_cif_mipi_id1 (1 pad, 11 links)
+            type Node subtype V4L flags 0
+            device node name /dev/video23
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 [ENABLED]
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 9: stream_cif_mipi_id2 (1 pad, 11 links)
+            type Node subtype V4L flags 0
+            device node name /dev/video24
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 [ENABLED]
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 13: stream_cif_mipi_id3 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video25
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 [ENABLED]
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 17: rkcif_scale_ch0 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video26
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 [ENABLED]
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 21: rkcif_scale_ch1 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video27
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 [ENABLED]
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 25: rkcif_scale_ch2 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video28
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 [ENABLED]
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 29: rkcif_scale_ch3 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video29
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 [ENABLED]
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 33: rkcif_tools_id0 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video30
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 [ENABLED]
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 37: rkcif_tools_id1 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video31
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 [ENABLED]
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 41: rkcif_tools_id2 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video32
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 [ENABLED]
+
+- entity 45: rockchip-mipi-csi2 (12 pads, 122 links)
+             type V4L2 subdev subtype Unknown flags 0
+             device node name /dev/v4l-subdev0
+	pad0: Sink
+		[fmt:SGBRG10_1X10/3864x2192 field:none colorspace:raw xfer:none quantization:full-range
+		 crop.bounds:(12,16)/3840x2160
+		 crop:(12,16)/3840x2160]
+		<- "rockchip-csi2-dphy0":1 [ENABLED]
+	pad1: Source
+		-> "stream_cif_mipi_id0":0 [ENABLED]
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad2: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 [ENABLED]
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad3: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 [ENABLED]
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad4: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 [ENABLED]
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad5: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 [ENABLED]
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad6: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 [ENABLED]
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad7: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 [ENABLED]
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad8: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 [ENABLED]
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad9: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 [ENABLED]
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad10: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 [ENABLED]
+		-> "rkcif_tools_id2":0 []
+	pad11: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 [ENABLED]
+
+- entity 58: rockchip-csi2-dphy0 (2 pads, 2 links)
+             type V4L2 subdev subtype Unknown flags 0
+             device node name /dev/v4l-subdev1
+	pad0: Sink
+		[fmt:SGBRG10_1X10/3864x2192@2250/67500 field:none colorspace:raw xfer:none quantization:full-range
+		 crop.bounds:(12,16)/3840x2160
+		 crop:(12,16)/3840x2160]
+		<- "zzh_imx415 3-001a":0 [ENABLED]
+	pad1: Source
+		-> "rockchip-mipi-csi2":0 [ENABLED]
+
+- entity 63: zzh_imx415 3-001a (1 pad, 1 link)
+             type V4L2 subdev subtype Sensor flags 0
+             device node name /dev/v4l-subdev2
+	pad0: Source
+		[fmt:SGBRG10_1X10/3864x2192@2250/67500 field:none colorspace:raw xfer:none quantization:full-range
+		 crop.bounds:(12,16)/3840x2160
+		 crop:(12,16)/3840x2160]
+		-> "rockchip-csi2-dphy0":0 [ENABLED]
+
+=== all V4L2 devices ===
+Failed to open /dev/video0: No such device
+rk_hdmirx (fdee0000.hdmirx-controller):
+	/dev/video80
+
+rkisp-statistics (platform: rkisp):
+	/dev/video51
+	/dev/video52
+	/dev/video60
+	/dev/video61
+	/dev/video69
+	/dev/video70
+	/dev/video78
+	/dev/video79
+
+rkcif-mipi-lvds (platform:rkcif):
+	/dev/media0
+	/dev/media1
+	/dev/media2
+	/dev/media3
+
+rkcif (platform:rkcif-mipi-lvds2):
+	/dev/video22
+	/dev/video23
+	/dev/video24
+	/dev/video25
+	/dev/video26
+	/dev/video27
+	/dev/video28
+	/dev/video29
+	/dev/video30
+	/dev/video31
+	/dev/video32
+
+rkisp_mainpath (platform:rkisp0-vir0):
+	/dev/video44
+	/dev/video45
+	/dev/video46
+	/dev/video47
+	/dev/video48
+	/dev/video49
+	/dev/video50
+	/dev/media4
+
+rkisp_mainpath (platform:rkisp0-vir1):
+	/dev/video53
+	/dev/video54
+	/dev/video55
+	/dev/video56
+	/dev/video57
+	/dev/video58
+	/dev/video59
+	/dev/media5
+
+rkisp_mainpath (platform:rkisp1-vir0):
+	/dev/video62
+	/dev/video63
+	/dev/video64
+	/dev/video65
+	/dev/video66
+	/dev/video67
+	/dev/video68
+	/dev/media6
+
+rkisp_mainpath (platform:rkisp1-vir1):
+	/dev/video71
+	/dev/video72
+	/dev/video73
+	/dev/video74
+	/dev/video75
+	/dev/video76
+	/dev/video77
+	/dev/media7
+
+=== Sensor subdev contract ===
+Driver Info:
+	Driver version   : 5.10.209
+	Capabilities     : 0x00000000
+
+User Controls
+
+                       exposure 0x00980911 (int)    : min=4 max=2242 step=1 default=2242 value=2242
+
+Image Source Controls
+
+              vertical_blanking 0x009e0901 (int)    : min=58 max=30575 step=1 default=58 value=58
+            horizontal_blanking 0x009e0902 (int)    : min=1416 max=1416 step=1 default=1416 value=1416 flags=read-only
+                  analogue_gain 0x009e0903 (int)    : min=0 max=240 step=1 default=0 value=0
+
+Image Processing Controls
+
+                 link_frequency 0x009f0901 (intmenu): min=0 max=0 default=0 value=0 (445500000 0x1a8dca60) flags=read-only
+				0: 445500000 (0x1a8dca60)
+                     pixel_rate 0x009f0902 (int64)  : min=356400000 max=356400000 step=1 default=356400000 value=356400000 flags=read-only
+ioctl: VIDIOC_SUBDEV_ENUM_MBUS_CODE (pad=0)
+	0x300e: MEDIA_BUS_FMT_SGBRG10_1X10
+ioctl: VIDIOC_SUBDEV_ENUM_FRAME_SIZE (pad=0)
+	Size Range: 3864x2192 - 3864x2192
+ioctl: VIDIOC_SUBDEV_ENUM_FRAME_INTERVAL (pad=0)
+	Interval: 0.033s (30.000 fps)
+ioctl: VIDIOC_SUBDEV_G_FMT (pad=0)
+	Width/Height      : 3864/2192
+	Mediabus Code     : 0x300e (MEDIA_BUS_FMT_SGBRG10_1X10)
+	Field             : None
+	Colorspace        : Raw
+	Transfer Function : None
+	YCbCr/HSV Encoding: Default (maps to ITU-R 601)
+	Quantization      : Full Range
+ioctl: VIDIOC_SUBDEV_G_FRAME_INTERVAL (pad=0)
+	Frames per second: 30.000 (67500/2250)
+ioctl: VIDIOC_SUBDEV_G_SELECTION (pad=0)
+Selection: native_size, Left 0, Top 0, Width 3864, Height 2192, Flags: 
+ioctl: VIDIOC_SUBDEV_G_SELECTION (pad=0)
+Selection: crop_bounds, Left 12, Top 16, Width 3840, Height 2160, Flags: 
+ioctl: VIDIOC_SUBDEV_G_SELECTION (pad=0)
+Selection: crop_default, Left 12, Top 16, Width 3840, Height 2160, Flags: 
+ioctl: VIDIOC_SUBDEV_G_SELECTION (pad=0)
+Selection: crop, Left 12, Top 16, Width 3840, Height 2160, Flags: 
+
+User Controls
+
+                       exposure 0x00980911 (int)    : min=4 max=2242 step=1 default=2242 value=2242
+
+Image Source Controls
+
+              vertical_blanking 0x009e0901 (int)    : min=58 max=30575 step=1 default=58 value=58
+            horizontal_blanking 0x009e0902 (int)    : min=1416 max=1416 step=1 default=1416 value=1416 flags=read-only
+                  analogue_gain 0x009e0903 (int)    : min=0 max=240 step=1 default=0 value=0
+
+Image Processing Controls
+
+                 link_frequency 0x009f0901 (intmenu): min=0 max=0 default=0 value=0 (445500000 0x1a8dca60) flags=read-only
+				0: 445500000 (0x1a8dca60)
+                     pixel_rate 0x009f0902 (int64)  : min=356400000 max=356400000 step=1 default=356400000 value=356400000 flags=read-only
+=== RKCIF RAW format ===
+Driver Info:
+	Driver name      : rkcif
+	Card type        : rkcif
+	Bus info         : platform:rkcif-mipi-lvds2
+	Driver version   : 5.10.209
+	Capabilities     : 0x84201000
+		Video Capture Multiplanar
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04201000
+		Video Capture Multiplanar
+		Streaming
+		Extended Pix Format
+Priority: 2
+Format Video Capture Multiplanar:
+	Width/Height      : 3840/2160
+	Pixel Format      : 'GB10' (10-bit Bayer GBGB/RGRG)
+	Field             : None
+	Number of planes  : 1
+	Flags             : premultiplied-alpha, set-csc, 0x000000fc
+	Colorspace        : Unknown (0x080a22d0)
+	Transfer Function : Unknown (0x000000d0)
+	YCbCr/HSV Encoding: Unknown (0x000000ff)
+	Quantization      : Default
+	Plane 0           :
+	   Bytes per Line : 4864
+	   Size Image     : 10506240
+Selection Video Capture: crop, Left 12, Top 16, Width 3840, Height 2160, Flags: 
+Selection Video Capture: crop_bounds, Left 12, Top 16, Width 3840, Height 2160, Flags: 
+Selection Video Output: crop, Left 12, Top 16, Width 3840, Height 2160, Flags: 
+Selection Video Output: crop_bounds, Left 12, Top 16, Width 3840, Height 2160, Flags: 
+Format Video Capture Multiplanar:
+	Width/Height      : 3840/2160
+	Pixel Format      : 'GB10' (10-bit Bayer GBGB/RGRG)
+	Field             : None
+	Number of planes  : 1
+	Flags             : premultiplied-alpha, set-csc, 0x000000fc
+	Colorspace        : Unknown (0x080a22d0)
+	Transfer Function : Unknown (0x000000d0)
+	YCbCr/HSV Encoding: Unknown (0x000000ff)
+	Quantization      : Default
+	Plane 0           :
+	   Bytes per Line : 4864
+	   Size Image     : 10506240
+=== short STREAMON/OFF cycles ===
+cycle,start_uptime_s,end_uptime_s,skipped_frames,captured_frames,result
+		VIDIOC_REQBUFS returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_STREAMON returned 0 (Success)
+cap dqbuf: 0 seq:      0 bytesused: 10506240 ts: 1725.883254 delta now: +34.012 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      1 bytesused: 10506240 ts: 1725.916483 delta: 33.229 ms delta now: +34.094 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:      2 bytesused: 10506240 ts: 1725.949816 delta: 33.333 ms delta now: +33.828 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:      3 bytesused: 10506240 ts: 1725.983149 delta: 33.333 ms delta now: +33.842 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:      4 bytesused: 10506240 ts: 1726.016482 delta: 33.333 ms delta now: +33.828 ms fps: 30.02 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      5 bytesused: 10506240 ts: 1726.049816 delta: 33.334 ms delta now: +34.248 ms fps: 30.02 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:      6 bytesused: 10506240 ts: 1726.083150 delta: 33.334 ms delta now: +33.835 ms fps: 30.02 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:      7 bytesused: 10506240 ts: 1726.116482 delta: 33.332 ms delta now: +34.083 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:      8 bytesused: 10506240 ts: 1726.149816 delta: 33.334 ms delta now: +33.824 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      9 bytesused: 10506240 ts: 1726.183149 delta: 33.333 ms delta now: +34.090 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     10 bytesused: 10506240 ts: 1726.216483 delta: 33.334 ms delta now: +33.841 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     11 bytesused: 10506240 ts: 1726.249816 delta: 33.333 ms delta now: +34.196 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     12 bytesused: 10506240 ts: 1726.283150 delta: 33.334 ms delta now: +33.826 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     13 bytesused: 10506240 ts: 1726.316482 delta: 33.332 ms delta now: +34.154 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     14 bytesused: 10506240 ts: 1726.349816 delta: 33.334 ms delta now: +33.827 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     15 bytesused: 10506240 ts: 1726.383149 delta: 33.333 ms delta now: +34.133 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     16 bytesused: 10506240 ts: 1726.416482 delta: 33.333 ms delta now: +34.143 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     17 bytesused: 10506240 ts: 1726.449816 delta: 33.334 ms delta now: +33.828 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     18 bytesused: 10506240 ts: 1726.483149 delta: 33.333 ms delta now: +34.153 ms fps: 30.01 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     19 bytesused: 10506240 ts: 1726.516483 delta: 33.334 ms delta now: +34.153 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     20 bytesused: 10506240 ts: 1726.549816 delta: 33.333 ms delta now: +34.144 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     21 bytesused: 10506240 ts: 1726.583150 delta: 33.334 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     22 bytesused: 10506240 ts: 1726.616482 delta: 33.332 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     23 bytesused: 10506240 ts: 1726.649815 delta: 33.333 ms delta now: +34.166 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     24 bytesused: 10506240 ts: 1726.683150 delta: 33.335 ms delta now: +33.824 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     25 bytesused: 10506240 ts: 1726.716482 delta: 33.332 ms delta now: +34.107 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     26 bytesused: 10506240 ts: 1726.749816 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     27 bytesused: 10506240 ts: 1726.783149 delta: 33.333 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     28 bytesused: 10506240 ts: 1726.816482 delta: 33.333 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     29 bytesused: 10506240 ts: 1726.849816 delta: 33.334 ms delta now: +34.099 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     30 bytesused: 10506240 ts: 1726.883150 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     31 bytesused: 10506240 ts: 1726.916482 delta: 33.332 ms delta now: +34.250 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     32 bytesused: 10506240 ts: 1726.949816 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     33 bytesused: 10506240 ts: 1726.983149 delta: 33.333 ms delta now: +34.097 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     34 bytesused: 10506240 ts: 1727.016483 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     35 bytesused: 10506240 ts: 1727.049816 delta: 33.333 ms delta now: +34.399 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     36 bytesused: 10506240 ts: 1727.083150 delta: 33.334 ms delta now: +33.833 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     37 bytesused: 10506240 ts: 1727.116482 delta: 33.332 ms delta now: +34.084 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     38 bytesused: 10506240 ts: 1727.149816 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     39 bytesused: 10506240 ts: 1727.183149 delta: 33.333 ms delta now: +34.099 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     40 bytesused: 10506240 ts: 1727.216483 delta: 33.334 ms delta now: +34.092 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     41 bytesused: 10506240 ts: 1727.249816 delta: 33.333 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     42 bytesused: 10506240 ts: 1727.283149 delta: 33.333 ms delta now: +34.169 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     43 bytesused: 10506240 ts: 1727.316483 delta: 33.334 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     44 bytesused: 10506240 ts: 1727.349815 delta: 33.332 ms delta now: +34.093 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     45 bytesused: 10506240 ts: 1727.383150 delta: 33.335 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     46 bytesused: 10506240 ts: 1727.416482 delta: 33.332 ms delta now: +33.841 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     47 bytesused: 10506240 ts: 1727.449816 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     48 bytesused: 10506240 ts: 1727.483149 delta: 33.333 ms delta now: +34.157 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     49 bytesused: 10506240 ts: 1727.516483 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     50 bytesused: 10506240 ts: 1727.549816 delta: 33.333 ms delta now: +33.998 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     51 bytesused: 10506240 ts: 1727.583150 delta: 33.334 ms delta now: +34.089 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     52 bytesused: 10506240 ts: 1727.616483 delta: 33.333 ms delta now: +34.159 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     53 bytesused: 10506240 ts: 1727.649817 delta: 33.334 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     54 bytesused: 10506240 ts: 1727.683149 delta: 33.332 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     55 bytesused: 10506240 ts: 1727.716482 delta: 33.333 ms delta now: +34.164 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     56 bytesused: 10506240 ts: 1727.749816 delta: 33.334 ms delta now: +34.178 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     57 bytesused: 10506240 ts: 1727.783150 delta: 33.334 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     58 bytesused: 10506240 ts: 1727.816482 delta: 33.332 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     59 bytesused: 10506240 ts: 1727.849816 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     60 bytesused: 10506240 ts: 1727.883149 delta: 33.333 ms delta now: +34.074 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     61 bytesused: 10506240 ts: 1727.916482 delta: 33.333 ms delta now: +33.849 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     62 bytesused: 10506240 ts: 1727.949816 delta: 33.334 ms delta now: +34.102 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     63 bytesused: 10506240 ts: 1727.983150 delta: 33.334 ms delta now: +34.173 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     64 bytesused: 10506240 ts: 1728.016483 delta: 33.333 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     65 bytesused: 10506240 ts: 1728.049816 delta: 33.333 ms delta now: +34.403 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     66 bytesused: 10506240 ts: 1728.083149 delta: 33.333 ms delta now: +33.858 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     67 bytesused: 10506240 ts: 1728.116483 delta: 33.334 ms delta now: +33.831 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     68 bytesused: 10506240 ts: 1728.149816 delta: 33.333 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     69 bytesused: 10506240 ts: 1728.183150 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     70 bytesused: 10506240 ts: 1728.216482 delta: 33.332 ms delta now: +34.163 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     71 bytesused: 10506240 ts: 1728.249816 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     72 bytesused: 10506240 ts: 1728.283149 delta: 33.333 ms delta now: +34.040 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     73 bytesused: 10506240 ts: 1728.316483 delta: 33.334 ms delta now: +34.187 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     74 bytesused: 10506240 ts: 1728.349816 delta: 33.333 ms delta now: +33.849 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     75 bytesused: 10506240 ts: 1728.383150 delta: 33.334 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     76 bytesused: 10506240 ts: 1728.416482 delta: 33.332 ms delta now: +34.091 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     77 bytesused: 10506240 ts: 1728.449817 delta: 33.335 ms delta now: +34.033 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     78 bytesused: 10506240 ts: 1728.483150 delta: 33.333 ms delta now: +34.107 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     79 bytesused: 10506240 ts: 1728.516483 delta: 33.333 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     80 bytesused: 10506240 ts: 1728.549816 delta: 33.333 ms delta now: +34.148 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     81 bytesused: 10506240 ts: 1728.583150 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     82 bytesused: 10506240 ts: 1728.616483 delta: 33.333 ms delta now: +33.853 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     83 bytesused: 10506240 ts: 1728.649817 delta: 33.334 ms delta now: +34.187 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     84 bytesused: 10506240 ts: 1728.683149 delta: 33.332 ms delta now: +33.831 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     85 bytesused: 10506240 ts: 1728.716482 delta: 33.333 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     86 bytesused: 10506240 ts: 1728.749816 delta: 33.334 ms delta now: +33.946 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     87 bytesused: 10506240 ts: 1728.783149 delta: 33.333 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     88 bytesused: 10506240 ts: 1728.816482 delta: 33.333 ms delta now: +33.845 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     89 bytesused: 10506240 ts: 1728.849816 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     90 bytesused: 10506240 ts: 1728.883149 delta: 33.333 ms delta now: +34.118 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     91 bytesused: 10506240 ts: 1728.916483 delta: 33.334 ms delta now: +34.148 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     92 bytesused: 10506240 ts: 1728.949817 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     93 bytesused: 10506240 ts: 1728.983149 delta: 33.332 ms delta now: +34.098 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     94 bytesused: 10506240 ts: 1729.016483 delta: 33.334 ms delta now: +34.210 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     95 bytesused: 10506240 ts: 1729.049816 delta: 33.333 ms delta now: +33.842 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     96 bytesused: 10506240 ts: 1729.083149 delta: 33.333 ms delta now: +33.835 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     97 bytesused: 10506240 ts: 1729.116482 delta: 33.333 ms delta now: +34.152 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     98 bytesused: 10506240 ts: 1729.149817 delta: 33.335 ms delta now: +34.169 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     99 bytesused: 10506240 ts: 1729.183150 delta: 33.333 ms delta now: +33.908 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    100 bytesused: 10506240 ts: 1729.216482 delta: 33.332 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    101 bytesused: 10506240 ts: 1729.249816 delta: 33.334 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    102 bytesused: 10506240 ts: 1729.283149 delta: 33.333 ms delta now: +34.169 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    103 bytesused: 10506240 ts: 1729.316483 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    104 bytesused: 10506240 ts: 1729.349816 delta: 33.333 ms delta now: +34.098 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    105 bytesused: 10506240 ts: 1729.383150 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    106 bytesused: 10506240 ts: 1729.416483 delta: 33.333 ms delta now: +34.084 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    107 bytesused: 10506240 ts: 1729.449817 delta: 33.334 ms delta now: +33.833 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    108 bytesused: 10506240 ts: 1729.483149 delta: 33.332 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    109 bytesused: 10506240 ts: 1729.516482 delta: 33.333 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    110 bytesused: 10506240 ts: 1729.549816 delta: 33.334 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    111 bytesused: 10506240 ts: 1729.583150 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    112 bytesused: 10506240 ts: 1729.616483 delta: 33.333 ms delta now: +33.848 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    113 bytesused: 10506240 ts: 1729.649817 delta: 33.334 ms delta now: +34.070 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    114 bytesused: 10506240 ts: 1729.683150 delta: 33.333 ms delta now: +34.103 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    115 bytesused: 10506240 ts: 1729.716483 delta: 33.333 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    116 bytesused: 10506240 ts: 1729.749816 delta: 33.333 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    117 bytesused: 10506240 ts: 1729.783149 delta: 33.333 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    118 bytesused: 10506240 ts: 1729.816483 delta: 33.334 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    119 bytesused: 10506240 ts: 1729.849816 delta: 33.333 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    120 bytesused: 10506240 ts: 1729.883149 delta: 33.333 ms delta now: +34.197 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    121 bytesused: 10506240 ts: 1729.916483 delta: 33.334 ms delta now: +34.093 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    122 bytesused: 10506240 ts: 1729.949817 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    123 bytesused: 10506240 ts: 1729.983149 delta: 33.332 ms delta now: +33.831 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    124 bytesused: 10506240 ts: 1730.016482 delta: 33.333 ms delta now: +34.169 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    125 bytesused: 10506240 ts: 1730.049817 delta: 33.335 ms delta now: +33.846 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    126 bytesused: 10506240 ts: 1730.083149 delta: 33.332 ms delta now: +33.838 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    127 bytesused: 10506240 ts: 1730.116482 delta: 33.333 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    128 bytesused: 10506240 ts: 1730.149817 delta: 33.335 ms delta now: +34.088 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    129 bytesused: 10506240 ts: 1730.183150 delta: 33.333 ms delta now: +34.102 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    130 bytesused: 10506240 ts: 1730.216483 delta: 33.333 ms delta now: +34.183 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    131 bytesused: 10506240 ts: 1730.249816 delta: 33.333 ms delta now: +33.833 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    132 bytesused: 10506240 ts: 1730.283149 delta: 33.333 ms delta now: +33.875 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    133 bytesused: 10506240 ts: 1730.316483 delta: 33.334 ms delta now: +34.173 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    134 bytesused: 10506240 ts: 1730.349817 delta: 33.334 ms delta now: +33.837 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    135 bytesused: 10506240 ts: 1730.383149 delta: 33.332 ms delta now: +33.832 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    136 bytesused: 10506240 ts: 1730.416483 delta: 33.334 ms delta now: +34.163 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    137 bytesused: 10506240 ts: 1730.449817 delta: 33.334 ms delta now: +33.847 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    138 bytesused: 10506240 ts: 1730.483149 delta: 33.332 ms delta now: +33.903 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    139 bytesused: 10506240 ts: 1730.516483 delta: 33.334 ms delta now: +34.165 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    140 bytesused: 10506240 ts: 1730.549817 delta: 33.334 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    141 bytesused: 10506240 ts: 1730.583149 delta: 33.332 ms delta now: +34.092 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    142 bytesused: 10506240 ts: 1730.616483 delta: 33.334 ms delta now: +34.170 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    143 bytesused: 10506240 ts: 1730.649817 delta: 33.334 ms delta now: +33.824 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    144 bytesused: 10506240 ts: 1730.683149 delta: 33.332 ms delta now: +34.150 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    145 bytesused: 10506240 ts: 1730.716483 delta: 33.334 ms delta now: +33.846 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    146 bytesused: 10506240 ts: 1730.749816 delta: 33.333 ms delta now: +33.832 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    147 bytesused: 10506240 ts: 1730.783149 delta: 33.333 ms delta now: +34.200 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    148 bytesused: 10506240 ts: 1730.816483 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    149 bytesused: 10506240 ts: 1730.849816 delta: 33.333 ms delta now: +34.164 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    150 bytesused: 10506240 ts: 1730.883150 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    151 bytesused: 10506240 ts: 1730.916483 delta: 33.333 ms delta now: +34.163 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    152 bytesused: 10506240 ts: 1730.949817 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    153 bytesused: 10506240 ts: 1730.983149 delta: 33.332 ms delta now: +34.188 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    154 bytesused: 10506240 ts: 1731.016483 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    155 bytesused: 10506240 ts: 1731.049816 delta: 33.333 ms delta now: +34.181 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    156 bytesused: 10506240 ts: 1731.083150 delta: 33.334 ms delta now: +33.858 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    157 bytesused: 10506240 ts: 1731.116483 delta: 33.333 ms delta now: +34.166 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    158 bytesused: 10506240 ts: 1731.149817 delta: 33.334 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    159 bytesused: 10506240 ts: 1731.183149 delta: 33.332 ms delta now: +34.197 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    160 bytesused: 10506240 ts: 1731.216483 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    161 bytesused: 10506240 ts: 1731.249816 delta: 33.333 ms delta now: +34.159 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    162 bytesused: 10506240 ts: 1731.283150 delta: 33.334 ms delta now: +33.845 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    163 bytesused: 10506240 ts: 1731.316483 delta: 33.333 ms delta now: +34.082 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    164 bytesused: 10506240 ts: 1731.349817 delta: 33.334 ms delta now: +33.824 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    165 bytesused: 10506240 ts: 1731.383149 delta: 33.332 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    166 bytesused: 10506240 ts: 1731.416483 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    167 bytesused: 10506240 ts: 1731.449816 delta: 33.333 ms delta now: +34.162 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    168 bytesused: 10506240 ts: 1731.483150 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    169 bytesused: 10506240 ts: 1731.516483 delta: 33.333 ms delta now: +34.092 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    170 bytesused: 10506240 ts: 1731.549817 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    171 bytesused: 10506240 ts: 1731.583149 delta: 33.332 ms delta now: +34.086 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    172 bytesused: 10506240 ts: 1731.616483 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    173 bytesused: 10506240 ts: 1731.649816 delta: 33.333 ms delta now: +34.217 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    174 bytesused: 10506240 ts: 1731.683150 delta: 33.334 ms delta now: +33.833 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    175 bytesused: 10506240 ts: 1731.716483 delta: 33.333 ms delta now: +34.095 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    176 bytesused: 10506240 ts: 1731.749817 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    177 bytesused: 10506240 ts: 1731.783149 delta: 33.332 ms delta now: +34.114 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    178 bytesused: 10506240 ts: 1731.816483 delta: 33.334 ms delta now: +34.173 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    179 bytesused: 10506240 ts: 1731.849817 delta: 33.334 ms delta now: +33.837 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    180 bytesused: 10506240 ts: 1731.883150 delta: 33.333 ms delta now: +34.102 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    181 bytesused: 10506240 ts: 1731.916484 delta: 33.334 ms delta now: +33.989 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    182 bytesused: 10506240 ts: 1731.949817 delta: 33.333 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    183 bytesused: 10506240 ts: 1731.983150 delta: 33.333 ms delta now: +34.103 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    184 bytesused: 10506240 ts: 1732.016484 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    185 bytesused: 10506240 ts: 1732.049816 delta: 33.332 ms delta now: +33.839 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    186 bytesused: 10506240 ts: 1732.083149 delta: 33.333 ms delta now: +34.099 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    187 bytesused: 10506240 ts: 1732.116483 delta: 33.334 ms delta now: +34.101 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    188 bytesused: 10506240 ts: 1732.149817 delta: 33.334 ms delta now: +34.083 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    189 bytesused: 10506240 ts: 1732.183150 delta: 33.333 ms delta now: +33.847 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    190 bytesused: 10506240 ts: 1732.216483 delta: 33.333 ms delta now: +34.101 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    191 bytesused: 10506240 ts: 1732.249817 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    192 bytesused: 10506240 ts: 1732.283149 delta: 33.332 ms delta now: +34.203 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    193 bytesused: 10506240 ts: 1732.316483 delta: 33.334 ms delta now: +33.833 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    194 bytesused: 10506240 ts: 1732.349816 delta: 33.333 ms delta now: +34.151 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    195 bytesused: 10506240 ts: 1732.383150 delta: 33.334 ms delta now: +33.868 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    196 bytesused: 10506240 ts: 1732.416483 delta: 33.333 ms delta now: +34.094 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    197 bytesused: 10506240 ts: 1732.449817 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    198 bytesused: 10506240 ts: 1732.483149 delta: 33.332 ms delta now: +34.103 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    199 bytesused: 10506240 ts: 1732.516484 delta: 33.335 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    200 bytesused: 10506240 ts: 1732.549816 delta: 33.332 ms delta now: +34.100 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    201 bytesused: 10506240 ts: 1732.583150 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    202 bytesused: 10506240 ts: 1732.616483 delta: 33.333 ms delta now: +33.844 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    203 bytesused: 10506240 ts: 1732.649816 delta: 33.333 ms delta now: +34.090 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    204 bytesused: 10506240 ts: 1732.683150 delta: 33.334 ms delta now: +33.831 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    205 bytesused: 10506240 ts: 1732.716483 delta: 33.333 ms delta now: +34.181 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    206 bytesused: 10506240 ts: 1732.749817 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    207 bytesused: 10506240 ts: 1732.783150 delta: 33.333 ms delta now: +34.164 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    208 bytesused: 10506240 ts: 1732.816484 delta: 33.334 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    209 bytesused: 10506240 ts: 1732.849816 delta: 33.332 ms delta now: +34.163 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    210 bytesused: 10506240 ts: 1732.883150 delta: 33.334 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    211 bytesused: 10506240 ts: 1732.916483 delta: 33.333 ms delta now: +34.091 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    212 bytesused: 10506240 ts: 1732.949817 delta: 33.334 ms delta now: +34.166 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    213 bytesused: 10506240 ts: 1732.983150 delta: 33.333 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    214 bytesused: 10506240 ts: 1733.016483 delta: 33.333 ms delta now: +34.149 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    215 bytesused: 10506240 ts: 1733.049817 delta: 33.334 ms delta now: +33.847 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    216 bytesused: 10506240 ts: 1733.083149 delta: 33.332 ms delta now: +34.177 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    217 bytesused: 10506240 ts: 1733.116484 delta: 33.335 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    218 bytesused: 10506240 ts: 1733.149816 delta: 33.332 ms delta now: +34.094 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    219 bytesused: 10506240 ts: 1733.183150 delta: 33.334 ms delta now: +33.831 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    220 bytesused: 10506240 ts: 1733.216483 delta: 33.333 ms delta now: +34.099 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    221 bytesused: 10506240 ts: 1733.249817 delta: 33.334 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    222 bytesused: 10506240 ts: 1733.283149 delta: 33.332 ms delta now: +34.093 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    223 bytesused: 10506240 ts: 1733.316484 delta: 33.335 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    224 bytesused: 10506240 ts: 1733.349816 delta: 33.332 ms delta now: +34.163 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    225 bytesused: 10506240 ts: 1733.383150 delta: 33.334 ms delta now: +33.842 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    226 bytesused: 10506240 ts: 1733.416483 delta: 33.333 ms delta now: +34.092 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    227 bytesused: 10506240 ts: 1733.449817 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    228 bytesused: 10506240 ts: 1733.483149 delta: 33.332 ms delta now: +34.110 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    229 bytesused: 10506240 ts: 1733.516484 delta: 33.335 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    230 bytesused: 10506240 ts: 1733.549816 delta: 33.332 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    231 bytesused: 10506240 ts: 1733.583150 delta: 33.334 ms delta now: +34.089 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    232 bytesused: 10506240 ts: 1733.616484 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    233 bytesused: 10506240 ts: 1733.649816 delta: 33.332 ms delta now: +34.094 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    234 bytesused: 10506240 ts: 1733.683150 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    235 bytesused: 10506240 ts: 1733.716483 delta: 33.333 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    236 bytesused: 10506240 ts: 1733.749817 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    237 bytesused: 10506240 ts: 1733.783150 delta: 33.333 ms delta now: +34.098 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    238 bytesused: 10506240 ts: 1733.816484 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    239 bytesused: 10506240 ts: 1733.849816 delta: 33.332 ms delta now: +34.102 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    240 bytesused: 10506240 ts: 1733.883150 delta: 33.334 ms delta now: +33.880 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    241 bytesused: 10506240 ts: 1733.916483 delta: 33.333 ms delta now: +33.833 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    242 bytesused: 10506240 ts: 1733.949816 delta: 33.333 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    243 bytesused: 10506240 ts: 1733.983150 delta: 33.334 ms delta now: +34.168 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    244 bytesused: 10506240 ts: 1734.016484 delta: 33.334 ms delta now: +33.822 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    245 bytesused: 10506240 ts: 1734.049816 delta: 33.332 ms delta now: +34.118 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    246 bytesused: 10506240 ts: 1734.083150 delta: 33.334 ms delta now: +33.836 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    247 bytesused: 10506240 ts: 1734.116483 delta: 33.333 ms delta now: +34.185 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    248 bytesused: 10506240 ts: 1734.149816 delta: 33.333 ms delta now: +33.834 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    249 bytesused: 10506240 ts: 1734.183150 delta: 33.334 ms delta now: +34.092 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    250 bytesused: 10506240 ts: 1734.216484 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    251 bytesused: 10506240 ts: 1734.249816 delta: 33.332 ms delta now: +33.831 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    252 bytesused: 10506240 ts: 1734.283150 delta: 33.334 ms delta now: +34.104 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    253 bytesused: 10506240 ts: 1734.316484 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    254 bytesused: 10506240 ts: 1734.349816 delta: 33.332 ms delta now: +34.149 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    255 bytesused: 10506240 ts: 1734.383151 delta: 33.335 ms delta now: +34.095 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    256 bytesused: 10506240 ts: 1734.416484 delta: 33.333 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    257 bytesused: 10506240 ts: 1734.449816 delta: 33.332 ms delta now: +34.099 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    258 bytesused: 10506240 ts: 1734.483150 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    259 bytesused: 10506240 ts: 1734.516483 delta: 33.333 ms delta now: +34.019 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    260 bytesused: 10506240 ts: 1734.549817 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    261 bytesused: 10506240 ts: 1734.583150 delta: 33.333 ms delta now: +34.107 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    262 bytesused: 10506240 ts: 1734.616484 delta: 33.334 ms delta now: +33.825 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    263 bytesused: 10506240 ts: 1734.649816 delta: 33.332 ms delta now: +34.091 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    264 bytesused: 10506240 ts: 1734.683150 delta: 33.334 ms delta now: +33.814 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    265 bytesused: 10506240 ts: 1734.716483 delta: 33.333 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    266 bytesused: 10506240 ts: 1734.749817 delta: 33.334 ms delta now: +34.095 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    267 bytesused: 10506240 ts: 1734.783150 delta: 33.333 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    268 bytesused: 10506240 ts: 1734.816483 delta: 33.333 ms delta now: +34.123 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    269 bytesused: 10506240 ts: 1734.849817 delta: 33.334 ms delta now: +33.826 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    270 bytesused: 10506240 ts: 1734.883150 delta: 33.333 ms delta now: +34.103 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    271 bytesused: 10506240 ts: 1734.916484 delta: 33.334 ms delta now: +33.823 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    272 bytesused: 10506240 ts: 1734.949816 delta: 33.332 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    273 bytesused: 10506240 ts: 1734.983150 delta: 33.334 ms delta now: +34.100 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    274 bytesused: 10506240 ts: 1735.016484 delta: 33.334 ms delta now: +33.827 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    275 bytesused: 10506240 ts: 1735.049816 delta: 33.332 ms delta now: +34.213 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    276 bytesused: 10506240 ts: 1735.083151 delta: 33.335 ms delta now: +33.835 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    277 bytesused: 10506240 ts: 1735.116483 delta: 33.332 ms delta now: +34.150 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    278 bytesused: 10506240 ts: 1735.149817 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    279 bytesused: 10506240 ts: 1735.183150 delta: 33.333 ms delta now: +34.160 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    280 bytesused: 10506240 ts: 1735.216484 delta: 33.334 ms delta now: +33.843 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    281 bytesused: 10506240 ts: 1735.249817 delta: 33.333 ms delta now: +34.163 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    282 bytesused: 10506240 ts: 1735.283151 delta: 33.334 ms delta now: +33.841 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    283 bytesused: 10506240 ts: 1735.316483 delta: 33.332 ms delta now: +34.107 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    284 bytesused: 10506240 ts: 1735.349817 delta: 33.334 ms delta now: +33.830 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    285 bytesused: 10506240 ts: 1735.383150 delta: 33.333 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    286 bytesused: 10506240 ts: 1735.416483 delta: 33.333 ms delta now: +33.951 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    287 bytesused: 10506240 ts: 1735.449817 delta: 33.334 ms delta now: +33.833 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    288 bytesused: 10506240 ts: 1735.483150 delta: 33.333 ms delta now: +34.162 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    289 bytesused: 10506240 ts: 1735.516484 delta: 33.334 ms delta now: +33.828 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    290 bytesused: 10506240 ts: 1735.549816 delta: 33.332 ms delta now: +34.098 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    291 bytesused: 10506240 ts: 1735.583150 delta: 33.334 ms delta now: +33.843 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    292 bytesused: 10506240 ts: 1735.616483 delta: 33.333 ms delta now: +34.095 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    293 bytesused: 10506240 ts: 1735.649817 delta: 33.334 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    294 bytesused: 10506240 ts: 1735.683150 delta: 33.333 ms delta now: +34.096 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    295 bytesused: 10506240 ts: 1735.716484 delta: 33.334 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    296 bytesused: 10506240 ts: 1735.749816 delta: 33.332 ms delta now: +34.097 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    297 bytesused: 10506240 ts: 1735.783151 delta: 33.335 ms delta now: +33.984 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    298 bytesused: 10506240 ts: 1735.816484 delta: 33.333 ms delta now: +33.838 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    299 bytesused: 10506240 ts: 1735.849817 delta: 33.333 ms delta now: +34.084 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    300 bytesused: 10506240 ts: 1735.883151 delta: 33.334 ms delta now: +33.848 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    301 bytesused: 10506240 ts: 1735.916484 delta: 33.333 ms delta now: +34.179 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    302 bytesused: 10506240 ts: 1735.949817 delta: 33.333 ms delta now: +33.829 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    303 bytesused: 10506240 ts: 1735.983150 delta: 33.333 ms delta now: +34.163 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:    304 bytesused: 10506240 ts: 1736.016484 delta: 33.334 ms delta now: +34.066 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:    305 bytesused: 10506240 ts: 1736.049817 delta: 33.333 ms delta now: +33.842 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:    306 bytesused: 10506240 ts: 1736.083150 delta: 33.333 ms delta now: +34.102 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:    307 bytesused: 10506240 ts: 1736.116484 delta: 33.334 ms delta now: +33.831 ms fps: 30.00 (ts-monotonic, ts-src-eof)
+
+VIDIOC_QUERYCAP: ok
+1,1725.74,1736.23,8,300,PASS
+=== runtime PM and relevant kernel log ===
+runtime_status: suspended
+runtime_active_time: 21138
+runtime_suspended_time: 1713234
+[   55.584137] OF: reserved mem: initialized node cma, compatible id shared-dma-pool
+[   55.697315]   DMA      [mem 0x0000000000200000-0x00000000ffffffff]
+[   55.697881]   DMA32    empty
+[   55.702353]   DMA zone: 15288 pages used for memmap
+[   55.702356]   DMA zone: 0 pages reserved
+[   55.702359]   DMA zone: 978432 pages, LIFO batch:63
+[   56.086334] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[   56.087071] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[   56.144788] iommu: Default domain type: Translated 
+[   56.390884] rockchip-csi2-dphy-hw fedc0000.csi2-dphy0-hw: csi2 dphy hw probe successfully!
+[   56.390956] rockchip-csi2-dphy-hw fedc8000.csi2-dphy1-hw: csi2 dphy hw probe successfully!
+[   56.403864] mpp_vdpu1 fdb51000.avsd-plus: Adding to iommu group 1
+[   56.404511] mpp_vdpu2 fdb50400.vdpu: Adding to iommu group 1
+[   56.404897] mpp_vepu2 fdb50000.vepu: Adding to iommu group 1
+[   56.405092] mpp_vepu2 fdba0000.jpege-core: Adding to iommu group 5
+[   56.405347] mpp_vepu2 fdba4000.jpege-core: Adding to iommu group 6
+[   56.405584] mpp_vepu2 fdba8000.jpege-core: Adding to iommu group 7
+[   56.405812] mpp_vepu2 fdbac000.jpege-core: Adding to iommu group 8
+[   56.406213] mpp-iep2 fdbb0000.iep: Adding to iommu group 9
+[   56.406563] mpp_jpgdec fdb90000.jpegd: Adding to iommu group 4
+[   56.407290] mpp_rkvdec2 fdc38100.rkvdec-core: Adding to iommu group 12
+[   56.418952] mpp_rkvdec2 fdc48100.rkvdec-core: Adding to iommu group 13
+[   56.420449] mpp_av1dec av1d-master: av1_iommu_of_xlate,784
+[   56.420468] av1_iommu_probe_device,736, consumer : av1d-master, supplier : fdca0000.iommu
+[   56.420499] mpp_av1dec av1d-master: Adding to iommu group 18
+[   56.429788] dma-pl330 fea10000.dma-controller: Loaded driver for PL330 DMAC-241330
+[   56.429796] dma-pl330 fea10000.dma-controller: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[   56.430544] dma-pl330 fea30000.dma-controller: Loaded driver for PL330 DMAC-241330
+[   56.430551] dma-pl330 fea30000.dma-controller: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[   56.431301] dma-pl330 fed10000.dma-controller: Loaded driver for PL330 DMAC-241330
+[   56.431307] dma-pl330 fed10000.dma-controller: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[   56.457563] ata1: SATA max UDMA/133 mmio [mem 0xfe210000-0xfe210fff] port 0x100 irq 100
+[   56.476878] rk_gmac-dwmac fe1b0000.ethernet: DMA HW capability register supported
+[   56.476939] rk_gmac-dwmac fe1b0000.ethernet: Using 32 bits DMA width
+[   56.611716] rk_gmac-dwmac fe1c0000.ethernet: DMA HW capability register supported
+[   56.611775] rk_gmac-dwmac fe1c0000.ethernet: Using 32 bits DMA width
+[   57.901263] zzh_imx415 2-001a: endpoint must contain only link-frequencies = <445500000>
+[   57.901279] zzh_imx415: probe of 2-001a failed with error -22
+[   57.901386] zzh_imx415 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[   57.903830] zzh_imx415 3-001a: reference register 0x311a = 0xe0
+[   57.903836] zzh_imx415 3-001a: vendor reference signature matched (not an official unique Chip ID)
+[   57.903866] zzh_imx415 3-001a: registered independent 3864x2192 RAW10 30 fps Sensor subdev
+[   57.903999] zzh_imx415 4-001a: endpoint must contain only link-frequencies = <445500000>
+[   57.904009] zzh_imx415: probe of 4-001a failed with error -22
+[   57.904079] zzh_imx415 7-001a: endpoint must contain only link-frequencies = <445500000>
+[   57.904087] zzh_imx415: probe of 7-001a failed with error -22
+[   57.904538] rkcifhw fdce0000.rkcif: Adding to iommu group 16
+[   57.905263] rkcifhw fdce0000.rkcif: No reserved memory region assign to CIF
+[   57.905332] rkcif rkcif-mipi-lvds: Adding to iommu group 16
+[   57.905343] rkcif rkcif-mipi-lvds: rkcif driver version: v00.02.00
+[   57.905384] rkcif rkcif-mipi-lvds: attach to cif hw node
+[   57.905388] rkcif rkcif-mipi-lvds: rkcif wait line 0
+[   57.905391] rkcif rkcif-mipi-lvds: rkcif fastboot reserve bufs num 3
+[   57.905413] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.905418] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.905424] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.905427] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.905433] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.905436] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.905442] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.905445] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.906684] rkcif rkcif-mipi-lvds: No memory-region-thunderboot specified
+[   57.906828] rkcif rkcif-mipi-lvds1: Adding to iommu group 16
+[   57.906856] rkcif rkcif-mipi-lvds1: rkcif driver version: v00.02.00
+[   57.906936] rkcif rkcif-mipi-lvds1: attach to cif hw node
+[   57.906946] rkcif rkcif-mipi-lvds1: rkcif wait line 0
+[   57.906955] rkcif rkcif-mipi-lvds1: rkcif fastboot reserve bufs num 3
+[   57.906999] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.907008] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.907021] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.907029] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.907042] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.907050] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.907063] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.907070] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.908306] rkcif rkcif-mipi-lvds1: No memory-region-thunderboot specified
+[   57.908427] rkcif rkcif-mipi-lvds2: Adding to iommu group 16
+[   57.908453] rkcif rkcif-mipi-lvds2: rkcif driver version: v00.02.00
+[   57.908530] rkcif rkcif-mipi-lvds2: attach to cif hw node
+[   57.908540] rkcif rkcif-mipi-lvds2: rkcif wait line 0
+[   57.908548] rkcif rkcif-mipi-lvds2: rkcif fastboot reserve bufs num 3
+[   57.908591] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.908599] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.908612] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.908620] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.908633] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.908641] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.908654] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.908662] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.909865] rkcif rkcif-mipi-lvds2: No memory-region-thunderboot specified
+[   57.910119] rkcif rkcif-mipi-lvds4: Adding to iommu group 16
+[   57.910143] rkcif rkcif-mipi-lvds4: rkcif driver version: v00.02.00
+[   57.910190] rkcif rkcif-mipi-lvds4: attach to cif hw node
+[   57.910194] rkcif rkcif-mipi-lvds4: rkcif wait line 0
+[   57.910199] rkcif rkcif-mipi-lvds4: rkcif fastboot reserve bufs num 3
+[   57.910226] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.910232] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.910240] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.910245] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.910253] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.910257] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.910265] : rkcif_update_sensor_info: stream[0] get remote sensor_sd failed!
+[   57.910269] : rkcif_scale_set_fmt: req(40, 30) src out(0, 0)
+[   57.911002] rkcif rkcif-mipi-lvds4: No memory-region-thunderboot specified
+[   57.912072] rockchip-mipi-csi2-hw fdd10000.mipi0-csi2-hw: enter mipi csi2 hw probe!
+[   57.912182] rockchip-mipi-csi2-hw fdd10000.mipi0-csi2-hw: probe success, v4l2_dev:mipi0-csi2-hw!
+[   57.912216] rockchip-mipi-csi2-hw fdd20000.mipi1-csi2-hw: enter mipi csi2 hw probe!
+[   57.912268] rockchip-mipi-csi2-hw fdd20000.mipi1-csi2-hw: probe success, v4l2_dev:mipi1-csi2-hw!
+[   57.912295] rockchip-mipi-csi2-hw fdd30000.mipi2-csi2-hw: enter mipi csi2 hw probe!
+[   57.912338] rockchip-mipi-csi2-hw fdd30000.mipi2-csi2-hw: probe success, v4l2_dev:mipi2-csi2-hw!
+[   57.912364] rockchip-mipi-csi2-hw fdd40000.mipi3-csi2-hw: enter mipi csi2 hw probe!
+[   57.912410] rockchip-mipi-csi2-hw fdd40000.mipi3-csi2-hw: probe success, v4l2_dev:mipi3-csi2-hw!
+[   57.912434] rockchip-mipi-csi2-hw fdd50000.mipi4-csi2-hw: enter mipi csi2 hw probe!
+[   57.912478] rockchip-mipi-csi2-hw fdd50000.mipi4-csi2-hw: probe success, v4l2_dev:mipi4-csi2-hw!
+[   57.912503] rockchip-mipi-csi2-hw fdd60000.mipi5-csi2-hw: enter mipi csi2 hw probe!
+[   57.912564] rockchip-mipi-csi2-hw fdd60000.mipi5-csi2-hw: probe success, v4l2_dev:mipi5-csi2-hw!
+[   57.913094] rockchip-mipi-csi2 mipi0-csi2: attach to csi2 hw node
+[   57.913128] rkcif rkcif-mipi-lvds: Entity type for entity rockchip-mipi-csi2 was not initialized!
+[   57.913135] rockchip-mipi-csi2: Async registered subdev
+[   57.913141] rockchip-mipi-csi2: probe success, v4l2_dev:rkcif-mipi-lvds!
+[   57.913294] rockchip-mipi-csi2 mipi1-csi2: attach to csi2 hw node
+[   57.913313] rkcif rkcif-mipi-lvds1: Entity type for entity rockchip-mipi-csi2 was not initialized!
+[   57.913318] rockchip-mipi-csi2: Async registered subdev
+[   57.913323] rockchip-mipi-csi2: probe success, v4l2_dev:rkcif-mipi-lvds1!
+[   57.913461] rockchip-mipi-csi2 mipi2-csi2: attach to csi2 hw node
+[   57.913478] rkcif rkcif-mipi-lvds2: Entity type for entity rockchip-mipi-csi2 was not initialized!
+[   57.913483] rockchip-mipi-csi2: Async registered subdev
+[   57.913487] rockchip-mipi-csi2: probe success, v4l2_dev:rkcif-mipi-lvds2!
+[   57.913626] rockchip-mipi-csi2 mipi4-csi2: attach to csi2 hw node
+[   57.913654] rkcif rkcif-mipi-lvds4: Entity type for entity rockchip-mipi-csi2 was not initialized!
+[   57.913659] rockchip-mipi-csi2: Async registered subdev
+[   57.913664] rockchip-mipi-csi2: probe success, v4l2_dev:rkcif-mipi-lvds4!
+[   57.914716] rkisp_hw fdcb0000.rkisp: Adding to iommu group 14
+[   57.914852] rkisp_hw fdcb0000.rkisp: is_thunderboot: 0
+[   57.914858] rkisp_hw fdcb0000.rkisp: Missing rockchip,grf property
+[   57.914874] rkisp_hw fdcb0000.rkisp: max input:0x0@0fps
+[   57.914943] rkisp_hw fdcb0000.rkisp: no find phandle sram
+[   57.915050] rkisp_hw fdcc0000.rkisp: Adding to iommu group 15
+[   57.915215] rkisp_hw fdcc0000.rkisp: is_thunderboot: 0
+[   57.915220] rkisp_hw fdcc0000.rkisp: Missing rockchip,grf property
+[   57.915234] rkisp_hw fdcc0000.rkisp: max input:0x0@0fps
+[   57.915296] rkisp_hw fdcc0000.rkisp: no find phandle sram
+[   57.915582] rkisp rkisp0-vir0: rkisp driver version: v02.05.01
+[   57.915656] rkisp rkisp0-vir0: No memory-region-thunderboot specified
+[   57.915729] rkisp rkisp0-vir0: Entity type for entity rkisp-isp-subdev was not initialized!
+[   57.916316] rkisp rkisp0-vir1: rkisp driver version: v02.05.01
+[   57.916367] rkisp rkisp0-vir1: No memory-region-thunderboot specified
+[   57.916427] rkisp rkisp0-vir1: Entity type for entity rkisp-isp-subdev was not initialized!
+[   57.917082] rkisp rkisp1-vir0: rkisp driver version: v02.05.01
+[   57.917153] rkisp rkisp1-vir0: No memory-region-thunderboot specified
+[   57.917212] rkisp rkisp1-vir0: Entity type for entity rkisp-isp-subdev was not initialized!
+[   57.917782] rkisp rkisp1-vir1: rkisp driver version: v02.05.01
+[   57.917834] rkisp rkisp1-vir1: No memory-region-thunderboot specified
+[   57.917905] rkisp rkisp1-vir1: Entity type for entity rkisp-isp-subdev was not initialized!
+[   57.974811] dwmmc_rockchip fe2c0000.mmc: IDMAC supports 32-bit address mode.
+[   57.974840] dwmmc_rockchip fe2c0000.mmc: Using internal DMA controller.
+[   58.006735] mmc0: SDHCI controller on fe2e0000.mmc [fe2e0000.mmc] using ADMA
+[   58.302339] rga3 fdb60000.rga: Adding to iommu group 2
+[   58.302896] rga3 fdb70000.rga: Adding to iommu group 3
+[   58.304112] rga_iommu: IOMMU binding successfully, default mapping core[0x1]
+[   58.367070] mpp_rkvenc2 fdbd0000.rkvenc-core: Adding to iommu group 10
+[   58.387710] mpp_rkvenc2 fdbe0000.rkvenc-core: Adding to iommu group 11
+[   58.399058] rockchip-vop2 fdd90000.vop: Adding to iommu group 17
+[   58.452297] rockchip-csi2-dphy csi2-dcphy0: csi2 dphy0 probe successfully!
+[   58.452620] rockchip-csi2-dphy csi2-dcphy1: csi2 dphy0 probe successfully!
+[   58.452935] rockchip-csi2-dphy csi2-dphy0: dphy0 matches zzh_imx415 3-001a:bus type 5
+[   58.453406] rkcif-mipi-lvds2: Async subdev notifier completed
+[   58.453417] rockchip-csi2-dphy csi2-dphy0: csi2 dphy0 probe successfully!
+[   58.453813] rkisp0-vir0: Async subdev notifier completed
+[   58.453869] rockchip-csi2-dphy csi2-dphy3: csi2 dphy3 probe successfully!
+[   58.740521] rkcif rkcif-mipi-lvds: clear unready subdev num: 1
+[   58.740844] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.740863] rkcif-mipi-lvds: Async subdev notifier completed
+[   58.740874] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.740879] rkcif-mipi-lvds: There is not terminal subdev, not synchronized with ISP
+[   58.740885] rkcif rkcif-mipi-lvds1: clear unready subdev num: 1
+[   58.741218] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.741236] rkcif-mipi-lvds1: Async subdev notifier completed
+[   58.741247] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.741252] rkcif-mipi-lvds1: There is not terminal subdev, not synchronized with ISP
+[   58.741258] rkcif rkcif-mipi-lvds2: clear unready subdev num: 0
+[   58.741266] rkcif rkcif-mipi-lvds4: clear unready subdev num: 1
+[   58.741528] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.741545] rkcif-mipi-lvds4: Async subdev notifier completed
+[   58.741556] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.741561] rkcif-mipi-lvds4: There is not terminal subdev, not synchronized with ISP
+[   58.741578] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.741585] rkcif-mipi-lvds4: There is not terminal subdev, not synchronized with ISP
+[   58.741630] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.741636] rkcif-mipi-lvds: There is not terminal subdev, not synchronized with ISP
+[   58.741705] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   58.741712] rkcif-mipi-lvds1: There is not terminal subdev, not synchronized with ISP
+[   58.742485] RKNPU fdab0000.npu: Adding to iommu group 0
+[   58.742604] RKNPU fdab0000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[   61.866703] rkisp rkisp0-vir0: clear unready subdev num: 0
+[   61.866711] rkisp rkisp0-vir1: clear unready subdev num: 1
+[   61.866913] rkisp0-vir1: Async subdev notifier completed
+[   61.866924] rkisp rkisp1-vir0: clear unready subdev num: 1
+[   61.867087] rkisp1-vir0: Async subdev notifier completed
+[   61.867098] rkisp rkisp1-vir1: clear unready subdev num: 1
+[   61.867227] rkisp1-vir1: Async subdev notifier completed
+[   64.070024] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.070033] stream_cif_mipi_id0: update sensor info failed -19
+[   64.070425] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.070433] stream_cif_mipi_id1: update sensor info failed -19
+[   64.073422] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.073432] rkcif_tools_id2: update sensor info failed -19
+[   64.082585] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.082605] stream_cif_mipi_id2: update sensor info failed -19
+[   64.083525] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[   64.083539] stream_cif_mipi_id3: update sensor info failed -19
+[   64.083591] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.083600] rkcif_scale_ch0: update sensor info failed -19
+[   64.084101] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.084108] rkcif_scale_ch1: update sensor info failed -19
+[   64.084114] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.084121] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[   64.084124] rkcif_scale_ch3: update sensor info failed -19
+[   64.084129] rkcif_scale_ch2: update sensor info failed -19
+[   64.087252] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.087263] rkcif_tools_id1: update sensor info failed -19
+[   64.087441] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.087449] rkcif_tools_id0: update sensor info failed -19
+[   64.092287] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.092297] stream_cif_mipi_id1: update sensor info failed -19
+[   64.092303] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.092306] stream_cif_mipi_id0: update sensor info failed -19
+[   64.093199] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.093203] stream_cif_mipi_id2: update sensor info failed -19
+[   64.094512] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[   64.094517] stream_cif_mipi_id3: update sensor info failed -19
+[   64.097143] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.097157] rkcif_scale_ch1: update sensor info failed -19
+[   64.097505] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.097513] rkcif_scale_ch0: update sensor info failed -19
+[   64.098935] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.098940] rkcif_scale_ch2: update sensor info failed -19
+[   64.101008] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.101019] rkcif_tools_id0: update sensor info failed -19
+[   64.101369] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[   64.101379] rkcif_scale_ch3: update sensor info failed -19
+[   64.102380] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.102388] rkcif_tools_id1: update sensor info failed -19
+[   64.104454] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.104465] rkcif_tools_id2: update sensor info failed -19
+[   64.114429] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.114438] stream_cif_mipi_id0: update sensor info failed -19
+[   64.116112] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[   64.116124] stream_cif_mipi_id3: update sensor info failed -19
+[   64.116654] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.116664] rkcif_scale_ch1: update sensor info failed -19
+[   64.116848] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.116855] stream_cif_mipi_id1: update sensor info failed -19
+[   64.117117] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.117123] rkcif_scale_ch0: update sensor info failed -19
+[   64.118218] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[   64.118229] rkcif_tools_id0: update sensor info failed -19
+[   64.118258] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[   64.118267] rkcif_scale_ch3: update sensor info failed -19
+[   64.118921] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.118928] rkcif_scale_ch2: update sensor info failed -19
+[   64.120829] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.120838] stream_cif_mipi_id2: update sensor info failed -19
+[   64.129742] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[   64.129752] rkcif_tools_id2: update sensor info failed -19
+[   64.131000] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[   64.131017] rkcif_tools_id1: update sensor info failed -19
+[  414.704478] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.704499] stream_cif_mipi_id0: update sensor info failed -19
+[  414.704523] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.704528] stream_cif_mipi_id1: update sensor info failed -19
+[  414.704548] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.704553] stream_cif_mipi_id2: update sensor info failed -19
+[  414.704571] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  414.704577] stream_cif_mipi_id3: update sensor info failed -19
+[  414.704595] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.704601] rkcif_scale_ch0: update sensor info failed -19
+[  414.704619] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.704624] rkcif_scale_ch1: update sensor info failed -19
+[  414.704642] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.704647] rkcif_scale_ch2: update sensor info failed -19
+[  414.704665] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  414.704670] rkcif_scale_ch3: update sensor info failed -19
+[  414.704689] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.704694] rkcif_tools_id0: update sensor info failed -19
+[  414.704713] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.704718] rkcif_tools_id1: update sensor info failed -19
+[  414.704736] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.704741] rkcif_tools_id2: update sensor info failed -19
+[  414.704788] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.704793] stream_cif_mipi_id0: update sensor info failed -19
+[  414.704813] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.704818] stream_cif_mipi_id1: update sensor info failed -19
+[  414.704837] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.704843] stream_cif_mipi_id2: update sensor info failed -19
+[  414.704861] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  414.704866] stream_cif_mipi_id3: update sensor info failed -19
+[  414.704885] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.704891] rkcif_scale_ch0: update sensor info failed -19
+[  414.704909] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.704914] rkcif_scale_ch1: update sensor info failed -19
+[  414.704932] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.704937] rkcif_scale_ch2: update sensor info failed -19
+[  414.704955] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  414.704960] rkcif_scale_ch3: update sensor info failed -19
+[  414.704979] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.704984] rkcif_tools_id0: update sensor info failed -19
+[  414.705003] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.705007] rkcif_tools_id1: update sensor info failed -19
+[  414.705026] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.705031] rkcif_tools_id2: update sensor info failed -19
+[  414.728879] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.728893] stream_cif_mipi_id0: update sensor info failed -19
+[  414.728919] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.728925] stream_cif_mipi_id1: update sensor info failed -19
+[  414.728948] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.728954] stream_cif_mipi_id2: update sensor info failed -19
+[  414.728977] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  414.728982] stream_cif_mipi_id3: update sensor info failed -19
+[  414.729005] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.729011] rkcif_scale_ch0: update sensor info failed -19
+[  414.729033] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.729039] rkcif_scale_ch1: update sensor info failed -19
+[  414.729061] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.729067] rkcif_scale_ch2: update sensor info failed -19
+[  414.729089] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  414.729095] rkcif_scale_ch3: update sensor info failed -19
+[  414.729117] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.729123] rkcif_tools_id0: update sensor info failed -19
+[  414.729145] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  414.729156] rkcif_tools_id1: update sensor info failed -19
+[  414.729257] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  414.729266] rkcif_tools_id2: update sensor info failed -19
+[  414.776004] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  414.776021] stream_cif_mipi_id0: update sensor info failed -19
+[  740.642787] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.642834] stream_cif_mipi_id0: update sensor info failed -19
+[  740.642874] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.642883] stream_cif_mipi_id1: update sensor info failed -19
+[  740.642918] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.642926] rkcif_tools_id2: update sensor info failed -19
+[  740.642988] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.642997] stream_cif_mipi_id0: update sensor info failed -19
+[  740.643032] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.643040] stream_cif_mipi_id1: update sensor info failed -19
+[  740.643071] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.643079] stream_cif_mipi_id2: update sensor info failed -19
+[  740.643164] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  740.643181] stream_cif_mipi_id3: update sensor info failed -19
+[  740.643224] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.643232] rkcif_scale_ch0: update sensor info failed -19
+[  740.643265] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.643273] rkcif_scale_ch1: update sensor info failed -19
+[  740.643304] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.643312] rkcif_scale_ch2: update sensor info failed -19
+[  740.643343] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  740.643352] rkcif_scale_ch3: update sensor info failed -19
+[  740.643388] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.643396] rkcif_tools_id0: update sensor info failed -19
+[  740.643431] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.643439] stream_cif_mipi_id2: update sensor info failed -19
+[  740.643473] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.643481] rkcif_tools_id1: update sensor info failed -19
+[  740.643514] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.643522] rkcif_tools_id2: update sensor info failed -19
+[  740.660855] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  740.660862] stream_cif_mipi_id3: update sensor info failed -19
+[  740.667336] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.667370] stream_cif_mipi_id0: update sensor info failed -19
+[  740.667410] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.667419] stream_cif_mipi_id1: update sensor info failed -19
+[  740.667454] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.667463] stream_cif_mipi_id2: update sensor info failed -19
+[  740.667494] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  740.667502] stream_cif_mipi_id3: update sensor info failed -19
+[  740.667534] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.667542] rkcif_scale_ch0: update sensor info failed -19
+[  740.667574] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.667581] rkcif_scale_ch1: update sensor info failed -19
+[  740.667613] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.667621] rkcif_scale_ch2: update sensor info failed -19
+[  740.667657] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.667665] rkcif_scale_ch0: update sensor info failed -19
+[  740.667698] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  740.667707] rkcif_scale_ch3: update sensor info failed -19
+[  740.667739] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.667747] rkcif_tools_id0: update sensor info failed -19
+[  740.667779] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.667786] rkcif_tools_id1: update sensor info failed -19
+[  740.667818] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.667826] rkcif_tools_id2: update sensor info failed -19
+[  740.681548] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.681554] rkcif_scale_ch1: update sensor info failed -19
+[  740.693549] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  740.693585] rkcif_scale_ch2: update sensor info failed -19
+[  740.703753] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  740.703773] rkcif_scale_ch3: update sensor info failed -19
+[  740.714127] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  740.714148] rkcif_tools_id0: update sensor info failed -19
+[  740.714198] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  740.714204] rkcif_tools_id1: update sensor info failed -19
+[  741.046862] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.046894] stream_cif_mipi_id0: update sensor info failed -19
+[  741.046918] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.046923] stream_cif_mipi_id1: update sensor info failed -19
+[  741.046944] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.046949] rkcif_tools_id2: update sensor info failed -19
+[  741.046995] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.047000] stream_cif_mipi_id0: update sensor info failed -19
+[  741.047020] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.047025] stream_cif_mipi_id1: update sensor info failed -19
+[  741.047044] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.047049] stream_cif_mipi_id2: update sensor info failed -19
+[  741.047067] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  741.047072] stream_cif_mipi_id3: update sensor info failed -19
+[  741.047092] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.047096] rkcif_scale_ch0: update sensor info failed -19
+[  741.047116] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.047121] rkcif_scale_ch1: update sensor info failed -19
+[  741.047139] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.047144] rkcif_scale_ch2: update sensor info failed -19
+[  741.047163] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  741.047168] rkcif_scale_ch3: update sensor info failed -19
+[  741.047186] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.047190] rkcif_tools_id0: update sensor info failed -19
+[  741.047211] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.047216] stream_cif_mipi_id2: update sensor info failed -19
+[  741.047235] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.047240] rkcif_tools_id1: update sensor info failed -19
+[  741.047258] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.047263] rkcif_tools_id2: update sensor info failed -19
+[  741.063963] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  741.063970] stream_cif_mipi_id3: update sensor info failed -19
+[  741.070360] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.070387] stream_cif_mipi_id0: update sensor info failed -19
+[  741.070412] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.070417] stream_cif_mipi_id1: update sensor info failed -19
+[  741.070437] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.070443] stream_cif_mipi_id2: update sensor info failed -19
+[  741.070467] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  741.070472] stream_cif_mipi_id3: update sensor info failed -19
+[  741.070495] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.070500] rkcif_scale_ch0: update sensor info failed -19
+[  741.070523] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.070528] rkcif_scale_ch1: update sensor info failed -19
+[  741.070550] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.070556] rkcif_scale_ch2: update sensor info failed -19
+[  741.070581] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.070587] rkcif_scale_ch0: update sensor info failed -19
+[  741.070611] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  741.070617] rkcif_scale_ch3: update sensor info failed -19
+[  741.070640] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.070646] rkcif_tools_id0: update sensor info failed -19
+[  741.070668] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.070674] rkcif_tools_id1: update sensor info failed -19
+[  741.070695] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.070701] rkcif_tools_id2: update sensor info failed -19
+[  741.083878] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.083885] rkcif_scale_ch1: update sensor info failed -19
+[  741.095356] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[  741.095394] rkcif_scale_ch2: update sensor info failed -19
+[  741.106071] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[  741.106094] rkcif_scale_ch3: update sensor info failed -19
+[  741.116509] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[  741.116532] rkcif_tools_id0: update sensor info failed -19
+[  741.116584] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[  741.116590] rkcif_tools_id1: update sensor info failed -19
+[  742.311410] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.311480] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.311511] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.311544] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.311576] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.382831] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.382993] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.383052] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.383099] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[  742.383176] rkisp1-vir1: rkisp_enum_frameintervals Not active sensor
+[ 1731.969536] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.969566] stream_cif_mipi_id0: update sensor info failed -19
+[ 1731.969615] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.969621] stream_cif_mipi_id1: update sensor info failed -19
+[ 1731.969643] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.969648] stream_cif_mipi_id2: update sensor info failed -19
+[ 1731.969665] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1731.969670] stream_cif_mipi_id3: update sensor info failed -19
+[ 1731.969687] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.969696] rkcif_scale_ch0: update sensor info failed -19
+[ 1731.969715] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.969719] rkcif_scale_ch1: update sensor info failed -19
+[ 1731.969736] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.969740] rkcif_scale_ch2: update sensor info failed -19
+[ 1731.969756] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1731.969761] rkcif_scale_ch3: update sensor info failed -19
+[ 1731.969778] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.969783] rkcif_tools_id0: update sensor info failed -19
+[ 1731.969800] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.969804] rkcif_tools_id1: update sensor info failed -19
+[ 1731.969821] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.969826] rkcif_tools_id2: update sensor info failed -19
+[ 1731.969871] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.969876] stream_cif_mipi_id0: update sensor info failed -19
+[ 1731.969895] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.969904] stream_cif_mipi_id1: update sensor info failed -19
+[ 1731.969922] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.969927] stream_cif_mipi_id2: update sensor info failed -19
+[ 1731.969943] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1731.969948] stream_cif_mipi_id3: update sensor info failed -19
+[ 1731.969964] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.969969] rkcif_scale_ch0: update sensor info failed -19
+[ 1731.969985] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.969990] rkcif_scale_ch1: update sensor info failed -19
+[ 1731.970007] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.970011] rkcif_scale_ch2: update sensor info failed -19
+[ 1731.970028] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1731.970032] rkcif_scale_ch3: update sensor info failed -19
+[ 1731.970052] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.970058] rkcif_tools_id0: update sensor info failed -19
+[ 1731.970075] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.970079] rkcif_tools_id1: update sensor info failed -19
+[ 1731.970095] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.970100] rkcif_tools_id2: update sensor info failed -19
+[ 1731.994136] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.994145] stream_cif_mipi_id0: update sensor info failed -19
+[ 1731.994165] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.994170] stream_cif_mipi_id1: update sensor info failed -19
+[ 1731.994188] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.994193] stream_cif_mipi_id2: update sensor info failed -19
+[ 1731.994210] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1731.994214] stream_cif_mipi_id3: update sensor info failed -19
+[ 1731.994231] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.994236] rkcif_scale_ch0: update sensor info failed -19
+[ 1731.994253] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.994258] rkcif_scale_ch1: update sensor info failed -19
+[ 1731.994292] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.994297] rkcif_scale_ch2: update sensor info failed -19
+[ 1731.994315] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1731.994320] rkcif_scale_ch3: update sensor info failed -19
+[ 1731.994337] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1731.994341] rkcif_tools_id0: update sensor info failed -19
+[ 1731.994358] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1731.994363] rkcif_tools_id1: update sensor info failed -19
+[ 1731.994380] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1731.994384] rkcif_tools_id2: update sensor info failed -19
+[ 1732.022472] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1732.022503] stream_cif_mipi_id0: update sensor info failed -19
+[ 1732.247691] rkcif-mipi-lvds2: stream[0] start streaming
+[ 1732.250376] rkcif-mipi-lvds2: Allocate dummy buffer, size: 0x01028000
+[ 1732.250464] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000009de0fc56, sd_name:rockchip-csi2-dphy0
+[ 1732.250471] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[ 1732.250507] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[ 1732.250543] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[ 1732.307730] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[ 1742.622787] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x1, cur 0x1
+[ 1742.654892] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000009de0fc56, sd_name:rockchip-csi2-dphy0
+[ 1742.655052] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[ 1742.655129] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[ 1742.655160] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[ 1742.657335] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[ 1781.519274] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.519314] stream_cif_mipi_id0: update sensor info failed -19
+[ 1781.519345] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.519352] stream_cif_mipi_id1: update sensor info failed -19
+[ 1781.519377] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.519384] stream_cif_mipi_id2: update sensor info failed -19
+[ 1781.519408] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1781.519415] stream_cif_mipi_id3: update sensor info failed -19
+[ 1781.519439] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.519446] rkcif_scale_ch0: update sensor info failed -19
+[ 1781.519469] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.519476] rkcif_scale_ch1: update sensor info failed -19
+[ 1781.519500] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.519506] rkcif_scale_ch2: update sensor info failed -19
+[ 1781.519531] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1781.519538] rkcif_scale_ch3: update sensor info failed -19
+[ 1781.519608] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.519616] rkcif_tools_id0: update sensor info failed -19
+[ 1781.519658] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.519669] rkcif_tools_id1: update sensor info failed -19
+[ 1781.519694] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.519701] rkcif_tools_id2: update sensor info failed -19
+[ 1781.519754] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.519761] stream_cif_mipi_id0: update sensor info failed -19
+[ 1781.519787] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.519800] stream_cif_mipi_id1: update sensor info failed -19
+[ 1781.519829] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.519836] stream_cif_mipi_id2: update sensor info failed -19
+[ 1781.519859] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1781.519865] stream_cif_mipi_id3: update sensor info failed -19
+[ 1781.519888] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.519895] rkcif_scale_ch0: update sensor info failed -19
+[ 1781.519920] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.519926] rkcif_scale_ch1: update sensor info failed -19
+[ 1781.519949] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.519956] rkcif_scale_ch2: update sensor info failed -19
+[ 1781.519979] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1781.519986] rkcif_scale_ch3: update sensor info failed -19
+[ 1781.520009] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.520015] rkcif_tools_id0: update sensor info failed -19
+[ 1781.520038] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.520045] rkcif_tools_id1: update sensor info failed -19
+[ 1781.520070] rkcif-mipi-lvds1: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.520083] rkcif_tools_id2: update sensor info failed -19
+[ 1781.541284] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.541297] stream_cif_mipi_id0: update sensor info failed -19
+[ 1781.541333] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.541341] stream_cif_mipi_id1: update sensor info failed -19
+[ 1781.541371] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.541379] stream_cif_mipi_id2: update sensor info failed -19
+[ 1781.541408] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1781.541415] stream_cif_mipi_id3: update sensor info failed -19
+[ 1781.541444] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.541452] rkcif_scale_ch0: update sensor info failed -19
+[ 1781.541481] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.541488] rkcif_scale_ch1: update sensor info failed -19
+[ 1781.541517] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.541524] rkcif_scale_ch2: update sensor info failed -19
+[ 1781.541553] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[3] get remote terminal sensor failed!
+[ 1781.541561] rkcif_scale_ch3: update sensor info failed -19
+[ 1781.541589] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.541597] rkcif_tools_id0: update sensor info failed -19
+[ 1781.541626] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[1] get remote terminal sensor failed!
+[ 1781.541634] rkcif_tools_id1: update sensor info failed -19
+[ 1781.541662] rkcif-mipi-lvds4: rkcif_update_sensor_info: stream[2] get remote terminal sensor failed!
+[ 1781.541670] rkcif_tools_id2: update sensor info failed -19
+[ 1781.569491] rkcif-mipi-lvds: rkcif_update_sensor_info: stream[0] get remote terminal sensor failed!
+[ 1781.569511] stream_cif_mipi_id0: update sensor info failed -19
+[ 1781.799895] rkcif-mipi-lvds2: stream[0] start streaming
+[ 1781.802445] rkcif-mipi-lvds2: Allocate dummy buffer, size: 0x01028000
+[ 1781.802524] rockchip-mipi-csi2 mipi2-csi2: stream on, src_sd: 000000009de0fc56, sd_name:rockchip-csi2-dphy0
+[ 1781.802530] rockchip-mipi-csi2 mipi2-csi2: stream ON
+[ 1781.802556] rockchip-csi2-dphy0: dphy0, data_rate_mbps 891
+[ 1781.802589] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0, ret 0
+[ 1781.858782] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[ 1792.173830] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x1, cur 0x1
+[ 1792.205833] rockchip-mipi-csi2 mipi2-csi2: stream off, src_sd: 000000009de0fc56, sd_name:rockchip-csi2-dphy0
+[ 1792.205858] rockchip-mipi-csi2 mipi2-csi2: stream OFF
+[ 1792.205875] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[ 1792.205883] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0, ret 0
+[ 1792.207985] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+STAGE2_RUNTIME_CHECK=PASS_CANDIDATE
+This output is a candidate only; archive the complete serial log, deployed hashes, RAW metadata, control readback, PM evidence, and vendor A/B before accepting stage two.

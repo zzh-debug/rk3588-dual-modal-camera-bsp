@@ -1,0 +1,398 @@
+[ 1855.421740] zzh_mlx90640: loading out-of-tree module taints kernel.
+[ 1855.536612] zzh_mlx90640 5-0033: EEPROM cached, reference ID 131a-4948-0190
+[ 1855.537479] zzh_mlx90640 5-0033: registered Meta v1 (3400 bytes), status=0x0008 control=0x1901, 16 Hz subpages
+[ 1855.537621] i2c i2c-5: new_device: Instantiated device zzh_mlx90640 at 0x33
+[ 1888.404260] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[ 1889.680005] zzh_mlx90640 5-0033: restored control 0x1901
+[ 1889.680107] zzh_mlx90640 5-0033: stream stopped: pairs=10 no-buffer=0 duplicate=0
+[ 1889.806170] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[ 1891.089656] zzh_mlx90640 5-0033: restored control 0x1901
+[ 1891.089684] zzh_mlx90640 5-0033: stream stopped: pairs=10 no-buffer=0 duplicate=0
+[ 1891.215878] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[ 1892.495746] zzh_mlx90640 5-0033: restored control 0x1901
+[ 1892.495772] zzh_mlx90640 5-0033: stream stopped: pairs=10 no-buffer=0 duplicate=0
+[ 1933.498192] i2c i2c-5: delete_device: Deleting device zzh_mlx90640 at 0x33
+[13033.295399] zzh_mlx90640 5-0033: EEPROM cached, reference ID 131a-4948-0190
+[13033.295628] zzh_mlx90640 5-0033: registered Meta v1 (3400 bytes), status=0x0009 control=0x1901, 16 Hz subpages
+[13033.295875] i2c i2c-5: new_device: Instantiated device zzh_mlx90640 at 0x33
+[13063.877989] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13066.439721] zzh_mlx90640 5-0033: restored control 0x1901
+[13066.439751] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13066.566888] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13069.133606] zzh_mlx90640 5-0033: restored control 0x1901
+[13069.133707] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13069.253034] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13071.817744] zzh_mlx90640 5-0033: restored control 0x1901
+[13071.817772] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13071.949163] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13074.504038] zzh_mlx90640 5-0033: restored control 0x1901
+[13074.504143] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13074.632366] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13077.193054] zzh_mlx90640 5-0033: restored control 0x1901
+[13077.193084] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13077.314742] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13079.879422] zzh_mlx90640 5-0033: restored control 0x1901
+[13079.879451] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13080.011988] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13082.570242] zzh_mlx90640 5-0033: restored control 0x1901
+[13082.570347] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13082.692784] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13085.260845] zzh_mlx90640 5-0033: restored control 0x1901
+[13085.260942] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13085.390498] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13087.949602] zzh_mlx90640 5-0033: restored control 0x1901
+[13087.949699] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13088.071574] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13090.632244] zzh_mlx90640 5-0033: restored control 0x1901
+[13090.632274] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13121.939805] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13123.731639] zzh_mlx90640 5-0033: restored control 0x1901
+[13123.731742] zzh_mlx90640 5-0033: stream stopped: pairs=14 no-buffer=0 duplicate=0
+[13150.944468] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13152.230617] zzh_mlx90640 5-0033: restored control 0x1901
+[13152.230710] zzh_mlx90640 5-0033: stream stopped: pairs=10 no-buffer=0 duplicate=0
+[13152.351665] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13153.638088] zzh_mlx90640 5-0033: restored control 0x1901
+[13153.638113] zzh_mlx90640 5-0033: stream stopped: pairs=10 no-buffer=0 duplicate=0
+[13681.196628] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13687.337700] zzh_mlx90640 5-0033: restored control 0x1901
+[13687.337798] zzh_mlx90640 5-0033: stream stopped: pairs=16 no-buffer=32 duplicate=0
+[13687.981683] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13689.259688] zzh_mlx90640 5-0033: restored control 0x1901
+[13689.259715] zzh_mlx90640 5-0033: stream stopped: pairs=10 no-buffer=0 duplicate=0
+[13737.427903] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13737.554176] zzh_mlx90640 5-0033: restored control 0x1901
+[13737.554197] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13737.685839] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13737.812862] zzh_mlx90640 5-0033: restored control 0x1901
+[13737.812951] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13737.937672] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13738.067329] zzh_mlx90640 5-0033: restored control 0x1901
+[13738.067353] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13738.202153] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13738.327962] zzh_mlx90640 5-0033: restored control 0x1901
+[13738.328055] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13738.456193] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13738.583126] zzh_mlx90640 5-0033: restored control 0x1901
+[13738.583146] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13738.705591] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13738.841955] zzh_mlx90640 5-0033: restored control 0x1901
+[13738.842042] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13738.972392] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13739.094295] zzh_mlx90640 5-0033: restored control 0x1901
+[13739.094319] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13739.218126] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13739.350193] zzh_mlx90640 5-0033: restored control 0x1901
+[13739.350323] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13739.478259] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13739.605422] zzh_mlx90640 5-0033: restored control 0x1901
+[13739.605509] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13739.729596] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13739.862458] zzh_mlx90640 5-0033: restored control 0x1901
+[13739.862478] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13739.993913] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13740.122281] zzh_mlx90640 5-0033: restored control 0x1901
+[13740.122370] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13740.248999] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13740.373902] zzh_mlx90640 5-0033: restored control 0x1901
+[13740.373991] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13740.497054] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13740.633154] zzh_mlx90640 5-0033: restored control 0x1901
+[13740.633243] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13740.758164] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13740.880641] zzh_mlx90640 5-0033: restored control 0x1901
+[13740.880662] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13741.012596] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13741.146278] zzh_mlx90640 5-0033: restored control 0x1901
+[13741.146368] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13741.267860] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13741.404504] zzh_mlx90640 5-0033: restored control 0x1901
+[13741.404589] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13741.527147] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13741.656480] zzh_mlx90640 5-0033: restored control 0x1901
+[13741.656500] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13741.775745] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13741.905930] zzh_mlx90640 5-0033: restored control 0x1901
+[13741.905953] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13742.039884] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13742.168454] zzh_mlx90640 5-0033: restored control 0x1901
+[13742.168477] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13742.293709] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13742.427321] zzh_mlx90640 5-0033: restored control 0x1901
+[13742.427340] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13742.551756] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13742.676032] zzh_mlx90640 5-0033: restored control 0x1901
+[13742.676169] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13742.803695] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13742.933838] zzh_mlx90640 5-0033: restored control 0x1901
+[13742.933924] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13743.062160] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13743.193339] zzh_mlx90640 5-0033: restored control 0x1901
+[13743.193362] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13743.315826] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13743.449400] zzh_mlx90640 5-0033: restored control 0x1901
+[13743.449488] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13743.575573] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13743.702558] zzh_mlx90640 5-0033: restored control 0x1901
+[13743.702650] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13743.836785] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13743.966230] zzh_mlx90640 5-0033: restored control 0x1901
+[13743.966325] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13744.152619] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13744.280539] zzh_mlx90640 5-0033: restored control 0x1901
+[13744.280560] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13744.400304] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13744.535486] zzh_mlx90640 5-0033: restored control 0x1901
+[13744.535582] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13744.663042] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13744.792571] zzh_mlx90640 5-0033: restored control 0x1901
+[13744.792591] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13744.917454] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13745.044295] zzh_mlx90640 5-0033: restored control 0x1901
+[13745.044320] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13745.176196] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13745.301126] zzh_mlx90640 5-0033: restored control 0x1901
+[13745.301210] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13745.431211] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13745.562557] zzh_mlx90640 5-0033: restored control 0x1901
+[13745.562644] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13745.683741] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13745.814842] zzh_mlx90640 5-0033: restored control 0x1901
+[13745.814862] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13745.937682] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13746.072554] zzh_mlx90640 5-0033: restored control 0x1901
+[13746.072645] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13746.193865] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13746.326415] zzh_mlx90640 5-0033: restored control 0x1901
+[13746.326502] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13746.451334] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13746.584349] zzh_mlx90640 5-0033: restored control 0x1901
+[13746.584369] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13746.709376] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13746.845362] zzh_mlx90640 5-0033: restored control 0x1901
+[13746.845452] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13746.968922] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13747.096970] zzh_mlx90640 5-0033: restored control 0x1901
+[13747.097005] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13747.223643] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13747.350942] zzh_mlx90640 5-0033: restored control 0x1901
+[13747.350964] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13747.479280] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13747.607627] zzh_mlx90640 5-0033: restored control 0x1901
+[13747.607649] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13747.729527] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13747.865933] zzh_mlx90640 5-0033: restored control 0x1901
+[13747.865953] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13748.000179] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13748.118663] zzh_mlx90640 5-0033: restored control 0x1901
+[13748.118687] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13748.245579] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13748.378757] zzh_mlx90640 5-0033: restored control 0x1901
+[13748.378843] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13748.499791] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13748.636811] zzh_mlx90640 5-0033: restored control 0x1901
+[13748.636901] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13748.761064] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13748.887294] zzh_mlx90640 5-0033: restored control 0x1901
+[13748.887315] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13749.018499] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13749.142098] zzh_mlx90640 5-0033: restored control 0x1901
+[13749.142189] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13749.267095] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13749.399284] zzh_mlx90640 5-0033: restored control 0x1901
+[13749.399305] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13749.523752] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13749.656014] zzh_mlx90640 5-0033: restored control 0x1901
+[13749.656034] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13749.781078] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13749.907732] zzh_mlx90640 5-0033: restored control 0x1901
+[13749.907754] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13750.040252] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13750.174977] zzh_mlx90640 5-0033: restored control 0x1901
+[13750.175000] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13750.291685] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13750.423430] zzh_mlx90640 5-0033: restored control 0x1901
+[13750.423450] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13750.550185] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13750.679414] zzh_mlx90640 5-0033: restored control 0x1901
+[13750.679549] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13750.807566] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13750.937914] zzh_mlx90640 5-0033: restored control 0x1901
+[13750.937935] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13751.059529] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13751.190337] zzh_mlx90640 5-0033: restored control 0x1901
+[13751.190359] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13751.317376] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13751.450016] zzh_mlx90640 5-0033: restored control 0x1901
+[13751.450037] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13751.578424] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13751.704143] zzh_mlx90640 5-0033: restored control 0x1901
+[13751.704165] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13751.831906] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13751.957920] zzh_mlx90640 5-0033: restored control 0x1901
+[13751.957941] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13752.087140] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13752.218439] zzh_mlx90640 5-0033: restored control 0x1901
+[13752.218527] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13752.339595] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13752.474383] zzh_mlx90640 5-0033: restored control 0x1901
+[13752.474463] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13752.594576] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13752.733192] zzh_mlx90640 5-0033: restored control 0x1901
+[13752.733213] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13752.856438] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13752.987854] zzh_mlx90640 5-0033: restored control 0x1901
+[13752.987879] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13753.112399] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13753.241238] zzh_mlx90640 5-0033: restored control 0x1901
+[13753.241259] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13753.367310] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13753.497980] zzh_mlx90640 5-0033: restored control 0x1901
+[13753.498000] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13753.624064] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13753.757726] zzh_mlx90640 5-0033: restored control 0x1901
+[13753.757746] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13753.880231] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13754.072581] zzh_mlx90640 5-0033: restored control 0x1901
+[13754.072681] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13754.199252] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13754.332006] zzh_mlx90640 5-0033: restored control 0x1901
+[13754.332102] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13754.452899] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13754.586422] zzh_mlx90640 5-0033: restored control 0x1901
+[13754.586442] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13754.713676] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13754.838144] zzh_mlx90640 5-0033: restored control 0x1901
+[13754.838165] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13754.970546] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13755.099490] zzh_mlx90640 5-0033: restored control 0x1901
+[13755.099512] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13755.221514] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13755.355195] zzh_mlx90640 5-0033: restored control 0x1901
+[13755.355215] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13755.484387] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13755.610448] zzh_mlx90640 5-0033: restored control 0x1901
+[13755.610467] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13755.737513] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13755.860203] zzh_mlx90640 5-0033: restored control 0x1901
+[13755.860313] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13755.992425] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13756.122524] zzh_mlx90640 5-0033: restored control 0x1901
+[13756.122545] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13756.248550] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13756.375965] zzh_mlx90640 5-0033: restored control 0x1901
+[13756.375988] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13756.511072] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13756.629537] zzh_mlx90640 5-0033: restored control 0x1901
+[13756.629559] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13756.761021] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13756.893631] zzh_mlx90640 5-0033: restored control 0x1901
+[13756.893649] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13757.018830] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13757.147776] zzh_mlx90640 5-0033: restored control 0x1901
+[13757.147798] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13757.272926] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13757.402346] zzh_mlx90640 5-0033: restored control 0x1901
+[13757.402367] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13757.525624] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13757.663302] zzh_mlx90640 5-0033: restored control 0x1901
+[13757.663323] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13757.786715] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13757.915548] zzh_mlx90640 5-0033: restored control 0x1901
+[13757.915569] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13758.040228] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13758.171536] zzh_mlx90640 5-0033: restored control 0x1901
+[13758.171557] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13758.290767] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13758.422146] zzh_mlx90640 5-0033: restored control 0x1901
+[13758.422168] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13758.556360] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13758.684879] zzh_mlx90640 5-0033: restored control 0x1901
+[13758.684968] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13758.811409] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13758.935077] zzh_mlx90640 5-0033: restored control 0x1901
+[13758.935098] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13759.058235] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13759.191046] zzh_mlx90640 5-0033: restored control 0x1901
+[13759.191069] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13759.324202] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13759.452312] zzh_mlx90640 5-0033: restored control 0x1901
+[13759.452333] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13759.581492] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13759.707672] zzh_mlx90640 5-0033: restored control 0x1901
+[13759.707756] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13759.828544] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13759.966770] zzh_mlx90640 5-0033: restored control 0x1901
+[13759.966794] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13760.088412] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13760.224224] zzh_mlx90640 5-0033: restored control 0x1901
+[13760.224247] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13760.343274] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13760.472014] zzh_mlx90640 5-0033: restored control 0x1901
+[13760.472106] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13760.601585] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13760.732652] zzh_mlx90640 5-0033: restored control 0x1901
+[13760.732672] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13760.858649] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13761.049890] zzh_mlx90640 5-0033: restored control 0x1901
+[13761.049980] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13761.182066] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13761.303573] zzh_mlx90640 5-0033: restored control 0x1901
+[13761.303736] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13761.432916] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13761.565679] zzh_mlx90640 5-0033: restored control 0x1901
+[13761.565775] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13761.686641] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13761.815673] zzh_mlx90640 5-0033: restored control 0x1901
+[13761.815693] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13761.948388] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13762.070664] zzh_mlx90640 5-0033: restored control 0x1901
+[13762.070689] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13762.197054] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13762.331179] zzh_mlx90640 5-0033: restored control 0x1901
+[13762.331201] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13762.457916] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13762.583197] zzh_mlx90640 5-0033: restored control 0x1901
+[13762.583218] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13762.709865] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13762.843821] zzh_mlx90640 5-0033: restored control 0x1901
+[13762.843841] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13762.967054] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13763.094334] zzh_mlx90640 5-0033: restored control 0x1901
+[13763.094429] zzh_mlx90640 5-0033: stream stopped: pairs=1 no-buffer=0 duplicate=0
+[13832.222043] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13834.781025] zzh_mlx90640 5-0033: restored control 0x1901
+[13834.781056] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13834.906050] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13837.474097] zzh_mlx90640 5-0033: restored control 0x1901
+[13837.474125] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13837.598442] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13840.162254] zzh_mlx90640 5-0033: restored control 0x1901
+[13840.162283] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13840.285999] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13842.853217] zzh_mlx90640 5-0033: restored control 0x1901
+[13842.853245] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13842.978165] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13845.539240] zzh_mlx90640 5-0033: restored control 0x1901
+[13845.539340] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13845.662577] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13848.230795] zzh_mlx90640 5-0033: restored control 0x1901
+[13848.230824] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13848.348940] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13850.912461] zzh_mlx90640 5-0033: restored control 0x1901
+[13850.912489] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13851.043669] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13853.605003] zzh_mlx90640 5-0033: restored control 0x1901
+[13853.605032] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13853.726581] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13856.294742] zzh_mlx90640 5-0033: restored control 0x1901
+[13856.294770] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13856.420481] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13858.984754] zzh_mlx90640 5-0033: restored control 0x1901
+[13858.984783] zzh_mlx90640 5-0033: stream stopped: pairs=20 no-buffer=0 duplicate=0
+[13859.615998] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13865.768764] zzh_mlx90640 5-0033: restored control 0x1901
+[13865.768913] zzh_mlx90640 5-0033: stream stopped: pairs=16 no-buffer=32 duplicate=0
+[13866.403337] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[13867.686885] zzh_mlx90640 5-0033: restored control 0x1901
+[13867.687061] zzh_mlx90640 5-0033: stream stopped: pairs=10 no-buffer=0 duplicate=0

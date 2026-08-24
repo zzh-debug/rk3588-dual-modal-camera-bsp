@@ -1,0 +1,39 @@
+config VIDEO_ZZH_IMX415_MINIMAL
+	tristate "ZZH IMX415 minimal I2C identification driver"
+	depends on I2C
+	depends on OF
+	depends on GPIOLIB
+	depends on COMMON_CLK
+	depends on REGULATOR
+	help
+	  Build the isolated stage-one IMX415 hardware-contract experiment.
+	  This driver intentionally has no V4L2, media-controller, streaming,
+	  mode-table, or Rockchip ISP/CIF dependency.
+
+config VIDEO_ZZH_IMX415
+	tristate "ZZH IMX415 fixed-mode V4L2 sensor driver"
+	depends on I2C
+	depends on OF
+	depends on GPIOLIB
+	depends on COMMON_CLK
+	depends on REGULATOR
+	depends on VIDEO_V4L2
+	depends on MEDIA_CONTROLLER
+	help
+	  Build the isolated stage-two IMX415 experiment for ATK-DLRK3588
+	  J20. The driver exposes one 3864x2192 RAW10 30 fps mode, standard
+	  V4L2 sub-device format operations, exposure/gain/blanking controls,
+	  and runtime power management. It does not implement HDR, Rockchip
+	  private camera ioctls, RKCIF recovery, or RKISP tuning.
+
+config VIDEO_ZZH_MLX90640
+	tristate "ZZH MLX90640 V4L2 Meta/VB2 driver"
+	depends on I2C && OF && VIDEO_V4L2 && NVMEM
+	depends on VIDEOBUF2_VMALLOC
+	help
+	  Build the independent MLX90640 thermal-array transport driver.
+	  It caches the read-only EEPROM, captures consecutive Chess subpages,
+	  and exports a versioned V4L2 Meta/VB2 ABI with monotonic timestamps.
+
+	  Temperature calculation, bad-pixel correction, filtering, color maps,
+	  cross-spectral calibration, and fusion remain userspace work.

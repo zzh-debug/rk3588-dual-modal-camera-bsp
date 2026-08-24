@@ -1,0 +1,349 @@
+Media controller API version 5.10.209
+
+Media device information
+------------------------
+driver          rkcif
+model           rkcif-mipi-lvds2
+serial          
+bus info        
+hw revision     0x0
+driver version  5.10.209
+
+Device topology
+- entity 1: stream_cif_mipi_id0 (1 pad, 11 links)
+            type Node subtype V4L flags 0
+            device node name /dev/video23
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 [ENABLED]
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 5: stream_cif_mipi_id1 (1 pad, 11 links)
+            type Node subtype V4L flags 0
+            device node name /dev/video24
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 [ENABLED]
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 9: stream_cif_mipi_id2 (1 pad, 11 links)
+            type Node subtype V4L flags 0
+            device node name /dev/video25
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 [ENABLED]
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 13: stream_cif_mipi_id3 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video26
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 [ENABLED]
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 17: rkcif_scale_ch0 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video27
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 [ENABLED]
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 21: rkcif_scale_ch1 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video28
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 [ENABLED]
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 25: rkcif_scale_ch2 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video29
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 [ENABLED]
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 29: rkcif_scale_ch3 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video30
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 [ENABLED]
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 33: rkcif_tools_id0 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video31
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 [ENABLED]
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 37: rkcif_tools_id1 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video32
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 [ENABLED]
+		<- "rockchip-mipi-csi2":11 []
+
+- entity 41: rkcif_tools_id2 (1 pad, 11 links)
+             type Node subtype V4L flags 0
+             device node name /dev/video33
+	pad0: Sink
+		<- "rockchip-mipi-csi2":1 []
+		<- "rockchip-mipi-csi2":2 []
+		<- "rockchip-mipi-csi2":3 []
+		<- "rockchip-mipi-csi2":4 []
+		<- "rockchip-mipi-csi2":5 []
+		<- "rockchip-mipi-csi2":6 []
+		<- "rockchip-mipi-csi2":7 []
+		<- "rockchip-mipi-csi2":8 []
+		<- "rockchip-mipi-csi2":9 []
+		<- "rockchip-mipi-csi2":10 []
+		<- "rockchip-mipi-csi2":11 [ENABLED]
+
+- entity 45: rockchip-mipi-csi2 (12 pads, 122 links)
+             type V4L2 subdev subtype Unknown flags 0
+             device node name /dev/v4l-subdev0
+	pad0: Sink
+		[fmt:SGBRG10_1X10/3864x2192 field:none colorspace:raw xfer:none quantization:full-range
+		 crop.bounds:(12,16)/3840x2160
+		 crop:(12,16)/3840x2160]
+		<- "rockchip-csi2-dphy0":1 [ENABLED]
+	pad1: Source
+		-> "stream_cif_mipi_id0":0 [ENABLED]
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad2: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 [ENABLED]
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad3: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 [ENABLED]
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad4: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 [ENABLED]
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad5: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 [ENABLED]
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad6: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 [ENABLED]
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad7: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 [ENABLED]
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad8: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 [ENABLED]
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad9: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 [ENABLED]
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 []
+	pad10: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 [ENABLED]
+		-> "rkcif_tools_id2":0 []
+	pad11: Source
+		-> "stream_cif_mipi_id0":0 []
+		-> "stream_cif_mipi_id1":0 []
+		-> "stream_cif_mipi_id2":0 []
+		-> "stream_cif_mipi_id3":0 []
+		-> "rkcif_scale_ch0":0 []
+		-> "rkcif_scale_ch1":0 []
+		-> "rkcif_scale_ch2":0 []
+		-> "rkcif_scale_ch3":0 []
+		-> "rkcif_tools_id0":0 []
+		-> "rkcif_tools_id1":0 []
+		-> "rkcif_tools_id2":0 [ENABLED]
+
+- entity 58: rockchip-csi2-dphy0 (2 pads, 2 links)
+             type V4L2 subdev subtype Unknown flags 0
+             device node name /dev/v4l-subdev1
+	pad0: Sink
+		[fmt:SGBRG10_1X10/3864x2192@2250/67500 field:none colorspace:raw xfer:none quantization:full-range
+		 crop.bounds:(12,16)/3840x2160
+		 crop:(12,16)/3840x2160]
+		<- "zzh_imx415 3-001a":0 [ENABLED]
+	pad1: Source
+		-> "rockchip-mipi-csi2":0 [ENABLED]
+
+- entity 63: zzh_imx415 3-001a (1 pad, 1 link)
+             type V4L2 subdev subtype Sensor flags 0
+             device node name /dev/v4l-subdev2
+	pad0: Source
+		[fmt:SGBRG10_1X10/3864x2192@2250/67500 field:none colorspace:raw xfer:none quantization:full-range
+		 crop.bounds:(12,16)/3840x2160
+		 crop:(12,16)/3840x2160]
+		-> "rockchip-csi2-dphy0":0 [ENABLED]
+

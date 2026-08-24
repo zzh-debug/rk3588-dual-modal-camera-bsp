@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+
+&i2c5 {
+	zzh_mlx90640: thermal-camera@33 {
+		compatible = "zzh,mlx90640";
+		reg = <0x33>;
+		zzh,subpage-rate-hz = <16>;
+		status = "okay";
+	};
+};

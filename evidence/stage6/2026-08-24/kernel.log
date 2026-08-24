@@ -1,0 +1,44 @@
+[   20.767314] iommu: Default domain type: Translated 
+[   22.587047] zzh_imx415 2-001a: endpoint must contain only link-frequencies = <445500000>
+[   22.587112] zzh_imx415: probe of 2-001a failed with error -22
+[   22.587361] zzh_imx415 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[   22.590143] zzh_imx415 3-001a: reference register 0x311a = 0xe0
+[   22.590161] zzh_imx415 3-001a: vendor reference signature matched (not an official unique Chip ID)
+[   22.590220] zzh_imx415 3-001a: registered independent 3864x2192 RAW10 30 fps Sensor subdev
+[   22.590498] zzh_imx415 4-001a: endpoint must contain only link-frequencies = <445500000>
+[   22.590527] zzh_imx415: probe of 4-001a failed with error -22
+[   22.590703] zzh_imx415 7-001a: endpoint must contain only link-frequencies = <445500000>
+[   22.590729] zzh_imx415: probe of 7-001a failed with error -22
+[   22.705646] zzh_mlx90640 5-0033: EEPROM cached, reference ID 131a-4948-0190
+[   22.705792] zzh_mlx90640 5-0033: registered Meta v1 (3400 bytes), status=0x0008 control=0x1901, 16 Hz subpages
+[   22.708949] rkcif rkcif-mipi-lvds2: Adding to iommu group 16
+[   22.708960] rkcif rkcif-mipi-lvds2: rkcif driver version: v00.02.00
+[   22.709005] rkcif rkcif-mipi-lvds2: attach to cif hw node
+[   22.709009] rkcif rkcif-mipi-lvds2: rkcif wait line 0
+[   22.709014] rkcif rkcif-mipi-lvds2: rkcif fastboot reserve bufs num 3
+[   22.709653] rkcif rkcif-mipi-lvds2: No memory-region-thunderboot specified
+[   22.713016] rkcif rkcif-mipi-lvds2: Entity type for entity rockchip-mipi-csi2 was not initialized!
+[   22.713026] rockchip-mipi-csi2: probe success, v4l2_dev:rkcif-mipi-lvds2!
+[   22.714902] rkisp rkisp0-vir0: rkisp driver version: v02.05.01
+[   22.714975] rkisp rkisp0-vir0: No memory-region-thunderboot specified
+[   22.715059] rkisp rkisp0-vir0: Entity type for entity rkisp-isp-subdev was not initialized!
+[   23.063733] rga_iommu: IOMMU binding successfully, default mapping core[0x1]
+[   23.208740] rockchip-csi2-dphy csi2-dphy0: dphy0 matches zzh_imx415 3-001a:bus type 5
+[   23.209067] rkcif-mipi-lvds2: Async subdev notifier completed
+[   23.209593] rkisp0-vir0: Async subdev notifier completed
+[   23.505207] rkcif rkcif-mipi-lvds2: clear unready subdev num: 0
+[   26.623176] rkisp rkisp0-vir0: clear unready subdev num: 0
+[  154.783771] rkcif-mipi-lvds2: stream[0] start streaming
+[  154.841153] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  154.977777] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  165.188090] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  165.214672] zzh_mlx90640 5-0033: restored control 0x1901
+[  165.214694] zzh_mlx90640 5-0033: stream stopped: pairs=80 no-buffer=0 duplicate=0
+[  165.222522] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  197.572967] rkcif-mipi-lvds2: stream[0] start streaming
+[  197.630955] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[  198.027922] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[  297.977965] rkcif-mipi-lvds2: stream[0] start stopping, total mode 0x2, cur 0x2
+[  298.012372] rkcif-mipi-lvds2: stream[0] stopping finished, dma_en 0x0
+[  300.393107] zzh_mlx90640 5-0033: restored control 0x1901
+[  300.393209] zzh_mlx90640 5-0033: stream stopped: pairs=800 no-buffer=0 duplicate=0

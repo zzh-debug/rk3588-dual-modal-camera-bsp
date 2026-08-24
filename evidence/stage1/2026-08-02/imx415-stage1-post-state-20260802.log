@@ -1,0 +1,28 @@
+=== RESOURCE_STATE_AFTER ===
+BOARD_TIME=1970-01-01 00:07:02 +0000
+driver=/sys/bus/i2c/drivers/zzh_imx415_minimal
+client_name=imx415-minimal
+module_refcnt=0
+          mclk_i2s3_2ch               0        0        0    12000000          0     0  50000
+          clk_mipi_camaraout_m3       0        1        0    37125000          0     0  50000
+                mclk_spdif3           0        0        0   198000000          0     0  50000
+                   mclk_i2s6_8ch_tx       3        6        0    12288000          0     0  50000
+                   mclk_i2s5_8ch_tx       3        6        0     6144000          0     0  50000
+          mclk_pdm1                   0        0        0   300000000          0     0  50000
+                mclk_pdm0             0        0        0   300000000          0     0  50000
+       armclk_b23                     0        0        0     8000000          0     0  50000
+ gpio-22  (                    |4G,reset            ) out lo 
+ gpio-39  (                    |pwdn                ) out lo ACTIVE LOW
+ gpio-41  (                    |reset               ) out lo ACTIVE LOW
+ gpio-113 (                    |reset               ) in  hi 
+ gpio-131 (                    |reset               ) out hi ACTIVE LOW
+ gpio-132 (                    |reset               ) out hi ACTIVE LOW
+signature_matches_total=21
+probe_lines_total=21
+=== RUNTIME_BOOT_STATE ===
+storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  rootwait rw earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs nfsroot=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588,v3,tcp ip=192.168.5.20:192.168.5.11::255.255.255.0:atk-dlrk3588:eth0:off androidboot.fwver=ddr-v1.17-3488111f83,spl-v1.13,bl31-v1.46,bl32-v1.16,uboot-23c0020-di-07/31/2026
+192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588 on / type nfs (rw,relatime,vers=3,rsize=4096,wsize=4096,namlen=255,hard,nolock,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.5.11,mountvers=3,mountproto=tcp,local_lock=all,addr=192.168.5.11)
+eth0             UP             192.168.5.20/24 fe80::d471:faff:fe13:dadd/64 
+NFS rootfs (192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588)
+exported from buildroot/output/alientek_rk3588/images/rootfs.ext2
+connman disabled: etc/init.d/S45connman -> K45connman

@@ -1,0 +1,101 @@
+diff --git a/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dts b/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dts
+index 31d5b936e..e80cce8c2 100644
+--- a/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dts
++++ b/arch/arm64/boot/dts/rockchip/rk3588-alientek-2mipi1080x1920-2hdmi.dts
+@@ -9,6 +9,8 @@
+ #include "rk3588-alientek.dtsi"
+ #include "rk3588-alientek-cameras.dtsi"
+ #include "rk3588-linux.dtsi"
++#include "rk3588-alientek-imx415-stage2.dtsi"
++#include "rk3588-alientek-mlx90640-stage5.dtsi"
+ 
+ // DSI0显示
+ &dsi0_in_vp2 {
+@@ -120,6 +122,7 @@ dsi_out_panel: endpoint {
+ };
+ 
+ &i2c5{
++	clock-frequency = <400000>;
+ 	dsi0_touch: gt911@14 {
+                 compatible = "goodix,gt911";
+                 reg = <0x14>;
+diff --git a/arch/arm64/configs/alientek_rk3588_defconfig b/arch/arm64/configs/alientek_rk3588_defconfig
+index 10839bc9e..fbc0e8125 100644
+--- a/arch/arm64/configs/alientek_rk3588_defconfig
++++ b/arch/arm64/configs/alientek_rk3588_defconfig
+@@ -108,6 +108,8 @@ CONFIG_UNIX=y
+ CONFIG_XFRM_USER=y
+ CONFIG_NET_KEY=y
+ CONFIG_INET=y
++CONFIG_IP_PNP=y
++CONFIG_IP_PNP_DHCP=y
+ CONFIG_IP_MULTICAST=y
+ CONFIG_IP_ADVANCED_ROUTER=y
+ CONFIG_IP_MROUTE=y
+@@ -362,6 +364,8 @@ CONFIG_VIDEO_RK_IRCUT=y
+ CONFIG_VIDEO_GC8034=y
+ CONFIG_VIDEO_IMX335=y
+ CONFIG_VIDEO_IMX415=y
++CONFIG_VIDEO_ZZH_IMX415=y
++CONFIG_VIDEO_ZZH_MLX90640=y
+ CONFIG_VIDEO_IMX464=y
+ CONFIG_VIDEO_OS04A10=y
+ CONFIG_VIDEO_OV4689=y
+@@ -647,6 +651,7 @@ CONFIG_PSTORE=y
+ CONFIG_PSTORE_CONSOLE=y
+ CONFIG_PSTORE_RAM=y
+ CONFIG_NFS_FS=y
++CONFIG_ROOT_NFS=y
+ CONFIG_NFS_V3_ACL=y
+ CONFIG_NFS_V4=y
+ CONFIG_NFS_SWAP=y
+diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
+index 98186f8b6..f771a62d9 100644
+--- a/drivers/media/i2c/Kconfig
++++ b/drivers/media/i2c/Kconfig
+@@ -1449,6 +1449,32 @@ config VIDEO_IMX415
+ 	  To compile this driver as a module, choose M here: the
+ 	  module will be called imx415.
+ 
++config VIDEO_ZZH_IMX415
++	tristate "ZZH independent IMX415 fixed-mode sensor support"
++	depends on I2C && OF && GPIOLIB && COMMON_CLK && REGULATOR
++	depends on VIDEO_V4L2 && VIDEO_V4L2_SUBDEV_API && MEDIA_CONTROLLER
++	depends on MEDIA_CAMERA_SUPPORT
++	select V4L2_FWNODE
++	help
++	  Build the independent ZZH IMX415 fixed-mode sensor driver.
++
++	  The ATK-DLRK3588 stage-two validation uses this driver as a
++	  built-in driver so that it registers before Rockchip camera
++	  asynchronous notifiers complete.
++
++config VIDEO_ZZH_MLX90640
++	tristate "ZZH independent MLX90640 V4L2 Meta support"
++	depends on I2C && OF && VIDEO_V4L2 && NVMEM
++	depends on VIDEOBUF2_VMALLOC
++	depends on MEDIA_CAMERA_SUPPORT
++	help
++	  Build the independent ZZH MLX90640 thermal-array transport driver.
++
++	  The driver caches the EEPROM and emits two consecutive Chess
++	  subpages through a versioned V4L2 Meta/VB2 interface. Temperature
++	  calculation and multimodal fusion are intentionally left to
++	  userspace.
++
+ config VIDEO_IMX464
+ 	tristate "Sony IMX464 sensor support"
+ 	depends on I2C && VIDEO_V4L2 && VIDEO_V4L2_SUBDEV_API
+diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
+index 4b6ade1a6..220f1b1e4 100644
+--- a/drivers/media/i2c/Makefile
++++ b/drivers/media/i2c/Makefile
+@@ -250,6 +250,8 @@ obj-$(CONFIG_VIDEO_IMX335)	+= imx335.o
+ obj-$(CONFIG_VIDEO_IMX347)	+= imx347.o
+ obj-$(CONFIG_VIDEO_IMX378)	+= imx378.o
+ obj-$(CONFIG_VIDEO_IMX415)	+= imx415.o
++obj-$(CONFIG_VIDEO_ZZH_IMX415)	+= zzh_imx415_builtin.o
++obj-$(CONFIG_VIDEO_ZZH_MLX90640)	+= zzh_mlx90640_builtin.o
+ obj-$(CONFIG_VIDEO_IMX464)	+= imx464.o
+ obj-$(CONFIG_VIDEO_IMX492)	+= imx492.o
+ obj-$(CONFIG_VIDEO_IMX355)	+= imx355.o

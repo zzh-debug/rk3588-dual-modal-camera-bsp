@@ -1,0 +1,123 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * 教学镜像，不参与 DTC 编译。
+ * 权威文件：
+ * kernel/arch/arm64/boot/dts/rockchip/
+ *     rk3588-alientek-imx415-minimal.dtsi
+ *
+ * 阶段目标只有：
+ *   1. 在 J20 对应的 i2c3 上创建一个 0x1a 实验 client；
+ *   2. 给最小驱动提供 MCLK、RESET、PWDN 和 VI power-domain 资源；
+ *   3. 禁用原厂同地址 Sensor，避免两个驱动竞争；
+ *   4. 不建立 endpoint，不启动 MIPI/RKCIF/RKISP。
+ */
+
+/*
+ * &imx415 是 rk3588-alientek-cameras.dtsi 里原厂 J20 Sensor 节点的 label。
+ * 这里没有删除原厂节点，只把 status 覆盖成 disabled：
+ *   - 编译后的 DTB 中原厂节点仍可审计；
+ *   - Linux OF 不会为 disabled 节点创建 i2c_client；
+ *   - 因而 sony,imx415 不会占用 i2c3 地址 0x1a；
+ *   - 回退时去掉实验 include 即可恢复原厂状态。
+ */
+&imx415 {
+	status = "disabled";
+};
+
+/*
+ * &i2c3 引用 SoC DTS 已经定义的 I2C3 控制器节点：
+ *   Linux MMIO：0xfeab0000
+ *   物理接口：J20 / MIPI CSI3 上的 I2C3_SCL/SDA
+ *
+ * 子节点名字 imx415-minimal@1a 用于描述设备类型和 unit-address。
+ * label zzh_imx415_minimal 方便其他 DTS 以后用 &zzh_imx415_minimal 引用；
+ * 当前阶段没有其他节点使用这个 label。
+ */
+&i2c3 {
+	zzh_imx415_minimal: imx415-minimal@1a {
+		/*
+		 * compatible 是设备树与驱动 of_match_table 的匹配键。
+		 * 它只匹配自研最小驱动，不以 sony,imx415 作为 fallback，
+		 * 所以原厂驱动不能误绑定实验节点。
+		 */
+		compatible = "zzh,imx415-minimal";
+
+		/*
+		 * reg 在 I2C 子节点中表示 7 位从设备地址。
+		 * 这里必须写 0x1a，而不是线上写/读地址字节 0x34/0x35。
+		 */
+		reg = <0x1a>;
+
+		/*
+		 * clocks 通过 phandle 指向 RK3588 CRU 的 Camera MCLK3。
+		 * clock-names 必须与驱动 devm_clk_get(dev, "xvclk") 一致。
+		 */
+		clocks = <&cru CLK_MIPI_CAMARAOUT_M3>;
+		clock-names = "xvclk";
+
+		/*
+		 * pinctrl-0 把对应引脚复用为 MIPI camera3 clock 输出，
+		 * 而不是普通 GPIO。设备进入 default pinctrl 状态时生效。
+		 */
+		pinctrl-names = "default";
+		pinctrl-0 = <&mipim0_camera3_clk>;
+
+		/*
+		 * MCLK/摄像头相关硬件属于 RK3588_PD_VI 电源域。
+		 * 这不是 IMX415 模组的 AVDD/DOVDD/DVDD 三路 regulator。
+		 */
+		power-domains = <&power RK3588_PD_VI>;
+
+		/*
+		 * GPIO_ACTIVE_LOW 定义“逻辑有效”对应物理低电平。
+		 * 驱动 gpiod_set_value_cansleep(desc, 1) 是断言：物理拉低；
+		 * 写逻辑 0 是释放：物理拉高。
+		 */
+		reset-gpios = <&gpio1 RK_PB1 GPIO_ACTIVE_LOW>;
+		pwdn-gpios = <&gpio1 RK_PA7 GPIO_ACTIVE_LOW>;
+
+		/*
+		 * 没有 dvdd/avdd/dovdd-supply 属性不是遗漏。
+		 * ATK 模组只从连接器接收 VCC3V3_SYS，并用板上三颗无 enable
+		 * LDO 生成约 1.2/1.8/2.8 V，Linux 无法逐路开关。
+		 */
+
+		/* 只有这个实验节点在 i2c3@0x1a 上允许实例化。 */
+		status = "okay";
+	};
+};
+
+/*
+ * 以下节点构成 J20 原厂视频图链。阶段一没有 endpoint、mode、V4L2
+ * Subdev 或 s_stream()，所以全部禁用，避免半条 Media Graph 被 probe。
+ */
+
+/* Sensor 连接的 D-PHY 逻辑实例。 */
+&csi2_dphy0 {
+	status = "disabled";
+};
+
+/* D-PHY 的共享硬件节点。 */
+&csi2_dphy0_hw {
+	status = "disabled";
+};
+
+/* MIPI CSI-2 Host 控制器。 */
+&mipi2_csi2 {
+	status = "disabled";
+};
+
+/* RKCIF 对应的 MIPI/LVDS capture 实例。 */
+&rkcif_mipi_lvds2 {
+	status = "disabled";
+};
+
+/* RKCIF 到 RKISP 的 serial data interface。 */
+&rkcif_mipi_lvds2_sditf {
+	status = "disabled";
+};
+
+/* 对应的 RKISP virtual device。 */
+&rkisp0_vir0 {
+	status = "disabled";
+};

@@ -1,0 +1,19 @@
+# 本文件是教学镜像，不参与构建。
+# 权威文件：projects/rk3588_camera_bsp/driver/Makefile
+
+# obj-$(CONFIG_...) 会按 Kconfig 值展开：
+#   CONFIG_VIDEO_ZZH_IMX415_MINIMAL=m
+#     -> obj-m += zzh_imx415_minimal.o
+#     -> Kbuild 最终链接出 zzh_imx415_minimal.ko
+#
+# 右侧 .o 名称决定模块基础名；它必须和权威 C 文件名一致。
+obj-$(CONFIG_VIDEO_ZZH_IMX415_MINIMAL) += zzh_imx415_minimal.o
+
+# 阶段二外部模块对照构建选择 CONFIG_VIDEO_ZZH_IMX415=m 时：
+#   obj-m += zzh_imx415.o
+# Kbuild 编译权威 zzh_imx415.c 并链接出独立 zzh_imx415.ko。
+# 它不会把原厂 kernel/drivers/media/i2c/imx415.c 链入本模块，也不会编译
+# 本“详细注释版”目录中的 zzh_imx415.annotated.c。
+# 当前板端阶段二验收使用 kernel/drivers/media/i2c/zzh_imx415_builtin.c，
+# 以 CONFIG_VIDEO_ZZH_IMX415=y 内建到 Image，确保早于 RKCIF async notifier 注册。
+obj-$(CONFIG_VIDEO_ZZH_IMX415) += zzh_imx415.o
