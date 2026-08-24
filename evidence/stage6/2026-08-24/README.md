@@ -51,3 +51,10 @@ aaf3857972bee7488ef464df5e4c6b57a550942a470b358e9c1ec54ada73bff0  long/thermal-m
 
 正式结果：online双路与RAW均PASS；online trace FS/FE/DMA为310/310/310，
 RAW trace FS/FE/DMA/VB2为309/308/308/308，IRQ→VB2为1.166–19.834µs。
+
+## P1.6-C L1错误传播（待真机）
+
+- `l1/kernel-build.log`：generation-aware timeout与mainpath
+  `vb2_queue_error()`的成功构建日志。
+- 自动门禁：`scripts/verify_rkisp_l1_timeout_stage6.sh`。
+- 当前仅记录实现/编译/部署状态；用户态EIO和关闭/重开结果必须等待新Image真机运行后补充。

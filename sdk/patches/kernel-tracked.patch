@@ -408,3 +408,236 @@ index d9f063f63..b5ec2a447 100644
  	}
  }
  
+diff --git a/drivers/media/platform/rockchip/isp/capture.c b/drivers/media/platform/rockchip/isp/capture.c
+index d29a0169d..e96c53dcd 100644
+--- a/drivers/media/platform/rockchip/isp/capture.c
++++ b/drivers/media/platform/rockchip/isp/capture.c
+@@ -2,6 +2,7 @@
+ /* Copyright (c) 2020 Rockchip Electronics Co., Ltd. */
+ 
+ #include <linux/delay.h>
++#include <linux/module.h>
+ #include <linux/pm_runtime.h>
+ #include <media/v4l2-common.h>
+ #include <media/v4l2-event.h>
+@@ -16,6 +17,138 @@
+ #define STREAM_MIN_MP_SP_INPUT_WIDTH		STREAM_MIN_RSZ_OUTPUT_WIDTH
+ #define STREAM_MIN_MP_SP_INPUT_HEIGHT		STREAM_MIN_RSZ_OUTPUT_HEIGHT
+ 
++static bool rkisp_l1_timeout_enable;
++module_param_named(l1_timeout_enable, rkisp_l1_timeout_enable, bool, 0644);
++MODULE_PARM_DESC(l1_timeout_enable,
++		 "Enable generation-aware L1 timeout on the RKISP mainpath");
++
++static unsigned int rkisp_l1_timeout_ms = 1000;
++module_param_named(l1_timeout_ms, rkisp_l1_timeout_ms, uint, 0644);
++MODULE_PARM_DESC(l1_timeout_ms, "RKISP mainpath L1 timeout in milliseconds");
++
++static bool rkisp_l1_fault_drop_heartbeat;
++module_param_named(l1_fault_drop_heartbeat,
++		   rkisp_l1_fault_drop_heartbeat, bool, 0644);
++MODULE_PARM_DESC(l1_fault_drop_heartbeat,
++		 "Test only: suppress mainpath heartbeats until L1 timeout");
++
++static unsigned int rkisp_l1_effective_timeout_ms(void)
++{
++	return clamp(READ_ONCE(rkisp_l1_timeout_ms), 100U, 10000U);
++}
++
++static void rkisp_l1_timeout_work(struct work_struct *work)
++{
++	struct rkisp_stream *stream =
++		container_of(to_delayed_work(work), struct rkisp_stream,
++			     l1_timeout_work);
++	struct vb2_queue *queue = &stream->vnode.buf_queue;
++	unsigned long flags;
++	u64 now_ns = rkisp_time_get_ns(stream->ispdev);
++	u64 timeout_ns =
++		(u64)rkisp_l1_effective_timeout_ms() * NSEC_PER_MSEC;
++	u64 age_ns;
++	u64 generation;
++	u64 timeout_count;
++	u32 sequence;
++	unsigned long delay;
++
++	spin_lock_irqsave(&stream->l1_lock, flags);
++	if (!stream->l1_armed ||
++	    stream->l1_timer_generation != stream->l1_generation ||
++	    !READ_ONCE(stream->streaming) ||
++	    !READ_ONCE(rkisp_l1_timeout_enable)) {
++		stream->l1_armed = false;
++		spin_unlock_irqrestore(&stream->l1_lock, flags);
++		return;
++	}
++
++	age_ns = now_ns - stream->l1_last_heartbeat_ns;
++	if (age_ns < timeout_ns) {
++		delay = nsecs_to_jiffies(timeout_ns - age_ns);
++		spin_unlock_irqrestore(&stream->l1_lock, flags);
++		mod_delayed_work(system_wq, &stream->l1_timeout_work,
++				 max(delay, 1UL));
++		return;
++	}
++
++	stream->l1_armed = false;
++	stream->l1_triggered = true;
++	stream->l1_timeout_count++;
++	stream->l1_last_timeout_ns = now_ns;
++	generation = stream->l1_generation;
++	timeout_count = stream->l1_timeout_count;
++	sequence = stream->l1_last_sequence;
++	spin_unlock_irqrestore(&stream->l1_lock, flags);
++
++	vb2_queue_error(queue);
++	v4l2_err(&stream->ispdev->v4l2_dev,
++		 "L1 timeout: stream=%u generation=%llu age_ms=%llu sequence=%u count=%llu\n",
++		 stream->id, generation, div_u64(age_ns, NSEC_PER_MSEC),
++		 sequence, timeout_count);
++}
++
++static void rkisp_l1_timeout_heartbeat(struct rkisp_stream *stream,
++				       u32 sequence)
++{
++	unsigned long flags;
++
++	if (stream->id != RKISP_STREAM_MP ||
++	    READ_ONCE(rkisp_l1_fault_drop_heartbeat))
++		return;
++
++	spin_lock_irqsave(&stream->l1_lock, flags);
++	if (stream->l1_armed &&
++	    stream->l1_timer_generation == stream->l1_generation) {
++		stream->l1_last_heartbeat_ns = rkisp_time_get_ns(stream->ispdev);
++		stream->l1_last_sequence = sequence;
++	}
++	spin_unlock_irqrestore(&stream->l1_lock, flags);
++}
++
++void rkisp_l1_timeout_start(struct rkisp_stream *stream)
++{
++	unsigned long flags;
++	unsigned int timeout_ms;
++
++	if (stream->id != RKISP_STREAM_MP || !READ_ONCE(stream->streaming))
++		return;
++
++	cancel_delayed_work_sync(&stream->l1_timeout_work);
++	spin_lock_irqsave(&stream->l1_lock, flags);
++	stream->l1_generation++;
++	stream->l1_triggered = false;
++	stream->l1_last_heartbeat_ns = rkisp_time_get_ns(stream->ispdev);
++	stream->l1_last_sequence = 0;
++	stream->l1_timer_generation = stream->l1_generation;
++	stream->l1_armed = READ_ONCE(rkisp_l1_timeout_enable);
++	spin_unlock_irqrestore(&stream->l1_lock, flags);
++
++	if (!READ_ONCE(rkisp_l1_timeout_enable))
++		return;
++
++	timeout_ms = rkisp_l1_effective_timeout_ms();
++	mod_delayed_work(system_wq, &stream->l1_timeout_work,
++			 msecs_to_jiffies(timeout_ms));
++	v4l2_info(&stream->ispdev->v4l2_dev,
++		  "L1 timeout armed: stream=%u generation=%llu timeout_ms=%u\n",
++		  stream->id, stream->l1_generation, timeout_ms);
++}
++
++void rkisp_l1_timeout_stop(struct rkisp_stream *stream)
++{
++	unsigned long flags;
++
++	if (stream->id != RKISP_STREAM_MP)
++		return;
++
++	spin_lock_irqsave(&stream->l1_lock, flags);
++	stream->l1_armed = false;
++	stream->l1_timer_generation = 0;
++	spin_unlock_irqrestore(&stream->l1_lock, flags);
++	cancel_delayed_work_sync(&stream->l1_timeout_work);
++}
++
+ static int hdr_dma_frame(struct rkisp_device *dev)
+ {
+ 	int max_dma;
+@@ -1623,6 +1756,7 @@ static void rkisp_buf_done_task(unsigned long arg)
+ 			v4l2_dbg(0, rkisp_debug, &stream->ispdev->v4l2_dev,
+ 				 "seq:%d data no update:%llx %llx\n",
+ 				 buf->vb.sequence, *data, *(data + 1));
++		rkisp_l1_timeout_heartbeat(stream, buf->vb.sequence);
+ 		vb2_buffer_done(&buf->vb.vb2_buf,
+ 				stream->streaming ? VB2_BUF_STATE_DONE : VB2_BUF_STATE_ERROR);
+ 	}
+@@ -1675,6 +1809,7 @@ static void rkisp_stream_fast(struct work_struct *work)
+ 
+ void rkisp_unregister_stream_vdev(struct rkisp_stream *stream)
+ {
++	rkisp_l1_timeout_stop(stream);
+ 	tasklet_kill(&stream->buf_done_tasklet);
+ 	media_entity_cleanup(&stream->vnode.vdev.entity);
+ 	video_unregister_device(&stream->vnode.vdev);
+@@ -1690,6 +1825,9 @@ int rkisp_register_stream_vdev(struct rkisp_stream *stream)
+ 	int ret = 0, pad;
+ 
+ 	mutex_init(&stream->apilock);
++	spin_lock_init(&stream->l1_lock);
++	INIT_DELAYED_WORK(&stream->l1_timeout_work, rkisp_l1_timeout_work);
++
+ 	node = vdev_to_node(vdev);
+ 
+ 	vdev->ioctl_ops = &rkisp_v4l2_ioctl_ops;
+diff --git a/drivers/media/platform/rockchip/isp/capture.h b/drivers/media/platform/rockchip/isp/capture.h
+index 26b9ee90a..8d96d9d62 100644
+--- a/drivers/media/platform/rockchip/isp/capture.h
++++ b/drivers/media/platform/rockchip/isp/capture.h
+@@ -36,6 +36,7 @@
+ #define _RKISP_PATH_VIDEO_H
+ 
+ #include <linux/interrupt.h>
++#include <linux/workqueue.h>
+ 
+ #include "common.h"
+ #include "capture_v1x.h"
+@@ -271,6 +272,16 @@ struct rkisp_stream {
+ 	struct streams_ops *ops;
+ 	struct stream_config *config;
+ 	spinlock_t vbq_lock;
++	spinlock_t l1_lock;
++	struct delayed_work l1_timeout_work;
++	u64 l1_generation;
++	u64 l1_timer_generation;
++	u64 l1_last_heartbeat_ns;
++	u64 l1_last_timeout_ns;
++	u64 l1_timeout_count;
++	u32 l1_last_sequence;
++	bool l1_armed;
++	bool l1_triggered;
+ 	struct list_head buf_queue;
+ 	struct rkisp_buffer *curr_buf;
+ 	struct rkisp_buffer *next_buf;
+@@ -351,4 +362,6 @@ int rkisp_get_tb_stream_info(struct rkisp_stream *stream,
+ 			     struct rkisp_tb_stream_info *info);
+ int rkisp_free_tb_stream_buf(struct rkisp_stream *stream);
+ int rkisp_stream_buf_cnt(struct rkisp_stream *stream);
++void rkisp_l1_timeout_start(struct rkisp_stream *stream);
++void rkisp_l1_timeout_stop(struct rkisp_stream *stream);
+ #endif /* _RKISP_PATH_VIDEO_H */
+diff --git a/drivers/media/platform/rockchip/isp/capture_v32.c b/drivers/media/platform/rockchip/isp/capture_v32.c
+index 7931a3ec8..f0449973f 100644
+--- a/drivers/media/platform/rockchip/isp/capture_v32.c
++++ b/drivers/media/platform/rockchip/isp/capture_v32.c
+@@ -1829,6 +1829,7 @@ static void rkisp_stop_streaming(struct vb2_queue *queue)
+ 	struct v4l2_device *v4l2_dev = &dev->v4l2_dev;
+ 	int ret;
+ 
++	rkisp_l1_timeout_stop(stream);
+ 	mutex_lock(&dev->hw_dev->dev_lock);
+ 
+ 	v4l2_dbg(1, rkisp_debug, v4l2_dev, "%s %s %d\n",
+@@ -2123,6 +2124,7 @@ rkisp_start_streaming(struct vb2_queue *queue, unsigned int count)
+ 	}
+ 	tasklet_enable(&stream->buf_done_tasklet);
+ end:
++	rkisp_l1_timeout_start(stream);
+ 	mutex_unlock(&dev->hw_dev->dev_lock);
+ 	return 0;
+ 
