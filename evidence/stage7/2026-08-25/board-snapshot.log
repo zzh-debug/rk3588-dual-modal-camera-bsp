@@ -1,0 +1,32 @@
+Linux ATK-DLRK3588 5.10.209 #11 SMP Mon Aug 24 23:02:08 CST 2026 aarch64 GNU/Linux
+storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  rootwait rw earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 rcupdate.rcu_expedited=1 rcu_nocbs=all root=/dev/nfs nfsroot=192.168.5.11:/home/zzh/workspace/myproject/nfs_rootfs/atk_dlrk3588,v3,tcp ip=192.168.5.20:192.168.5.11::255.255.255.0:atk-dlrk3588:eth0:off androidboot.fwver=ddr-v1.17-3488111f83,spl-v1.13,bl31-v1.46,bl32-v1.16,uboot-23c0020-di-07/31/2026
+../../../../../bus/i2c/drivers/zzh_imx415
+../../../../../bus/i2c/drivers/zzh_mlx90640
+BRIGHTNESS=0
+MAX=255
+ pwm-0   (white-fill          ): requested enabled period: 50000 ns duty: 0 ns polarity: normal
+pin 22 (gpio0-22): febd0010.pwm (GPIO UNCLAIMED) function pwm5 group pwm5m1-pins
+/sys/firmware/devicetree/base/rm500u-modem/status=disabled
+/sys/firmware/devicetree/base/i2c@fead0000/pcf8563@51/status=disabled
+/sys/firmware/devicetree/base/pwm@febd0010/status=okay
+[   22.422616] zzh_imx415 2-001a: endpoint must contain only link-frequencies = <445500000>
+[   22.422658] zzh_imx415: probe of 2-001a failed with error -22
+[   22.422805] zzh_imx415 3-001a: using module-local 3.3V-to-AVDD/DOVDD/DVDD LDOs
+[   22.424988] zzh_imx415 3-001a: reference register 0x311a = 0xe0
+[   22.424994] zzh_imx415 3-001a: vendor reference signature matched (not an official unique Chip ID)
+[   22.425023] zzh_imx415 3-001a: registered independent 3864x2192 RAW10 30 fps Sensor subdev
+[   22.425168] zzh_imx415 4-001a: endpoint must contain only link-frequencies = <445500000>
+[   22.425202] zzh_imx415: probe of 4-001a failed with error -22
+[   22.425313] zzh_imx415 7-001a: endpoint must contain only link-frequencies = <445500000>
+[   22.425344] zzh_imx415: probe of 7-001a failed with error -22
+[   22.539585] zzh_mlx90640 5-0033: EEPROM cached, reference ID 131a-4948-0190
+[   22.539688] zzh_mlx90640 5-0033: registered Meta v1 (3400 bytes), status=0x0009 control=0x1901, 16 Hz subpages
+[   23.027632] rockchip-csi2-dphy csi2-dphy0: dphy0 matches zzh_imx415 3-001a:bus type 5
+[ 1328.158712] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[ 1328.458380] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[ 1338.698763] zzh_mlx90640 5-0033: restored control 0x1901
+[ 1338.698791] zzh_mlx90640 5-0033: stream stopped: pairs=80 no-buffer=0 duplicate=0 invalid=0
+[ 1429.454944] zzh_imx415 3-001a: stream on: 3864x2192 SGBRG10, 4 lanes, 891 Mbps/lane
+[ 1429.783132] zzh_mlx90640 5-0033: stream started: 16 Hz subpages, control 0x1a81
+[ 1440.027867] zzh_mlx90640 5-0033: restored control 0x1901
+[ 1440.027892] zzh_mlx90640 5-0033: stream stopped: pairs=80 no-buffer=0 duplicate=0 invalid=0
