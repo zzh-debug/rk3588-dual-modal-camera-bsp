@@ -49,7 +49,7 @@ ioctl 类型/编号识别该命令，只读取两个版本共同的首字段 `hd
 | 外置模块 `W=1` | 编译、MODPOST、链接通过，无 warning |
 | SDK 复现检查 | `sdk/apply_sdk_changes.sh --check-only /rk3588_dev` 通过 |
 | Kernel 分项构建 | `output/sessions/2026-08-26_22-51-36/` 成功，Linux `#14` |
-| 构建日志归档 | `evidence/stage8/2026-08-26/build/` |
+| 构建日志归档 | `evidence/stage8/2026-08-26/kernel-build/` |
 
 最终载荷：
 
@@ -77,7 +77,7 @@ ioctl 类型/编号识别该命令，只读取两个版本共同的首字段 `hd
 
 - `evidence/stage8/2026-08-26/kernel14-first/`
 - `evidence/stage8/2026-08-26/kernel14-final/`
-- `evidence/stage8/2026-08-26/build/`
+- `evidence/stage8/2026-08-26/kernel-build/`
 
 ## 6. 对项目二的影响与事实边界
 
