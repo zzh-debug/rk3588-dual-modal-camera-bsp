@@ -19,6 +19,7 @@
 #include <linux/of.h>
 #include <linux/pm_runtime.h>
 #include <linux/property.h>
+#include <linux/rk-camera-module.h>
 #include <linux/regulator/consumer.h>
 
 #include <media/media-entity.h>
@@ -29,6 +30,7 @@
 #include <media/v4l2-subdev.h>
 
 #define ZZH_IMX415_NAME			"zzh_imx415"
+#define ZZH_IMX415_SENSOR_NAME		"imx415"
 #define ZZH_IMX415_I2C_ADDR		0x1a
 
 #define ZZH_IMX415_XVCLK_HZ		37125000UL
@@ -65,6 +67,9 @@
 #define IMX415_REGHOLD_ENABLE		0x01
 #define IMX415_REGHOLD_DISABLE		0x00
 #define IMX415_REG_VMAX			0x3024
+#define IMX415_REG_FLIP			0x3030
+#define IMX415_MIRROR_BIT		BIT(0)
+#define IMX415_FLIP_BIT			BIT(1)
 #define IMX415_REG_SHR0			0x3050
 #define IMX415_REG_GAIN			0x3090
 #define IMX415_REFERENCE_REG		0x311a
@@ -217,6 +222,10 @@ struct zzh_imx415 {
 	struct regulator *dovdd;
 	struct regulator *avdd;
 
+	u32 module_index;
+	const char *module_facing;
+	const char *module_name;
+	const char *lens_name;
 	struct v4l2_subdev subdev;
 	struct media_pad pad;
 	struct v4l2_ctrl_handler ctrl_handler;
@@ -593,6 +602,7 @@ static int zzh_imx415_set_ctrl(struct v4l2_ctrl *ctrl)
 	u32 new_vts = old_vts;
 	u32 exposure_max;
 	u32 exp;
+	u8 flip;
 	int pm_ref;
 	int ret = 0;
 
@@ -647,6 +657,26 @@ static int zzh_imx415_set_ctrl(struct v4l2_ctrl *ctrl)
 		ret = zzh_imx415_write_held(imx415, IMX415_REG_GAIN, 2,
 					    ctrl->val);
 		break;
+	case V4L2_CID_HFLIP:
+		ret = zzh_imx415_read_reg8(imx415, IMX415_REG_FLIP, &flip);
+		if (ret)
+			break;
+		if (ctrl->val)
+			flip |= IMX415_MIRROR_BIT;
+		else
+			flip &= ~IMX415_MIRROR_BIT;
+		ret = zzh_imx415_write_reg8(imx415, IMX415_REG_FLIP, flip);
+		break;
+	case V4L2_CID_VFLIP:
+		ret = zzh_imx415_read_reg8(imx415, IMX415_REG_FLIP, &flip);
+		if (ret)
+			break;
+		if (ctrl->val)
+			flip |= IMX415_FLIP_BIT;
+		else
+			flip &= ~IMX415_FLIP_BIT;
+		ret = zzh_imx415_write_reg8(imx415, IMX415_REG_FLIP, flip);
+		break;
 	default:
 		break;
 	}
@@ -664,7 +694,7 @@ static int zzh_imx415_init_controls(struct zzh_imx415 *imx415)
 	struct v4l2_ctrl_handler *handler = &imx415->ctrl_handler;
 	int ret;
 
-	ret = v4l2_ctrl_handler_init(handler, 6);
+	ret = v4l2_ctrl_handler_init(handler, 8);
 	if (ret)
 		return ret;
 	handler->lock = &imx415->mutex;
@@ -699,6 +729,10 @@ static int zzh_imx415_init_controls(struct zzh_imx415 *imx415)
 				  V4L2_CID_ANALOGUE_GAIN,
 				  ZZH_IMX415_GAIN_MIN, ZZH_IMX415_GAIN_MAX,
 				  1, ZZH_IMX415_GAIN_MIN);
+	v4l2_ctrl_new_std(handler, &zzh_imx415_ctrl_ops,
+			  V4L2_CID_HFLIP, 0, 1, 1, 0);
+	v4l2_ctrl_new_std(handler, &zzh_imx415_ctrl_ops,
+			  V4L2_CID_VFLIP, 0, 1, 1, 0);
 
 	if (imx415->link_freq)
 		imx415->link_freq->flags |= V4L2_CTRL_FLAG_READ_ONLY;
@@ -1016,8 +1050,66 @@ static const struct v4l2_subdev_internal_ops zzh_imx415_internal_ops = {
 };
 #endif
 
+static void zzh_imx415_get_module_info(struct zzh_imx415 *imx415,
+				       struct rkmodule_inf *info)
+{
+	memset(info, 0, sizeof(*info));
+	strscpy(info->base.sensor, ZZH_IMX415_SENSOR_NAME,
+		sizeof(info->base.sensor));
+	strscpy(info->base.module, imx415->module_name,
+		sizeof(info->base.module));
+	strscpy(info->base.lens, imx415->lens_name,
+		sizeof(info->base.lens));
+}
+
+static long zzh_imx415_ioctl(struct v4l2_subdev *subdev,
+			     unsigned int command, void *argument)
+{
+	struct zzh_imx415 *imx415 = to_zzh_imx415(subdev);
+	struct rkmodule_channel_info *channel_info;
+	struct rkmodule_hdr_cfg *hdr_config;
+
+	/*
+	 * Rockchip AIQ releases carry private copies of rk-camera-module.h.
+	 * Some of them use a different rkmodule_hdr_cfg tail layout, and the
+	 * encoded ioctl size therefore differs from the kernel UAPI value.  The
+	 * command type/number and the leading hdr_mode field remain stable.
+	 */
+	if (_IOC_TYPE(command) == _IOC_TYPE(RKMODULE_SET_HDR_CFG) &&
+	    _IOC_NR(command) == _IOC_NR(RKMODULE_SET_HDR_CFG)) {
+		hdr_config = argument;
+		if (hdr_config->hdr_mode != NO_HDR)
+			return -EINVAL;
+		return 0;
+	}
+
+	switch (command) {
+	case RKMODULE_GET_MODULE_INFO:
+		zzh_imx415_get_module_info(imx415, argument);
+		return 0;
+	case RKMODULE_GET_HDR_CFG:
+		hdr_config = argument;
+		memset(hdr_config, 0, sizeof(*hdr_config));
+		hdr_config->esp.mode = HDR_NORMAL_VC;
+		hdr_config->hdr_mode = NO_HDR;
+		return 0;
+	case RKMODULE_GET_CHANNEL_INFO:
+		channel_info = argument;
+		if (channel_info->index != 0)
+			return -EINVAL;
+		channel_info->vc = 0;
+		channel_info->width = ZZH_IMX415_WIDTH;
+		channel_info->height = ZZH_IMX415_HEIGHT;
+		channel_info->bus_fmt = MEDIA_BUS_FMT_SGBRG10_1X10;
+		return 0;
+	default:
+		return -ENOIOCTLCMD;
+	}
+}
+
 static const struct v4l2_subdev_core_ops zzh_imx415_core_ops = {
 	.s_power = zzh_imx415_s_power,
+	.ioctl = zzh_imx415_ioctl,
 	.subscribe_event = v4l2_ctrl_subdev_subscribe_event,
 	.unsubscribe_event = v4l2_event_subdev_unsubscribe,
 };
@@ -1046,6 +1138,34 @@ static const struct v4l2_subdev_ops zzh_imx415_subdev_ops = {
 static const struct media_entity_operations zzh_imx415_entity_ops = {
 	.link_validate = v4l2_subdev_link_validate,
 };
+
+static int zzh_imx415_parse_module_info(struct zzh_imx415 *imx415)
+{
+	struct device *dev = &imx415->client->dev;
+	struct device_node *node = dev->of_node;
+	int ret;
+
+	ret = of_property_read_u32(node, RKMODULE_CAMERA_MODULE_INDEX,
+				   &imx415->module_index);
+	ret |= of_property_read_string(node, RKMODULE_CAMERA_MODULE_FACING,
+				       &imx415->module_facing);
+	ret |= of_property_read_string(node, RKMODULE_CAMERA_MODULE_NAME,
+				       &imx415->module_name);
+	ret |= of_property_read_string(node, RKMODULE_CAMERA_LENS_NAME,
+				       &imx415->lens_name);
+	if (ret) {
+		dev_err(dev, "missing Rockchip camera module metadata\n");
+		return -EINVAL;
+	}
+
+	if (strcmp(imx415->module_facing, "back") &&
+	    strcmp(imx415->module_facing, "front")) {
+		dev_err(dev, "camera-module-facing must be back or front\n");
+		return -EINVAL;
+	}
+
+	return 0;
+}
 
 static int zzh_imx415_check_endpoint(struct device *dev)
 {
@@ -1123,6 +1243,7 @@ static int zzh_imx415_probe(struct i2c_client *client,
 	struct device *dev = &client->dev;
 	struct zzh_imx415 *imx415;
 	struct v4l2_subdev *subdev;
+	char facing[2] = { 0 };
 	int ret;
 
 	if (!i2c_check_functionality(client->adapter, I2C_FUNC_I2C))
@@ -1139,6 +1260,10 @@ static int zzh_imx415_probe(struct i2c_client *client,
 
 	imx415->client = client;
 	mutex_init(&imx415->mutex);
+	ret = zzh_imx415_parse_module_info(imx415);
+	if (ret)
+		goto destroy_mutex;
+
 	subdev = &imx415->subdev;
 	v4l2_i2c_subdev_init(subdev, client, &zzh_imx415_subdev_ops);
 
@@ -1197,6 +1322,14 @@ static int zzh_imx415_probe(struct i2c_client *client,
 		goto power_off;
 #endif
 
+	if (!strcmp(imx415->module_facing, "back"))
+		facing[0] = 'b';
+	else
+		facing[0] = 'f';
+	snprintf(subdev->name, sizeof(subdev->name), "m%02u_%s_%s %s",
+		 imx415->module_index, facing, ZZH_IMX415_NAME,
+		 dev_name(subdev->dev));
+
 	ret = v4l2_async_register_subdev_sensor_common(subdev);
 	if (ret)
 		goto cleanup_entity;
@@ -1206,7 +1339,8 @@ static int zzh_imx415_probe(struct i2c_client *client,
 	pm_runtime_idle(dev);
 
 	dev_info(dev,
-		 "registered independent 3864x2192 RAW10 30 fps Sensor subdev\n");
+		 "registered independent 3864x2192 RAW10 30 fps Sensor subdev as %s (%s/%s)\n",
+		 subdev->name, imx415->module_name, imx415->lens_name);
 	return 0;
 
 cleanup_entity:

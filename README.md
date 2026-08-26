@@ -1,6 +1,6 @@
 # 基于 RK3588 的 IMX415 MIPI 双模态成像 BSP 适配与采集链路可靠性开发
 
-> 当前进度：P1.6/P1.7已完成真机验收；项目一V1正式关闭，项目二可开始  
+> 当前进度：P1.6/P1.7/P1.8已完成真机验收；项目一V1.1正式关闭，项目二可开始  
 > 目标平台：ATK-DLRK3588，Rockchip Linux 5.10.209  
 > 项目关系：本项目独立开发；项目二使用本项目验证通过的稳定接口
 
@@ -24,6 +24,7 @@ U-Boot 修改仍位于 SDK 原有目录，不在此处复制或迁移。
 
 - 基于 Rockchip Linux 5.10 SDK 完成 Loader、U-Boot、Kernel、DTB 及 Buildroot RootFS 构建，打通“TFTP 加载 Image/DTB + NFS RootFS”网络启动调试链路，并保留 eMMC 原厂启动和镜像回退路径；通过调优 TFTP Blocksize 并启用 U-Boot IP 分片重组，将 36 MiB Image 下载速度由约 1.4 MiB/s 提升至 4.1 MiB/s。
 - 基于原理图和厂商参考实现，独立完成 IMX415 驱动及设备树适配，实现 I2C 识别、MCLK、RESET/PWDN 控制和 3864×2192 RAW10 30 fps 采集，并接入 V4L2 Subdev 及曝光、增益、VBLANK 控制；完成 Sensor-RKCIF-RKISP 媒体链路配置，通过独立 compatible 和 DTB 保留原厂方案进行 A/B 验证。
+- 为自研 IMX415 驱动补齐 Rockchip AIQ 所需的模组/镜头元数据、兼容实体命名、私有 module/HDR/channel ABI 和 H/V Flip 控件，兼容内核与 AIQ 私有头文件的 ioctl 大小差异；真机确认 AIQ 精确选中原厂目标 IQ JSON、3A 控件动态变化并稳定输出 4K NV12。
 - 参考并分析内核 `video-i2c` 中的 MLX90640 实现，完成独立热成像采集驱动，采用 400 kHz 分段 I2C 读取并缓存 EEPROM 校准数据，实现 Chess 模式双 Subpage 配对组帧；基于 V4L2 Meta/VB2 向用户态输出热成像数据，支持 MMAP、poll 和时间戳，并完善 STREAMOFF 及异常路径下的 Buffer 回收。
 - 针对采集卡死和丢帧问题，在 RKCIF 中补充 FS/FE、DMA Buffer 切换、VB2 完成及无可用 Buffer 等现有procfs快照与tracepoint跟踪；增加带采集代际校验的帧超时检测，通过 `vb2_queue_error()` 向用户态传播异常，避免残留超时任务影响新的采集会话，并验证用户态关闭、重开后的采集恢复。
 - 完成 IMX415 与 MLX90640 双路并行采集及白光 LED GPIO/PWM 控制，并编写自动化部署、故障注入和稳定性测试脚本；覆盖重复 STREAMON/OFF、慢速 DQBUF、I2C 异常及长时间并采等场景，验证 Buffer 回收、错误传播和异常退出后的重新采集能力。
@@ -36,7 +37,8 @@ U-Boot 修改仍位于 SDK 原有目录，不在此处复制或迁移。
 | TFTP Image/DTB + NFS RootFS | 已验证 | `docs/sdk-bringup/phase1_tftp_nfs_report.md`；实测 1.4 -> 4.1 MiB/s；`run nfsbootfdt` 启动闭环 | 后续每次测试记录 Image/DTB hash 和 `/proc/cmdline` |
 | IMX415 最小 I2C 识别 | 已通过真机功能验证；波形/实物证据待补 | 独立 `zzh,imx415-minimal`、实验 DTS、外置模块；NFS 实启动；原厂同地址节点 disabled；20/20 次 remove/probe 均读得 `0x311A=0xE0`，`VERIFY_RC=0`；`docs/阶段一总结.md` 和 `evidence/stage1/2026-08-02/` | 补齐 J20 照片、完整串口捕获与必要的电源/MCLK/GPIO 波形；对外始终称“厂商参考签名” |
 | IMX415 固定 mode/Subdev/Controls/runtime PM | 已通过板端验收 | `docs/阶段二总结.md`；新内建驱动、固定 1080x1920 NFS DTB、Subdev/Media graph、Controls、10/100 轮短流和 PM 证据 | 寄存器 readback、物理波形和原厂 A/B 作为补充审计 |
-| IMX415 Media Graph/RKCIF RAW/RKISP NV12 | P1.3 目标路径板端验收通过 | `docs/阶段三总结.md`；GB10/NV12 单帧、300/3000 帧，sequence 无断号、RKISP ErrCnt=0；曝光/增益亮度变化与 VBLANK 15/30 fps 动态验证 | ISP IQ/标准色卡画质和 Host 故障恢复保留到具备相应标定与故障门禁时 |
+| IMX415 Media Graph/RKCIF RAW/RKISP NV12 | P1.3 目标路径板端验收通过 | `docs/阶段三总结.md`；GB10/NV12 单帧、300/3000 帧，sequence 无断号、RKISP ErrCnt=0；曝光/增益亮度变化与 VBLANK 15/30 fps 动态验证 | Host 故障恢复保留到具备相应故障门禁时 |
+| IMX415 Rockchip AIQ/IQ | P1.8 真机验收通过 | `docs/阶段八AIQ接入与验收.md`、`evidence/stage8/2026-08-26/`；模块/镜头 ABI、H/V Flip、线性 HDR 配置兼容、目标 IQ 哈希与选择日志、AIQ PID、188 DQBUF 和 3A 动态变化均通过 | 目标 IQ 正确接入不等于完成色卡/畸变/噪声等量化画质标定 |
 | MLX90640 原始传输 | P1.4 板端功能验收通过；仪器波形不纳入当前验收，FOV型号在项目二标定前确认 | `docs/阶段四总结.md`；`0x33`、EEPROM 20/20 同哈希；400 kHz；8/16 Hz 各20个正式 Subpage，0交替/周期/数据错误；控制寄存器恢复 | P1.5 冻结版本化 V4L2 Meta/VB2 ABI；项目二跨光谱标定前确认精确FOV型号 |
 | MLX90640 V4L2 Meta/VB2 | P1.5 built-in正式验收通过 | `docs/阶段五总结.md`、`evidence/stage5/2026-08-24/builtin/`；自动probe、1664-byte NVMEM黄金哈希、`ZMLX` 3400-byte、200对/10周期、control恢复和共享总线回归通过 | 向P1.6/项目二提供稳定热阵列ABI；后续故障注入继续复用该接口 |
 | Host可观测性和L1恢复 | P1.6-B/C正式通过 | `docs/阶段六RKCIF可观测性.md`、`docs/阶段六L1错误传播.md`；逐stream统计/trace、500ms EIO、关闭重开、100次generation连续、0残留work | L2/L3透明恢复明确不做 |
@@ -52,7 +54,8 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
   -> P1.4  MLX90640 电气确认、原始读取和 EEPROM（板端功能验收通过）
   -> P1.5  MLX90640 V4L2 Meta/VB2 ABI（built-in板端验收通过）
   -> P1.6  双路并采、RKCIF 可观测性、L1 错误传播和2小时长稳（已通过）
-  -> P1.7  外置 LED GPIO/PWM（真机验收通过，项目一V1关闭）
+  -> P1.7  外置 LED GPIO/PWM（真机验收通过）
+  -> P1.8  自研 IMX415 接入 Rockchip AIQ/原厂 IQ（真机验收通过，项目一V1.1关闭）
   -> 向项目二提供验证通过的接口
 ```
 
@@ -76,6 +79,7 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
 - `docs/阶段六可靠性矩阵.md`
 - `docs/阶段六总结.md`
 - `docs/阶段七硬件契约与实施计划.md`
+- `docs/阶段八AIQ接入与验收.md`
 - `docs/independent-imx415-bringup-plan.md`
 - `docs/resume-project-feasibility-audit.md`
 - `docs/feasibility-study.md`
@@ -88,6 +92,7 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
 - 模组本地 LDO 不表述为软件完成三路独立电源时序。
 - 第一版恢复止于统计、`vb2_queue_error()` 和用户态关闭/重开，不表述为 Host 无感恢复。
 - DMA-BUF 目标是减少 CPU 全帧复制，不使用“全程零拷贝”。
+- AIQ 精确选择原厂 IQ、3A 动态生效和稳定出流不等于完成新的 IQ 调参或标准色卡画质标定。
 
 ## 6. 独立仓库与SDK复现
 
@@ -124,4 +129,3 @@ P1.1  IMX415 最小 I2C 真机识别（已通过真机功能验证）
 
 详细说明见`sdk/README.md`和`sdk/BASELINE.md`。远端仓库建议初期设为private；
 公开前需要确定仓库级许可证，并复核实验网络地址、硬件照片和证据日志。
-

@@ -12,6 +12,7 @@ driver/.tmp_versions/
 build/
 out/
 tmp/
+tools/verify_imx415_aiq_module
 
 # Large raw captures are not source evidence
 evidence/**/*.raw
